@@ -16,35 +16,35 @@ export const ServicesPage = () => {
     {
       icon: Clock,
       title: "Rapid Response",
-      description: "We aim to be with you within 60 minutes for all plumbing emergencies in South London."
+      description: "Available 24/7 for all electrical emergencies across Rugby and the Midlands."
     },
     {
       icon: ShieldCheck,
       title: "Fully Insured",
-      description: "Your property is in safe hands. We carry full public liability insurance for all work."
+      description: "Your property is in safe hands. I carry full public liability insurance for all work."
     },
     {
       icon: Award,
-      title: "12-Month Guarantee",
-      description: "All our repairs and installations come with a comprehensive 1-year workmanship guarantee."
+      title: "Professional Guarantee",
+      description: "All my repairs and installations come with a comprehensive workmanship guarantee."
     },
     {
       icon: CheckCircle2,
-      title: "Gas Safe Registered",
-      description: "Our engineers are fully certified to work on gas appliances and boiler systems."
+      title: "Certified Professional",
+      description: "Fully qualified and registered to handle all residential and commercial electrical work."
     }
   ]
 
   return (
     <>
       <Helmet>
-        <title>Our Plumbing Services | {siteSettings.businessName}</title>
-        <meta name="description" content="Expert plumbing, boiler, and drainage services across South London. 24/7 emergency support, Gas Safe registered engineers, and 12-month guarantees." />
+        <title>Our Electrical Services | {siteSettings.businessName}</title>
+        <meta name="description" content="Expert electrical services across Rugby and the Midlands. 24/7 emergency support, EV charger installations, and consumer unit upgrades." />
       </Helmet>
 
       <Hero 
-        title={<>Professional <br/><span className="text-orange-500">Plumbing Services</span> in South London.</>}
-        subtitle="From emergency repairs to full boiler installations, our expert team provides reliable, high-quality plumbing solutions with transparent pricing."
+        title={<>Professional <br/><span className="text-orange-500">Electrical Services</span> in Rugby.</>}
+        subtitle="From emergency repairs to EV charger installations, I provide reliable, high-quality electrical solutions with transparent pricing."
         showForm={true}
       />
 
@@ -54,12 +54,12 @@ export const ServicesPage = () => {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">What We Do</h2>
+            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">What I Do</h2>
             <h3 className="text-4xl md:text-5xl font-black text-navy-900 mb-6 leading-tight">
-              Comprehensive Solutions for Every <span className="text-orange-500">Plumbing Need.</span>
+              Comprehensive Solutions for Every <span className="text-orange-500">Electrical Need.</span>
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We specialize in providing top-tier plumbing services tailored to the unique needs of South London homeowners and businesses.
+              I specialize in providing top-tier electrical services tailored to the unique needs of homeowners and businesses in the Midlands.
             </p>
           </div>
 
@@ -125,14 +125,14 @@ export const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us / Benefits */}
+      {/* Why Choose Me / Benefits */}
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.2em] mb-4">Our Commitment</h2>
-            <h3 className="text-4xl md:text-5xl font-black mb-6">Why South London Trusts Our Team</h3>
+            <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.2em] mb-4">My Commitment</h2>
+            <h3 className="text-4xl md:text-5xl font-black mb-6">Why Local Residents Trust My Work</h3>
             <p className="text-xl text-gray-300">
-              We pride ourselves on delivering excellence through every pipe we fix and every boiler we install.
+              I pride myself on delivering excellence through every installation and repair I undertake.
             </p>
           </div>
 
@@ -156,15 +156,15 @@ export const ServicesPage = () => {
       
       <FAQ 
         title="Frequently Asked Questions" 
-        subtitle="Common questions about our plumbing and heating services."
+        subtitle="Common questions about my electrical services."
         items={allFaqs.length > 0 ? allFaqs : [
           {
             question: "Do you offer emergency services?",
-            answer: "Yes, we provide 24/7 emergency plumbing services across South London. We aim to be on-site within 60 minutes."
+            answer: "Yes, I provide 24/7 emergency electrical repairs across Rugby and the surrounding areas."
           },
           {
-            question: "Are your plumbers qualified?",
-            answer: "All our engineers are fully qualified, and those working on gas appliances are Gas Safe registered."
+            question: "Are you qualified?",
+            answer: "I am a fully qualified and certified electrician, registered for all types of residential electrical work."
           }
         ]} 
       />
@@ -174,14 +174,14 @@ export const ServicesPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-navy-900 mb-8">Ready to get started?</h2>
           <p className="text-xl md:text-2xl text-navy-900/80 mb-12 max-w-2xl mx-auto font-medium">
-            Contact us today for a free, no-obligation quote or emergency assistance.
+            Contact me today for a free, no-obligation quote or emergency assistance.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link 
               to="/contact"
               className="bg-navy-900 text-white font-black py-5 px-12 rounded shadow-2xl hover:bg-navy-800 transition-all text-lg uppercase tracking-wider"
             >
-              Book an Engineer
+              Book an Appointment
             </Link>
             <a 
               href={`tel:${siteSettings.phone}`}

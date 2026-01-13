@@ -42,22 +42,22 @@ export const ServicePage = () => {
           <div className="flex flex-col lg:flex-row gap-16">
             {/* Main Content */}
             <div className="lg:w-2/3">
-              <h2 className="text-4xl font-black text-navy-900 mb-8">Expert {service.title} across South London</h2>
+              <h2 className="text-4xl font-black text-navy-900 mb-8">Expert {service.title} in the Midlands</h2>
               <div className="prose prose-lg max-w-none text-gray-600 mb-12">
                 <p className="text-xl leading-relaxed mb-6">
                   {service.longDescription}
                 </p>
                 <p>
-                  At {siteSettings.businessName}, we understand that {service.shortTitle.toLowerCase()} issues can be stressful. 
-                  That's why we offer a rapid, reliable, and professional service designed to get your home back to normal as quickly as possible.
+                  At {siteSettings.businessName}, I understand that electrical issues can be stressful and potentially dangerous. 
+                  That's why I offer a rapid, reliable, and professional service designed to get your electrical systems safe and functional as quickly as possible.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
                   <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h4 className="font-bold text-navy-900 mb-2">Why Choose Us?</h4>
+                    <h4 className="font-bold text-navy-900 mb-2">Why Choose Me?</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
-                        <span>Gas Safe Registered Engineers</span>
+                        <span>Fully Qualified & Registered</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
@@ -65,14 +65,14 @@ export const ServicePage = () => {
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
-                        <span>12-Month Workmanship Guarantee</span>
+                        <span>Professional Workmanship Guarantee</span>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h4 className="font-bold text-navy-900 mb-2">Our Coverage</h4>
+                    <h4 className="font-bold text-navy-900 mb-2">My Coverage</h4>
                     <p className="text-sm">
-                      We provide {service.shortTitle.toLowerCase()} services throughout South London, including Brixton, Bromley, Croydon, Greenwich, and Lewisham.
+                      I provide {service.shortTitle.toLowerCase()} services throughout Rugby, Southam, Leamington Spa, Warwick, and Coventry.
                     </p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export const ServicePage = () => {
               <div className="bg-orange-50 p-8 rounded-2xl border border-orange-100 mb-16">
                 <h3 className="text-2xl font-bold text-navy-900 mb-4">Need help right now?</h3>
                 <p className="text-lg text-gray-700 mb-6">
-                  Our team is standing by to assist with your {service.shortTitle.toLowerCase()} needs. 
+                  I am standing by to assist with your {service.shortTitle.toLowerCase()} needs. 
                   Get a free quote or book an emergency call-out today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -100,7 +100,7 @@ export const ServicePage = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-navy-900 mb-8">Areas We Cover for {service.shortTitle}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-8">Areas I Cover for {service.shortTitle}</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-16">
                 {locations.map(location => (
                   <Link 

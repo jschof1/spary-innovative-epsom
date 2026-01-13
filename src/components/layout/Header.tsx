@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
-import { Menu, X, ChevronDown, Phone, Clock, MapPin } from "lucide-react"
+import { locations } from "@/data/locations"
+import { Menu, X, ChevronDown, Phone, Clock, MapPin, Zap } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
-import slLogo from "@/assets/sl-logo.png"
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,12 +33,12 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-1">
           <Link to="/" className="flex items-center gap-2 group relative z-50 w-fit">
-            <div className="w-9 h-9 flex items-center justify-center">
-              <img src={slLogo} alt="South London Plumbers" className="h-full w-auto object-contain" />
+            <div className="w-9 h-9 flex items-center justify-center bg-navy-900 rounded-lg">
+              <Zap className="text-orange-500 w-6 h-6" />
             </div>
             <div className="leading-tight">
-              <span className="block font-header font-bold text-navy-900 text-base uppercase tracking-tight">South London</span>
-              <span className="block font-header font-bold text-orange-500 text-xs tracking-widest -mt-1">PLUMBERS</span>
+              <span className="block font-header font-bold text-navy-900 text-base uppercase tracking-tight">DH Electrical</span>
+              <span className="block font-header font-bold text-orange-500 text-xs tracking-widest -mt-1">SERVICES</span>
             </div>
           </Link>
         </div>
@@ -65,11 +65,9 @@ export const Header = () => {
               Areas <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl rounded-lg p-4 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 translate-y-2 group-hover:translate-y-0">
-              <Link to="/locations/greenwich" className="block py-2 hover:text-orange-500 transition-colors">Greenwich</Link>
-              <Link to="/locations/croydon" className="block py-2 hover:text-orange-500 transition-colors">Croydon</Link>
-              <Link to="/locations/brixton" className="block py-2 hover:text-orange-500 transition-colors">Brixton</Link>
-              <Link to="/locations/bromley" className="block py-2 hover:text-orange-500 transition-colors">Bromley</Link>
-              <Link to="/locations/lewisham" className="block py-2 hover:text-orange-500 transition-colors">Lewisham</Link>
+              {locations.map(loc => (
+                <Link key={loc.id} to={`/locations/${loc.slug}`} className="block py-2 hover:text-orange-500 transition-colors">{loc.name}</Link>
+              ))}
             </div>
           </div>
         </nav>
@@ -183,11 +181,9 @@ export const Header = () => {
                           exit={{ height: 0, opacity: 0 }}
                           className="flex flex-col gap-3 pl-4 border-l-2 border-orange-500 mt-2 overflow-hidden"
                         >
-                          <Link to="/locations/greenwich" className="text-lg text-gray-600 hover:text-orange-500">Greenwich</Link>
-                          <Link to="/locations/croydon" className="text-lg text-gray-600 hover:text-orange-500">Croydon</Link>
-                          <Link to="/locations/brixton" className="text-lg text-gray-600 hover:text-orange-500">Brixton</Link>
-                          <Link to="/locations/bromley" className="text-lg text-gray-600 hover:text-orange-500">Bromley</Link>
-                          <Link to="/locations/lewisham" className="text-lg text-gray-600 hover:text-orange-500">Lewisham</Link>
+                          {locations.map(loc => (
+                            <Link key={loc.id} to={`/locations/${loc.slug}`} className="text-lg text-gray-600 hover:text-orange-500">{loc.name}</Link>
+                          ))}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -205,7 +201,7 @@ export const Header = () => {
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <span className="block text-xs uppercase font-bold text-orange-500">24/7 Emergency Call</span>
+                      <span className="block text-xs uppercase font-bold text-orange-500">24/7 Helpline</span>
                       <span className="text-xl font-header font-bold">{siteSettings.phone}</span>
                     </div>
                   </a>
@@ -222,7 +218,7 @@ export const Header = () => {
                   </div>
                   <div className="flex items-center gap-2 text-gray-500">
                     <MapPin className="w-4 h-4 text-orange-500" />
-                    <span className="text-sm">South London</span>
+                    <span className="text-sm">Midlands Based</span>
                   </div>
                 </div>
               </div>

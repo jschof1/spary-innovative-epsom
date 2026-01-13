@@ -1,4 +1,4 @@
-import gasSafeLogo from "../../assets/logos/gas-safe.svg";
+import niceicLogo from "../../assets/certifications/niceic240x172.png";
 import checkatradeLogo from "../../assets/logos/checkatrade.svg";
 import trustpilotLogo from "../../assets/logos/trustpilot.svg";
 import googleLogo from "../../assets/logos/Google__G__logo.svg";
@@ -10,11 +10,11 @@ export const TrustBar = () => {
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
           <div className="flex flex-col items-center">
             <img 
-              src={gasSafeLogo} 
-              alt="Gas Safe Register" 
+              src={niceicLogo} 
+              alt="NICEIC Certified" 
               className="h-10 w-auto object-contain"
             />
-            <span className="text-[10px] font-bold mt-1 text-gray-500">Reg #543210</span>
+            <span className="text-[10px] font-bold mt-1 text-gray-500">Reg #7616886213</span>
           </div>
           
           <div className="flex items-center">

@@ -3,42 +3,42 @@ import { Link } from "react-router-dom";
 
 const projects = [
   {
-    title: "Vaillant Eco-Efficiency Upgrade",
-    location: "Greenwich SE10",
-    category: "Heating",
-    description: "Decommissioning of failing G-rated system. Precision installation of Vaillant ecoTEC Plus with vSMART controls and magnetic filtration system.",
-    specs: ["Vaillant ecoTEC Plus", "Magnetic Filter", "vSMART Controls"],
-    impact: "30% Energy Saving",
+    title: "EV Charger Home Installation",
+    location: "Rugby CV21",
+    category: "EV Charging",
+    description: "Installation of Ohme ePod smart charger. Full integration with home Wi-Fi and setup of dynamic tariff charging for maximum cost efficiency.",
+    specs: ["Ohme ePod Charger", "Surge Protection", "Smart Integration"],
+    impact: "60% Fuel Savings",
     status: "Certified",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    title: "High-Pressure Main Breach",
-    location: "Clapham SW4",
-    category: "Emergency",
-    description: "Rapid response to 4.5 bar mains breach in Victorian terrace. Full containment and structural drying protocol initiated within 45 minutes.",
-    specs: ["Burst Containment", "Leak Detection", "Pipe Reinforcement"],
-    impact: "0% Water Damage",
+    title: "Consumer Unit Upgrade",
+    location: "Southam CV47",
+    category: "Safety",
+    description: "Replacement of outdated fuse box with a modern 18th Edition RCD-protected consumer unit. Full testing and certification of all domestic circuits.",
+    specs: ["Dual RCD Board", "Surge Protection", "Circuit Testing"],
+    impact: "Enhanced Safety",
     status: "Secured",
-    image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1558211583-d28f6109314a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    title: "Multi-Point Sanitary Engineering",
-    location: "Dulwich SE21",
-    category: "Bathroom",
-    description: "Complex first-fix hydraulic engineering for triple-outlet walk-in shower and concealed cistern system with precision drainage alignment.",
-    specs: ["Concealed Systems", "High-Flow Waste", "Certified Testing"],
-    impact: "Precision Fitment",
+    title: "Smart Security Lighting",
+    location: "Leamington Spa CV32",
+    category: "Lighting",
+    description: "Design and installation of high-efficiency LED security lighting with PIR sensors and remote override for improved property security and curb appeal.",
+    specs: ["LED Floodlights", "PIR Sensors", "Remote Access"],
+    impact: "Improved Security",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1565814329452-e1efa71c57da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ]
 
 const stats = [
-  { label: "Response Time", value: "<45 Mins", icon: Clock },
-  { label: "Annual Installs", value: "500+", icon: Gauge },
-  { label: "Customer Rating", value: "4.9/5", icon: Activity },
-  { label: "Workmanship Warranty", value: "12 Mo", icon: ShieldCheck },
+  { label: "Rapid Response", value: "24/7", icon: Clock },
+  { label: "Total Projects", value: "500+", icon: Gauge },
+  { label: "Google Rating", value: "5.0/5", icon: Activity },
+  { label: "Work Guarantee", value: "12 Mo", icon: ShieldCheck },
 ];
 
 export const RecentWork = () => {
@@ -56,10 +56,10 @@ export const RecentWork = () => {
               Live Project Log
             </div>
             <h2 className="font-header text-3xl md:text-5xl font-bold text-navy-900 mb-8 tracking-tight">
-              Engineering <span className="text-orange-500">Excellence</span> Across South London
+              Electrical <span className="text-orange-500">Excellence</span> Across the Midlands
             </h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
-              We don't just fix pipes; we engineer long-term reliability. Every project is executed to strict technical standards with verifiable performance outcomes.
+              I don't just install wires; I engineer long-term safety and reliability. Every project is executed to strict technical standards with verifiable performance outcomes.
             </p>
           </div>
           

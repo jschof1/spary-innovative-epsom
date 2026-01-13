@@ -11,8 +11,8 @@ export const CallToAction = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-white">
           <div className="text-center lg:text-left">
-            <h2 className="font-header text-2xl md:text-4xl font-bold mb-4">Need an Emergency Plumber?</h2>
-            <p className="text-lg text-white/90">We have engineers stationed across South London ready to help you 24/7.</p>
+            <h2 className="font-header text-2xl md:text-4xl font-bold mb-4">Need an Emergency Electrician?</h2>
+            <p className="text-lg text-white/90">I am based in Birdingbury and available 24/7 for urgent electrical repairs.</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -35,13 +35,13 @@ export const CallToAction = () => {
         <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-white/80 text-sm font-semibold">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            LIVE: 4 Engineers Available in SE/SW
+            LIVE: Available for CV Postcodes
           </div>
           <div className="flex items-center gap-2">
             <span>✓ No Call-out Fee</span>
           </div>
           <div className="flex items-center gap-2">
-            <span>✓ Arrival in &lt; 60 Mins</span>
+            <span>✓ Rapid Local Response</span>
           </div>
         </div>
       </div>

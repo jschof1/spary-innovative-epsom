@@ -9,46 +9,45 @@ export interface Location {
 
 export const locations: Location[] = [
   {
-    id: "greenwich",
-    slug: "greenwich",
-    name: "Greenwich",
-    postcodes: ["SE10"],
-    description: "Greenwich's local plumbing experts. From historic homes to modern apartments, we provide top-tier plumbing services throughout the Royal Borough.",
-    nearbyAreas: ["Blackheath", "Deptford", "Charlton"]
+    id: "rugby",
+    slug: "rugby",
+    name: "Rugby",
+    postcodes: ["CV21", "CV22", "CV23"],
+    description: "Your local Rugby electrician. Based nearby, I provide rapid response for all electrical installations and emergencies across the Rugby area.",
+    nearbyAreas: ["Dunchurch", "Hillmorton", "Bilton"]
   },
   {
-    id: "croydon",
-    slug: "croydon",
-    name: "Croydon",
-    postcodes: ["CR0", "CR2"],
-    description: "Reliable plumbing and heating services across Croydon. We have local engineers ready to help with any emergency or planned maintenance.",
-    nearbyAreas: ["Purley", "Thornton Heath", "Addiscombe"]
+    id: "southam",
+    slug: "southam",
+    name: "Southam",
+    postcodes: ["CV47"],
+    description: "Professional electrical services in Southam. From EV chargers to full rewires, I'm your trusted local electrician for all residential work.",
+    nearbyAreas: ["Long Itchington", "Harbury", "Napton"]
   },
   {
-    id: "brixton",
-    slug: "brixton",
-    name: "Brixton",
-    postcodes: ["SW2", "SW9"],
-    description: "Fast-response plumbers serving the heart of Brixton. We handle everything from leaky taps to full boiler installations in the Lambeth area.",
-    nearbyAreas: ["Clapham", "Stockwell", "Herne Hill"]
+    id: "leamington-spa",
+    slug: "leamington-spa",
+    name: "Leamington Spa",
+    postcodes: ["CV31", "CV32"],
+    description: "Expert electrical solutions for Leamington Spa residents. I offer safe, reliable, and certified electrical work for homes and businesses.",
+    nearbyAreas: ["Whitnash", "Lillington", "Cubbington"]
   },
   {
-    id: "bromley",
-    slug: "bromley",
-    name: "Bromley",
-    postcodes: ["BR1", "BR2"],
-    description: "Expert plumbing solutions for Bromley residents. Our Gas Safe registered engineers are available for all your heating and plumbing needs.",
-    nearbyAreas: ["Beckenham", "Orpington", "Hayes"]
+    id: "warwick",
+    slug: "warwick",
+    name: "Warwick",
+    postcodes: ["CV34"],
+    description: "Dedicated local electrician in Warwick. Providing top-tier electrical maintenance, safety checks, and modern installations.",
+    nearbyAreas: ["Barford", "Hampton on the Hill", "Sherbourne"]
   },
   {
-    id: "lewisham",
-    slug: "lewisham",
-    name: "Lewisham",
-    postcodes: ["SE13"],
-    description: "Dedicated local plumbers in Lewisham. We offer 24/7 emergency support and high-quality installations for kitchens and bathrooms.",
-    nearbyAreas: ["Catford", "Hither Green", "Ladywell"]
+    id: "coventry",
+    slug: "coventry",
+    name: "Coventry",
+    postcodes: ["CV1", "CV2", "CV3", "CV4", "CV5", "CV6"],
+    description: "Reliable electrical services across Coventry. I handle everything from consumer unit upgrades to security lighting with expert care.",
+    nearbyAreas: ["Kenilworth", "Bedworth", "Allesley"]
   }
 ]
 
 export const getLocationBySlug = (slug: string) => locations.find(l => l.slug === slug)
-

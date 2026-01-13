@@ -1,10 +1,11 @@
 import { Check, X, Shield, Clock, Zap, UserCheck, Sparkles, PoundSterling } from "lucide-react"
 import { Link } from "react-router-dom"
+import { siteSettings } from "@/data/siteSettings"
 
 const features = [
   {
     name: "Certified Safety Protocol",
-    description: "Every engineer is Gas Safe registered and undergoes mandatory quarterly safety audits. We don't just 'follow' regulations; we set the benchmark for South London plumbing safety.",
+    description: "Fully qualified and registered electrician. I undergo regular technical assessments to ensure all work meets the latest BS 7671 safety standards. I don't just 'follow' regulations; I set the benchmark for local electrical safety.",
     benefit: "Absolute peace of mind for your family.",
     icon: Shield,
     us: "Full Certification",
@@ -13,18 +14,18 @@ const features = [
     othersValid: false,
   },
   {
-    name: "12-Month Performance Bond",
-    description: "Our ironclad guarantee isn't just a promise—it's a legal commitment. If our workmanship fails within 365 days, we return within 24 hours to rectify it at zero cost.",
+    name: "Professional Guarantee",
+    description: "My guarantee is a professional commitment. If my workmanship fails within 365 days, I return as a priority to rectify it at zero cost.",
     benefit: "Protection against future repair costs.",
     icon: Clock,
-    us: "Legal Guarantee",
+    us: "Work Guarantee",
     others: "Verbal Promises",
     usValid: true,
     othersValid: false,
   },
   {
-    name: "Zero-Variance Fixed Pricing",
-    description: "Our proprietary quoting system ensures the price you're quoted is the price you pay. No 'unexpected' parts, no hourly ticking clocks, and no budget-breaking surprises.",
+    name: "Fixed Pricing Policy",
+    description: "My quoting system ensures the price you're quoted is the price you pay. No 'unexpected' parts, no hourly ticking clocks, and no budget-breaking surprises.",
     benefit: "100% financial predictability.",
     icon: Zap,
     us: "Fixed Quote",
@@ -33,8 +34,8 @@ const features = [
     othersValid: false,
   },
   {
-    name: "Direct-to-Job Logistics",
-    description: "We've optimized our dispatch system to eliminate call-out fees. You pay exclusively for expert labor and high-quality parts, not for our travel time or fuel costs.",
+    name: "Direct Local Logistics",
+    description: "Based in Birdingbury, I've optimized my local service area to eliminate call-out fees. You pay exclusively for expert labor and high-quality parts.",
     benefit: "Direct value for every pound spent.",
     icon: PoundSterling,
     us: "No Call-Out Fee",
@@ -43,21 +44,21 @@ const features = [
     othersValid: true,
   },
   {
-    name: "Multi-Stage Engineer Vetting",
-    description: "Our 'Trust-Verified' engineers are DBS-checked, fully insured (£5M), and undergo rigorous technical testing before they ever step foot in a customer's home.",
-    benefit: "Security you can trust with your keys.",
+    name: "Independent Accountability",
+    description: "As a one-man business, my reputation is everything. I am fully insured and take personal responsibility for every wire I install.",
+    benefit: "Direct communication with the expert.",
     icon: UserCheck,
-    us: "Verified Experts",
-    others: "Casual Labor",
+    us: "Personal Service",
+    others: "Agency Staff",
     usValid: true,
     othersValid: false,
   },
   {
-    name: "Property Preservation Standards",
-    description: "We treat your property as a sterile environment. Our mandatory protocol includes floor membrane protection, medical-grade shoe covers, and a post-job deep clean.",
+    name: "Property Care Standards",
+    description: "I treat your property with respect. My protocol includes floor protection, shoe covers, and a post-job clean to ensure your home is left as I found it.",
     benefit: "Zero mess, zero cleanup required.",
     icon: Sparkles,
-    us: "Pristine Exit",
+    us: "Clean Exit",
     others: "Minimal Cleanup",
     usValid: true,
     othersValid: false,
@@ -104,8 +105,8 @@ export const Comparison = () => {
                 <span className="text-[10px] font-bold text-navy-900/40 uppercase tracking-[0.2em]">Quality Benchmark Parameters</span>
               </div>
               <div className="col-span-3 p-8 bg-navy-900 text-center border-x border-navy-900/10">
-                <span className="text-[10px] font-bold text-orange-400 uppercase tracking-[0.3em] mb-4 block">Gold Standard</span>
-                <h3 className="text-white font-bold text-2xl tracking-tight">South London Plumbers</h3>
+                <span className="text-[10px] font-bold text-orange-400 uppercase tracking-[0.3em] mb-4 block">Professional Standard</span>
+                <h3 className="text-white font-bold text-2xl tracking-tight">DH Electrical Services</h3>
               </div>
               <div className="col-span-3 p-8 bg-slate-50 text-center flex flex-col items-center justify-center">
                 <span className="text-[10px] font-bold text-navy-900/30 uppercase tracking-[0.2em] mb-4 block">Market Average</span>
@@ -164,10 +165,10 @@ export const Comparison = () => {
             <div className="p-6 bg-navy-900 text-white flex flex-col justify-between group hover:bg-navy-800 transition-colors">
               <div>
                 <h4 className="text-2xl font-bold mb-4 tracking-tight">Need an emergency repair?</h4>
-                <p className="text-navy-100/60 text-sm leading-relaxed mb-8">Rapid response teams active in South London 24/7/365. Average response time under 60 minutes.</p>
+                <p className="text-navy-100/60 text-sm leading-relaxed mb-8">Available 24/7 for electrical emergencies in Rugby and surrounding areas.</p>
               </div>
-              <a href="tel:02081234567" className="flex items-center justify-between group/btn">
-                <span className="text-orange-400 font-bold uppercase tracking-widest text-xs">Call Dispatch Center</span>
+              <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center justify-between group/btn">
+                <span className="text-orange-400 font-bold uppercase tracking-widest text-xs">Call 24/7 Helpline</span>
                 <div className="w-10 h-10 bg-orange-500 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
                   <Zap className="w-5 h-5" />
                 </div>
@@ -201,8 +202,8 @@ export const Comparison = () => {
                 <p className="text-navy-900/60 text-sm italic leading-relaxed">"The transparency is what sold me. I knew exactly what I was paying before they arrived."</p>
               </div>
               <div className="mt-8 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-navy-900 flex items-center justify-center text-white text-[10px] font-bold">SM</div>
-                <span className="text-[11px] font-bold uppercase text-navy-900 tracking-wider">Sarah M., Dulwich</span>
+                <div className="w-8 h-8 rounded-full bg-navy-900 flex items-center justify-center text-white text-[10px] font-bold">MS</div>
+                <span className="text-[11px] font-bold uppercase text-navy-900 tracking-wider">Mark S., Rugby</span>
               </div>
             </div>
           </div>

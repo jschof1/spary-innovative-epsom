@@ -24,28 +24,28 @@ interface FAQProps {
 
 export const FAQ = ({ 
   title = "Frequently Asked Questions",
-  subtitle = "Everything you need to know about our plumbing and heating services in South London.",
+  subtitle = "Everything you need to know about our professional electrical services.",
   items = [
     ...siteSettings.standardFaqs,
     {
       category: "Emergency",
-      question: "How quickly do you respond to plumbing emergencies in South London?",
-      answer: "We offer a 60-minute emergency response time across South London. Our local engineers are strategically positioned in areas like Greenwich, Croydon, and Bromley to ensure we can reach you fast when you have a burst pipe or severe leak."
+      question: "What should I do in an electrical emergency?",
+      answer: "If you smell burning, see smoke, or have a complete power failure that isn't a local blackout, turn off your main power at the consumer unit (fuse box) if safe to do so and call me immediately at 07930 937358. I'm available 24/7 for urgent repairs."
     },
     {
-      category: "Boilers",
-      question: "Which boiler brands do you install and repair?",
-      answer: "As Gas Safe registered engineers, we specialize in Worcester Bosch, Vaillant, and Ideal boilers. We provide full installation, annual servicing, and emergency repairs across all major brands to keep your South London home warm."
+      category: "EV Charging",
+      question: "Do you install EV chargers at homes and businesses?",
+      answer: "Yes, I am a specialist in EV charger installations. I can install a variety of leading brands and ensure the work is fully certified and compliant with current safety regulations."
     },
     {
       category: "Pricing",
-      question: "Do you provide fixed price quotes?",
-      answer: "Yes, for planned work like boiler installations, bathroom plumbing, or leak detection, we provide a detailed, no-obligation fixed quote. For emergency repairs, we use a transparent hourly rate that is agreed upon before we start any work."
+      question: "How do you charge for your services?",
+      answer: "For larger projects like rewires or EV charger installations, I provide a fixed, no-obligation quote. For smaller repairs or maintenance, I have a transparent hourly rate. I never charge hidden call-out fees."
     },
     {
-      category: "General",
-      question: "Are your plumbers fully insured?",
-      answer: "Absolutely. All our South London plumbers and heating engineers are fully insured and Gas Safe registered. We take pride in our work and offer a 12-month guarantee on all parts and labor for your peace of mind."
+      category: "Safety",
+      question: "Will I receive a certificate for the electrical work?",
+      answer: "Absolutely. All major electrical work is tested and I provide the relevant certification (EIC or MEIWC) upon completion. I also notify local building control where required by Part P regulations."
     }
   ]
 }: FAQProps) => {
@@ -108,7 +108,7 @@ export const FAQ = ({
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Search for a question (e.g. 'boiler', 'call out', 'leak')..."
+              placeholder="Search for a question (e.g. 'EV', 'quote', 'fuse box')..."
               className="w-full pl-14 pr-6 py-5 bg-white border border-gray-100 rounded-2xl shadow-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-lg"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -180,7 +180,7 @@ export const FAQ = ({
               </div>
               <h3 className="text-2xl font-bold mb-4 relative z-10">Still have questions?</h3>
               <p className="text-navy-100 mb-8 relative z-10 leading-relaxed">
-                Our team is available 24/7 to provide expert advice and emergency support across South London.
+                I am available 24/7 to provide expert advice and emergency support across the Midlands.
               </p>
               <div className="space-y-4 relative z-10">
                 <a 
@@ -201,13 +201,13 @@ export const FAQ = ({
             </div>
 
             <div className="bg-orange-50 p-6 rounded-[2.5rem] border border-orange-100">
-              <h4 className="font-bold text-navy-900 mb-4">Why South London Plumbers?</h4>
+              <h4 className="font-bold text-navy-900 mb-4">Why DH Electrical?</h4>
               <ul className="space-y-4">
                 {[
-                  "60-Min Emergency Response",
-                  "Gas Safe Registered Engineers",
+                  "24/7 Emergency Support",
+                  "Fully Qualified & Certified",
                   "No Hidden Call-Out Fees",
-                  "12-Month Work Guarantee"
+                  "Professional & Reliable"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700 text-sm">
                     <div className="w-5 h-5 rounded-full bg-orange-500 flex-shrink-0 flex items-center justify-center mt-0.5">
@@ -223,7 +223,7 @@ export const FAQ = ({
 
         <div className="mt-10 text-center">
           <p className="text-gray-500 text-sm max-w-2xl mx-auto">
-            Our South London plumbing FAQ is regularly updated to provide the most accurate information on local regulations, emergency procedures, and boiler maintenance tips.
+            My FAQ is regularly updated to provide the most accurate information on electrical safety, modern installations, and emergency procedures.
           </p>
         </div>
       </div>

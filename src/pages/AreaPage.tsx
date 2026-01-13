@@ -15,9 +15,8 @@ import {
   Shield, 
   Star, 
   ArrowRight,
-  Droplets,
-  Flame,
-  Wrench,
+  Zap,
+  Battery,
   Hammer,
   FileText,
   BadgeCheck,
@@ -27,9 +26,9 @@ import {
 } from "lucide-react";
 
 // Using Unsplash images for a professional look
-const heroPlumber = "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1200";
+const heroElectrician = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=1200";
 const serviceVan = "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=1200";
-const southLondonAerial = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200";
+const localAerial = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200";
 
 const AreaPage = () => {
   const { areaSlug } = useParams<{ areaSlug: string }>();
@@ -40,21 +39,21 @@ const AreaPage = () => {
   }
 
   const localServices = [
-    { icon: Droplets, title: "Emergency Leaks", desc: "Burst pipes & water damage control" },
-    { icon: Flame, title: "Boiler Failures", desc: "Rapid diagnostics & same-day repairs" },
-    { icon: Hammer, title: "Blocked Drains", desc: "High-pressure clearing & surveys" },
-    { icon: Wrench, title: "General Plumbing", desc: "Taps, toilets & residential maintenance" }
+    { icon: Zap, title: "Emergency Repairs", desc: "Fault finding & power restoration" },
+    { icon: Battery, title: "EV Charging", desc: "Expert home & business installations" },
+    { icon: Shield, title: "Fuse Box Upgrades", desc: "Modern RCD & SPD protection" },
+    { icon: Hammer, title: "Full Rewiring", desc: "Complete property electrical overhaul" }
   ];
 
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "Plumber",
+      "@type": "Electrician",
       "name": `${siteSettings.businessName} - ${area.name}`,
-      "description": area.description || `Fastest emergency plumber in ${area.name}. Average response time ${area.emergencyTime}.`,
-      "url": `https://southlondonplumbers.co.uk/locations/${area.slug}`,
+      "description": area.description || `Fastest emergency electrician in ${area.name}. Average response time ${area.emergencyTime}.`,
+      "url": `https://dhelectricalservice.co.uk/locations/${area.slug}`,
       "telephone": siteSettings.phone,
-      "image": heroPlumber,
+      "image": heroElectrician,
       "areaServed": {
         "@type": "Place",
         "name": area.name,
@@ -62,7 +61,7 @@ const AreaPage = () => {
       },
       "address": {
         "@type": "PostalAddress",
-        "addressRegion": "London",
+        "addressRegion": "Warwickshire",
         "addressCountry": "GB"
       }
     },
@@ -70,9 +69,9 @@ const AreaPage = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://southlondonplumbers.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://southlondonplumbers.co.uk/locations" },
-        { "@type": "ListItem", "position": 3, "name": area.name, "item": `https://southlondonplumbers.co.uk/locations/${area.slug}` }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dhelectricalservice.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://dhelectricalservice.co.uk/locations" },
+        { "@type": "ListItem", "position": 3, "name": area.name, "item": `https://dhelectricalservice.co.uk/locations/${area.slug}` }
       ]
     }
   ];
@@ -80,12 +79,12 @@ const AreaPage = () => {
   return (
     <div className="bg-white font-sans">
       <Helmet>
-        <title>{area.metaTitle || `Emergency Plumber in ${area.name} | 24/7 ${area.name} Plumbing`}</title>
+        <title>{area.metaTitle || `Expert Electrician in ${area.name} | 24/7 ${area.name} Electrical Services`}</title>
         <meta 
           name="description" 
-          content={area.metaDescription || `Emergency plumber in ${area.name}. Average response time under ${area.emergencyTime}. No callout fees. Licensed, insured & Gas Safe registered. Call now for fast service in ${area.name}.`} 
+          content={area.metaDescription || `Expert electrician in ${area.name}. Average response time under ${area.emergencyTime}. No callout fees. Fully qualified & insured. Call now for fast service in ${area.name}.`} 
         />
-        <link rel="canonical" href={`https://southlondonplumbers.co.uk/locations/${area.slug}`} />
+        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${area.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(schemas)}
         </script>
@@ -95,7 +94,7 @@ const AreaPage = () => {
         {/* SECTION 1: NAVY - Hero */}
         <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden bg-navy-900">
           <div className="absolute inset-0 z-0 opacity-10">
-            <img src={southLondonAerial} className="w-full h-full object-cover" alt="" />
+            <img src={localAerial} className="w-full h-full object-cover" alt="" />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-900/80 to-navy-900" />
           </div>
           
@@ -114,11 +113,11 @@ const AreaPage = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                 </span>
-                Local Engineer Available in {area.name}
+                Local Electrician Available in {area.name}
               </div>
 
               <h1 className="font-header font-extrabold text-5xl md:text-7xl text-white leading-tight mb-8 animate-slide-in-left uppercase">
-                24/7 Emergency Plumber <br />
+                24/7 Expert Electrician <br />
                 <span className="text-orange-500 relative">
                   in {area.name}
                   <span className="absolute bottom-2 left-0 w-full h-3 bg-orange-500/20 -z-10" />
@@ -126,7 +125,7 @@ const AreaPage = () => {
               </h1>
 
               <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl leading-relaxed animate-fade-in delay-200">
-                {area.description || `Professional, Gas Safe registered engineers serving ${area.name} and the surrounding area. Average arrival in under ${area.emergencyTime}.`}
+                {area.description || `Professional, certified electrician serving ${area.name} and the surrounding area. Average arrival in under ${area.emergencyTime}.`}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
@@ -137,15 +136,11 @@ const AreaPage = () => {
                   </a>
                 </Button>
                 <div className="flex items-center gap-4 px-6 py-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-orange-500 bg-navy-800 flex items-center justify-center overflow-hidden">
-                        <img src={`https://i.pravatar.cc/150?u=${area.slug}${i}`} alt="" />
-                      </div>
-                    ))}
+                  <div className="w-10 h-10 rounded-full border-2 border-orange-500 bg-navy-800 flex items-center justify-center overflow-hidden">
+                    <Zap className="w-6 h-6 text-orange-500" />
                   </div>
                   <div className="text-sm">
-                    <p className="text-white font-bold">Local Experts</p>
+                    <p className="text-white font-bold">Local Expert</p>
                     <p className="text-white/60">Ready in {area.name}</p>
                   </div>
                 </div>
@@ -156,7 +151,7 @@ const AreaPage = () => {
           <div className="absolute bottom-0 right-0 w-1/3 h-full hidden lg:block overflow-hidden">
             <div className="relative h-full w-full">
               <img 
-                src={heroPlumber} 
+                src={heroElectrician} 
                 className="absolute bottom-0 right-0 h-[110%] w-auto object-cover object-left opacity-40 mix-blend-overlay grayscale" 
                 alt="" 
               />
@@ -171,7 +166,7 @@ const AreaPage = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { icon: Clock, label: "Response", value: area.emergencyTime },
-                { icon: Shield, label: "Registered", value: "Gas Safe" },
+                { icon: Shield, label: "Certified", value: "Fully Insured" },
                 { icon: Star, label: "Rating", value: siteSettings.googleRating },
                 { icon: CheckCircle2, label: "Coverage", value: area.postcodes[0] }
               ].map((stat, i) => (
@@ -196,18 +191,18 @@ const AreaPage = () => {
                 <Badge variant="orange" className="mb-6 px-4 py-1.5 font-bold shadow-lg shadow-orange-500/10 uppercase tracking-wider">LOCAL EXPERTISE</Badge>
                 <h2 className="font-header font-extrabold text-4xl md:text-5xl text-white mb-8 leading-tight uppercase">
                   Solving {area.name}'s <br />
-                  <span className="text-orange-500">Plumbing Challenges</span>
+                  <span className="text-orange-500">Electrical Challenges</span>
                 </h2>
                 
                 <div className="space-y-8">
                   <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-                    {area.localContext || `From the historic properties in ${area.name} to the latest modern developments, our team understands the unique plumbing infrastructure of the area.`}
+                    {area.localContext || `From the traditional homes in ${area.name} to the latest modern developments, I understand the unique electrical infrastructure of the area.`}
                   </p>
                   
                   <div className="grid sm:grid-cols-2 gap-6">
                     {localServices.map((service, i) => (
                       <div key={i} className="group bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-orange-500/30 hover:bg-white/10 transition-all">
-                        <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4 text-white shadow-lg shadow-orange-500/10">
+                        <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center mb-4 text-white shadow-lg shadow-orange-500/10">
                           <service.icon className="w-5 h-5" />
                         </div>
                         <h3 className="font-bold text-lg mb-2 text-white group-hover:text-orange-500 transition-colors uppercase">{service.title}</h3>
@@ -229,7 +224,7 @@ const AreaPage = () => {
                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-orange-500 text-orange-500" />)}
                   </div>
                   <p className="text-sm italic text-gray-600 mb-4 font-medium leading-relaxed">
-                    "Burst pipe in {area.name} at 2am. They were here in 30 mins. Saved my kitchen!"
+                    "Electrical fault in {area.name} late at night. Daniel was here in 30 mins and fixed it fast. Saved the day!"
                   </p>
                   <p className="text-xs font-bold text-navy-900 uppercase tracking-wider">— Local {area.name} Resident</p>
                 </div>
@@ -243,9 +238,9 @@ const AreaPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="max-w-2xl">
-                <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-4 uppercase tracking-tight">Where We Operate</h2>
+                <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-4 uppercase tracking-tight">Where I Operate</h2>
                 <p className="text-lg text-gray-600">
-                  Our engineers are stationed across {area.name} to ensure the fastest possible response times for all {area.postcodes.join(", ")} residents.
+                  I'm based nearby and serve all {area.name} residents, ensuring the fastest possible response times for all {area.postcodes.join(", ")} postcodes.
                 </p>
               </div>
               <Button asChild variant="outline" className="border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white rounded-xl h-12 px-6">
@@ -257,14 +252,14 @@ const AreaPage = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
-                {(area.landmarks || ["High Street", "Train Station", "Local Parks"]).map((landmark: string, i: number) => (
+                {(area.landmarks || ["High Street", "Local Parks"]).map((landmark: string, i: number) => (
                   <div key={i} className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl border border-transparent hover:border-orange-500/30 hover:bg-white transition-all group shadow-sm hover:shadow-md">
                     <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-orange-500 shadow-sm group-hover:scale-110 transition-transform border border-gray-100 group-hover:border-orange-500/20">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="font-bold text-navy-900">{landmark}</h4>
-                      <p className="text-xs text-gray-500 font-medium">Engineer stationed nearby</p>
+                      <p className="text-xs text-gray-500 font-medium">Local service specialist</p>
                     </div>
                   </div>
                 ))}
@@ -298,14 +293,14 @@ const AreaPage = () => {
             <div className="text-center mb-16">
               <Badge variant="orange" className="mb-4 px-4 py-1.5 font-bold uppercase tracking-wider">SIMPLE WORKFLOW</Badge>
               <h2 className="font-header font-extrabold text-4xl md:text-5xl text-white mb-4 uppercase">How It Works</h2>
-              <p className="text-white/60 max-w-2xl mx-auto text-lg">Getting an emergency plumber in {area.name} is simple and transparent.</p>
+              <p className="text-white/60 max-w-2xl mx-auto text-lg">Getting an emergency electrician in {area.name} is simple and transparent.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 relative">
               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/10 -translate-y-1/2 z-0" />
               {[
-                { step: "01", title: "Call Dispatch", desc: "Our local {area.name} team takes your details and assesses the emergency.", icon: Phone },
-                { step: "02", title: "Rapid Arrival", desc: "The nearest engineer to {area.name} is dispatched immediately.", icon: Truck },
-                { step: "03", title: "Issue Resolved", desc: "We fix the problem, clean up, and provide a 12-month guarantee.", icon: BadgeCheck }
+                { step: "01", title: "Contact Me", desc: "Call or message with your electrical issue and location in {area.name}.", icon: Phone },
+                { step: "02", title: "Rapid Arrival", desc: "I'll be with you as quickly as possible to assess and fix the fault.", icon: Truck },
+                { step: "03", title: "Job Certified", desc: "Work is completed, tested, and certified for your peace of mind.", icon: BadgeCheck }
               ].map((item, i) => (
                 <div key={i} className="relative z-10 bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 text-center hover:bg-white/10 transition-all hover:border-orange-500/30 group">
                   <div className="w-20 h-20 bg-orange-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
@@ -329,9 +324,9 @@ const AreaPage = () => {
                 <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-8 uppercase tracking-tight">Frequently Asked <br /><span className="text-orange-500 relative">Questions in {area.name}<span className="absolute bottom-1 left-0 w-full h-2 bg-orange-500/10 -z-10" /></span></h2>
                 <div className="space-y-4">
                   {[
-                    { q: `What is the arrival time in ${area.name}?`, a: `On average, we reach ${area.name} residents in ${area.emergencyTime}. Since our engineers are local to the ${area.postcodes[0]} area, we bypass major traffic hubs.` },
-                    { q: "Do you have Gas Safe engineers nearby?", a: "Yes, we have multiple Gas Safe registered specialists stationed across South London, including several who specifically cover your area." },
-                    { q: "Are there extra costs for late-night calls?", a: "We maintain transparent pricing. While emergency rates apply, we never charge 'hidden' fees or call-out charges." }
+                    { q: `What is your arrival time in ${area.name}?`, a: `I aim to reach ${area.name} residents as quickly as possible, typically within ${area.emergencyTime}. Since I am based locally, I can often bypass major traffic hubs.` },
+                    { q: "Are you fully certified for all electrical work?", a: "Yes, I am a fully qualified and certified electrician, registered to handle all residential electrical installations and repairs." },
+                    { q: "Do you provide fixed quotes for larger jobs?", a: "Yes, for planned work like rewires or EV installations, I provide a clear, fixed quote with no hidden extras." }
                   ].map((faq, i) => (
                     <div key={i} className="p-6 bg-gray-50 rounded-xl border border-transparent hover:border-orange-500/30 hover:bg-white hover:shadow-md transition-all group">
                       <h4 className="font-bold text-navy-900 mb-3 flex items-center gap-3 group-hover:text-orange-500 transition-colors uppercase">
@@ -350,7 +345,7 @@ const AreaPage = () => {
                   </div>
                   <div className="absolute bottom-0 left-0 w-full h-1.5 bg-orange-500" />
                   <h3 className="text-4xl font-header font-bold mb-6 relative z-10 uppercase">Planning a <span className="text-orange-500">Project?</span></h3>
-                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">We don't just do emergencies. If you're planning a bathroom renovation or boiler upgrade in {area.name}, we provide free site surveys.</p>
+                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">I don't just do emergencies. If you're planning a home renovation or EV charger installation in {area.name}, I provide free site surveys.</p>
                   <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white w-fit rounded-xl h-14 px-10 text-lg font-bold shadow-xl shadow-orange-500/20 relative z-10 transition-transform hover:scale-105 active:scale-95">
                     <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center gap-3">
                       <FileText className="w-5 h-5" />
@@ -367,13 +362,20 @@ const AreaPage = () => {
         <section className="py-16 bg-navy-900 border-y border-white/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-orange-500/5 opacity-30" />
           <div className="container mx-auto px-4 text-center relative z-10">
-            <p className="text-white/60 uppercase tracking-[0.3em] font-bold text-xs mb-12">Fully Accredited & Certified</p>
+            <p className="text-white/60 uppercase tracking-[0.3em] font-bold text-xs mb-12">Fully Certified & Professional</p>
             <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20 opacity-100 grayscale transition-all duration-500 hover:grayscale-0">
-              {/* Using standard logos from public/CDN for reliability */}
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Gas_Safe_Register_logo.svg/512px-Gas_Safe_Register_logo.svg.png" alt="Gas Safe" className="h-12 md:h-16 w-auto brightness-0 invert" />
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/City_%26_Guilds_logo.svg/512px-City_%26_Guilds_logo.svg.png" alt="City & Guilds" className="h-10 md:h-14 w-auto brightness-0 invert" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Vaillant_logo.svg/512px-Vaillant_logo.svg.png" alt="Vaillant" className="h-8 md:h-12 w-auto brightness-0 invert" />
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Worcester_Bosch_logo.svg/512px-Worcester_Bosch_logo.svg.png" alt="Worcester Bosch" className="h-10 md:h-14 w-auto brightness-0 invert" />
+              <div className="flex flex-col items-center">
+                <Zap className="h-12 w-auto text-orange-500 mb-2" />
+                <span className="text-white font-bold uppercase tracking-widest text-xs">Certified</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Shield className="h-12 w-auto text-white mb-2" />
+                <span className="text-white font-bold uppercase tracking-widest text-xs">Insured</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <BadgeCheck className="h-12 w-auto text-orange-500 mb-2" />
+                <span className="text-white font-bold uppercase tracking-widest text-xs">Professional</span>
+              </div>
             </div>
           </div>
         </section>
@@ -387,10 +389,10 @@ const AreaPage = () => {
           
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-header font-extrabold text-5xl md:text-6xl mb-8 uppercase tracking-tight">
-              Plumbing Emergency in {area.name}?
+              Electrical Emergency in {area.name}?
             </h2>
             <p className="text-2xl md:text-3xl mb-12 opacity-90 font-medium max-w-3xl mx-auto leading-relaxed">
-              Call our {area.name} dispatch team now for a free quote and <span className="underline decoration-navy-900 decoration-4 underline-offset-8 font-black">{area.emergencyTime}</span> response.
+              Call me now for a free quote and <span className="underline decoration-navy-900 decoration-4 underline-offset-8 font-black">rapid local</span> response.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
@@ -398,7 +400,7 @@ const AreaPage = () => {
                 href={`tel:${siteSettings.phoneFormatted}`} 
                 className="group flex items-center gap-6 bg-navy-900 text-white px-10 py-6 rounded-2xl text-3xl font-header font-extrabold hover:scale-105 transition-all shadow-2xl shadow-navy-900/40"
               >
-                <div className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
+                <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
                   <Phone className="w-7 h-7" />
                 </div>
                 {siteSettings.phone}
@@ -408,7 +410,7 @@ const AreaPage = () => {
                   <CheckCircle2 className="w-6 h-6 text-navy-900" /> No Callout Fees
                 </p>
                 <p className="font-black text-xl flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> 12-Month Guarantee
+                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> Professional Guarantee
                 </p>
               </div>
             </div>

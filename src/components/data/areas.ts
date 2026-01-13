@@ -13,49 +13,49 @@ export interface Area {
 
 export const areas: Area[] = [
   {
-    slug: "greenwich",
-    name: "Greenwich",
-    description: "Greenwich's local plumbing experts. From historic homes to modern apartments, we provide top-tier plumbing services throughout the Royal Borough.",
+    slug: "rugby",
+    name: "Rugby",
+    description: "Your local Rugby electrician. Based nearby, I provide rapid response for all electrical installations and emergencies across the Rugby area.",
     emergencyTime: "30 minutes",
-    postcodes: ["SE10"],
-    landmarks: ["Greenwich Park", "Royal Observatory", "Cutty Sark", "Greenwich Market"],
-    neighborhoods: ["Blackheath", "Deptford", "Charlton"]
+    postcodes: ["CV21", "CV22", "CV23"],
+    landmarks: ["Rugby School", "Rugby Art Gallery", "Caldecott Park", "Elliott's Field"],
+    neighborhoods: ["Dunchurch", "Hillmorton", "Bilton", "Cawston"]
   },
   {
-    slug: "croydon",
-    name: "Croydon",
-    description: "Reliable plumbing and heating services across Croydon. We have local engineers ready to help with any emergency or planned maintenance.",
-    emergencyTime: "35 minutes",
-    postcodes: ["CR0", "CR2"],
-    landmarks: ["Croydon High Street", "East Croydon Station", "Fairfield Halls"],
-    neighborhoods: ["Purley", "Thornton Heath", "Addiscombe"]
-  },
-  {
-    slug: "brixton",
-    name: "Brixton",
-    description: "Fast-response plumbers serving the heart of Brixton. We handle everything from leaky taps to full boiler installations in the Lambeth area.",
+    slug: "southam",
+    name: "Southam",
+    description: "Professional electrical services in Southam. From EV chargers to full rewires, I'm your trusted local electrician for all residential work.",
     emergencyTime: "25 minutes",
-    postcodes: ["SW2", "SW9"],
-    landmarks: ["Brixton Market", "Brixton Academy", "Brockwell Park"],
-    neighborhoods: ["Clapham", "Stockwell", "Herne Hill"]
+    postcodes: ["CV47"],
+    landmarks: ["St James Church", "Southam Library", "Grange Hall"],
+    neighborhoods: ["Long Itchington", "Harbury", "Napton", "Ladbroke"]
   },
   {
-    slug: "bromley",
-    name: "Bromley",
-    description: "Expert plumbing solutions for Bromley residents. Our Gas Safe registered engineers are available for all your heating and plumbing needs.",
-    emergencyTime: "40 minutes",
-    postcodes: ["BR1", "BR2"],
-    landmarks: ["Bromley High Street", "Bromley South Station", "Churchill Theatre"],
-    neighborhoods: ["Beckenham", "Orpington", "Hayes"]
+    slug: "leamington-spa",
+    name: "Leamington Spa",
+    description: "Expert electrical solutions for Leamington Spa residents. I offer safe, reliable, and certified electrical work for homes and businesses.",
+    emergencyTime: "35 minutes",
+    postcodes: ["CV31", "CV32"],
+    landmarks: ["Royal Pump Rooms", "Jephson Gardens", "Victoria Park"],
+    neighborhoods: ["Whitnash", "Lillington", "Cubbington", "Radford Semele"]
   },
   {
-    slug: "lewisham",
-    name: "Lewisham",
-    description: "Dedicated local plumbers in Lewisham. We offer 24/7 emergency support and high-quality installations for kitchens and bathrooms.",
+    slug: "warwick",
+    name: "Warwick",
+    description: "Dedicated local electrician in Warwick. Providing top-tier electrical maintenance, safety checks, and modern installations.",
     emergencyTime: "30 minutes",
-    postcodes: ["SE13"],
-    landmarks: ["Lewisham Shopping Centre", "Lewisham Station", "Lewisham Park"],
-    neighborhoods: ["Catford", "Hither Green", "Ladywell"]
+    postcodes: ["CV34"],
+    landmarks: ["Warwick Castle", "Lord Leycester Hospital", "Market Hall Museum"],
+    neighborhoods: ["Barford", "Hampton on the Hill", "Sherbourne", "Hatton"]
+  },
+  {
+    slug: "coventry",
+    name: "Coventry",
+    description: "Reliable electrical services across Coventry. I handle everything from consumer unit upgrades to security lighting with expert care.",
+    emergencyTime: "40 minutes",
+    postcodes: ["CV1", "CV2", "CV3", "CV4", "CV5", "CV6"],
+    landmarks: ["Coventry Cathedral", "Transport Museum", "War Memorial Park"],
+    neighborhoods: ["Kenilworth", "Bedworth", "Allesley", "Stivichall"]
   }
 ];
 

@@ -18,8 +18,8 @@ export const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>{siteSettings.businessName} | Expert Plumbing in South London</title>
-        <meta name="description" content="South London's most reliable plumbers. 24/7 emergency repairs, boiler installations, and more. 12-month guarantee on all work." />
+        <title>{siteSettings.businessName} | Expert Electrician in Rugby & Southam</title>
+        <meta name="description" content="Professional electrical services across Rugby, Southam and Coventry. 24/7 emergency repairs, EV charger installations, and more. Certified work with free quotes." />
       </Helmet>
       
       <Hero />

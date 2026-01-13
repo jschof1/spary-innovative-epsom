@@ -1,12 +1,11 @@
-import { Clock, Flame, Droplets, Zap, Home, Search, type LucideIcon } from "lucide-react"
+import { Zap, Battery, Home, Lightbulb, Shield, Settings, type LucideIcon } from "lucide-react"
 
-// Import service images
-import emergencyImg from "@/assets/services/service-24-7-emergency-plumbing.webp"
-import boilerImg from "@/assets/services/service-boiler-repair---installation.webp"
-import drainsImg from "@/assets/services/service-blocked-drains-clearing.webp"
-import cylindersImg from "@/assets/services/service-hot-water-cylinder-services.webp"
-import tapsToiletsImg from "@/assets/services/service-tap---toilet-repairs.webp"
-import leaksImg from "@/assets/services/service-advanced-leak-detection.webp"
+// For now using Unsplash placeholders for electrical services
+const evImg = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80"
+const rewireImg = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80"
+const cuImg = "https://images.unsplash.com/photo-1558211583-d28f6109314a?auto=format&fit=crop&q=80"
+const maintenanceImg = "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80"
+const lightingImg = "https://images.unsplash.com/photo-1565814329452-e1efa71c57da?auto=format&fit=crop&q=80"
 
 export interface Service {
   id: string
@@ -22,148 +21,95 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "emergency",
-    slug: "emergency-plumbing",
-    title: "24/7 Emergency Plumbing",
-    shortTitle: "Emergency Repairs",
-    icon: Clock,
-    image: emergencyImg,
-    description: "Burst pipes, water shut-off, and major leaks. We arrive fast to minimize damage.",
-    longDescription: "Plumbing emergencies don't wait for business hours. Our team is available 24/7 across South London to handle burst pipes, severe leaks, and water shut-off emergencies. We aim to be on-site within 60 minutes to minimize damage to your property.",
+    id: "ev-charging",
+    slug: "ev-charger-installation",
+    title: "EV Charger Installation",
+    shortTitle: "EV Charging",
+    icon: Battery,
+    image: evImg,
+    description: "Professional home and business EV charging point installations.",
+    longDescription: "Switching to an electric vehicle? I provide expert installation of home EV charging points, ensuring your vehicle is charged safely and efficiently. I handle everything from the initial site survey to the final testing and certification.",
     faqs: [
       {
-        category: "Emergency",
-        question: "How fast can you arrive for an emergency?",
-        answer: "We typically arrive within 60 minutes for emergencies across South London, including Croydon, Brixton, and Bromley."
+        category: "EV Charging",
+        question: "How long does it take to install an EV charger?",
+        answer: "A standard installation usually takes between 3 to 4 hours. However, this can vary depending on the distance between your consumer unit and the charging point."
       },
       {
-        category: "Emergency",
-        question: "Do you charge extra for night call-outs?",
-        answer: "We have a transparent fixed hourly rate for emergency work which is agreed upon before we dispatch an engineer."
-      },
-      {
-        category: "Emergency",
-        question: "What should I do while waiting for an emergency plumber?",
-        answer: "The most important step is to turn off your main water stopcock. If the leak is near electrical appliances, turn off your electricity at the consumer unit. Our team will guide you over the phone until we arrive."
+        category: "EV Charging",
+        question: "Do I need to upgrade my fuse box for an EV charger?",
+        answer: "In some cases, yes. I will assess your current consumer unit during the site survey to ensure it can safely handle the additional load of an EV charger."
       }
     ]
   },
   {
-    id: "boiler",
-    slug: "boiler-repair",
-    title: "Boiler Repair & Installation",
-    shortTitle: "Boiler Services",
-    icon: Flame,
-    image: boilerImg,
-    description: "Gas Safe registered diagnostics and replacement. Worcester Bosch & Vaillant experts.",
-    longDescription: "Our Gas Safe registered engineers specialize in all types of boiler repairs and installations. Whether you have a breakdown or need a high-efficiency replacement, we work with leading brands like Worcester Bosch and Vaillant to keep your home warm.",
-    faqs: [
-      {
-        category: "Boilers",
-        question: "Are your boiler engineers Gas Safe registered?",
-        answer: "Yes, every engineer working on a boiler or gas appliance carries a valid Gas Safe ID card. This is a legal requirement for your safety."
-      },
-      {
-        category: "Boilers",
-        question: "Which boiler brands do you install and repair?",
-        answer: "We are experts in Worcester Bosch, Vaillant, Ideal, and Baxi systems. However, our engineers are trained to diagnose and repair almost any make or model of domestic boiler."
-      },
-      {
-        category: "Boilers",
-        question: "How long does a new boiler installation take?",
-        answer: "A standard combi-to-combi boiler swap usually takes one day. More complex installations, such as system conversions, may take 2-3 days."
-      }
-    ]
-  },
-  {
-    id: "drains",
-    slug: "blocked-drains",
-    title: "Blocked Drains Clearing",
-    shortTitle: "Blocked Drains",
-    icon: Droplets,
-    image: drainsImg,
-    description: "High-pressure jetting for internal and external drains. We clear blocks fast.",
-    longDescription: "Blocked drains can be more than just a nuisance; they can lead to health hazards and property damage. We use high-pressure water jetting and CCTV surveys to identify and clear blockages in internal and external drainage systems quickly and effectively.",
-    faqs: [
-      {
-        category: "Drains",
-        question: "What methods do you use to clear blocked drains?",
-        answer: "We primarily use high-pressure water jetting, which is the most effective way to clear stubborn blockages and clean the pipe walls. For internal clogs, we use specialized manual and electric machinery."
-      },
-      {
-        category: "Drains",
-        question: "Do you offer CCTV drain surveys?",
-        answer: "Yes, we use advanced CCTV equipment to inspect the condition of your drains and identify the exact cause of recurring blockages or structural issues."
-      }
-    ]
-  },
-  {
-    id: "cylinders",
-    slug: "hot-water-cylinders",
-    title: "Hot Water Cylinder Services",
-    shortTitle: "Hot Water",
+    id: "rewires",
+    slug: "rewires",
+    title: "Full & Partial Rewires",
+    shortTitle: "Rewiring",
     icon: Zap,
-    image: cylindersImg,
-    description: "Repairing immersion heaters, thermostats, and unvented cylinders.",
-    longDescription: "We provide comprehensive services for hot water cylinders, including unvented systems. From immersion heater replacements to thermostat repairs and annual safety checks, we ensure you have reliable hot water when you need it.",
+    image: rewireImg,
+    description: "Complete electrical system upgrades for older properties.",
+    longDescription: "Older properties often have outdated wiring that can be a safety hazard. I provide full and partial rewiring services to bring your electrical system up to modern safety standards (BS 7671), increasing safety and capacity.",
     faqs: [
       {
-        category: "Hot Water",
-        question: "Are you qualified to work on unvented hot water cylinders?",
-        answer: "Yes, our engineers hold the necessary G3 Unvented Hot Water qualification required by law to install and service these high-pressure systems."
-      },
-      {
-        category: "Hot Water",
-        question: "Why is my hot water cylinder making a humming noise?",
-        answer: "This is often caused by 'scale' buildup on the immersion heater or a faulty thermostat. We can diagnose and replace these components quickly to restore quiet operation."
+        category: "Rewiring",
+        question: "When should I consider a full rewire?",
+        answer: "If your property is over 25 years old and hasn't been rewired, or if you're experiencing frequent circuit trips, it's worth getting an inspection. Old wiring can become brittle and pose a fire risk."
       }
     ]
   },
   {
-    id: "taps-toilets",
-    slug: "tap-toilet-repair",
-    title: "Tap & Toilet Repairs",
-    shortTitle: "Taps & Toilets",
-    icon: Home,
-    image: tapsToiletsImg,
-    description: "Dripping taps, running toilets, ball valve and siphon replacement.",
-    longDescription: "Leaking taps and running toilets can waste thousands of liters of water. We fix all common plumbing fixtures, replacing washers, cartridges, siphons, and ball valves to stop leaks and restore full functionality to your bathroom and kitchen.",
+    id: "consumer-unit",
+    slug: "consumer-unit-upgrades",
+    title: "Consumer Unit Upgrades",
+    shortTitle: "Fuse Box Upgrades",
+    icon: Shield,
+    image: cuImg,
+    description: "Upgrading old fuse boxes to modern RCD-protected consumer units.",
+    longDescription: "Your consumer unit (fuse box) is the heart of your home's electrical system. Upgrading to a modern unit with RCD and SPD protection significantly improves safety and provides better protection against electrical faults and surges.",
     faqs: [
       {
-        category: "Repairs",
-        question: "Can you fix any type of leaking tap?",
-        answer: "We can repair or replace almost all types of taps, including traditional pillar taps, modern mixer taps, and ceramic disk models. If a repair isn't cost-effective, we can install a new tap of your choice."
-      },
-      {
-        category: "Repairs",
-        question: "Why does my toilet keep running after flushing?",
-        answer: "This is usually due to a faulty flush valve (siphon) or an inlet valve that won't shut off. Both are common repairs that our plumbers can handle in a single visit."
+        category: "Fuse Box",
+        question: "Why should I upgrade my fuse box?",
+        answer: "Modern consumer units provide much better protection against electric shocks and fires. They also include surge protection devices (SPDs) to protect your electronic equipment."
       }
     ]
   },
   {
-    id: "leaks",
-    slug: "leak-detection",
-    title: "Advanced Leak Detection",
-    shortTitle: "Leak Detection",
-    icon: Search,
-    image: leaksImg,
-    description: "Tracing hidden leaks behind walls and under floors using thermal imaging.",
-    longDescription: "Hidden leaks can cause significant structural damage before they are even noticed. We use non-destructive methods, including thermal imaging and acoustic sensors, to pinpoint the exact location of leaks behind walls and under floors.",
+    id: "maintenance",
+    slug: "electrical-maintenance",
+    title: "Electrical Maintenance",
+    shortTitle: "Maintenance",
+    icon: Settings,
+    image: maintenanceImg,
+    description: "General repairs, socket replacements, and routine safety checks.",
+    longDescription: "From replacing broken sockets and switches to regular maintenance of commercial electrical systems, I provide a full range of electrical maintenance services to keep your property running smoothly and safely.",
     faqs: [
       {
-        category: "Leak Detection",
-        question: "Is your leak detection service non-destructive?",
-        answer: "Yes, our primary goal is to find the leak without damaging your property. We use thermal imaging, acoustic microphones, and tracer gases to find the leak before any floorboards or tiles are removed."
-      },
+        category: "Maintenance",
+        question: "How often should I have my electrics checked?",
+        answer: "For domestic properties, it's recommended to have an EICR (Electrical Installation Condition Report) every 10 years, or when you move house."
+      }
+    ]
+  },
+  {
+    id: "lighting",
+    slug: "outside-lighting",
+    title: "Outdoor & Security Lighting",
+    shortTitle: "Outside Lighting",
+    icon: Lightbulb,
+    image: lightingImg,
+    description: "Decorative and security lighting for gardens and driveways.",
+    longDescription: "Enhance your home's security and curb appeal with professional outdoor lighting. I install everything from motion-sensor security lights to decorative garden lighting and driveway illumination.",
+    faqs: [
       {
-        category: "Leak Detection",
-        question: "Will my insurance cover the cost of leak detection?",
-        answer: "Most home insurance policies include 'Trace and Access' cover, which usually covers the cost of finding the leak. We can provide a detailed report for your insurance claim."
+        category: "Lighting",
+        question: "Are LED lights better for outdoor use?",
+        answer: "Yes, LEDs are more energy-efficient, longer-lasting, and perform better in cold temperatures compared to traditional bulbs."
       }
     ]
   }
 ]
 
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug)
-

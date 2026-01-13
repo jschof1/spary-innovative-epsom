@@ -2,19 +2,19 @@ const steps = [
   {
     number: "1",
     title: "You Call or Book",
-    description: "Call 020 8123 4567 or fill out the form. Our dispatch team answers instantly.",
+    description: "Call 07930 937358 or fill out the form. I'll get back to you immediately.",
     borderColor: "border-orange-500",
   },
   {
     number: "2",
-    title: "We Confirm & Dispatch",
-    description: "We give you an arrival window and a transparent quote. You receive a text when we're en route.",
+    title: "Confirm & Dispatch",
+    description: "I'll give you an arrival window and a transparent quote. I'll let you know when I'm en route.",
     borderColor: "border-navy-900",
   },
   {
     number: "3",
     title: "The Job is Done",
-    description: "We fix the issue, clean up the mess, and provide a 12-month warranty on the work.",
+    description: "I fix the issue, clean up, and provide certified documentation for the work.",
     borderColor: "border-navy-900",
   },
 ]

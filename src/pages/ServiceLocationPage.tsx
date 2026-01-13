@@ -25,7 +25,7 @@ export const ServiceLocationPage = () => {
   }
 
   const title = `${service.shortTitle} in ${location.name}`
-  const description = `Need ${service.shortTitle.toLowerCase()} in ${location.name}? We offer fast, reliable ${service.title.toLowerCase()} across the ${location.name} area and ${location.postcodes.join(", ")} postcodes.`
+  const description = `Need ${service.shortTitle.toLowerCase()} in ${location.name}? I offer fast, reliable ${service.title.toLowerCase()} across the ${location.name} area and ${location.postcodes.join(", ")} postcodes.`
 
   return (
     <>
@@ -46,13 +46,12 @@ export const ServiceLocationPage = () => {
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
               If you're looking for a reliable professional for {service.title.toLowerCase()} in {location.name}, 
-              {siteSettings.businessName} is here to help. Our local engineers are familiar with the {location.name} area 
-              and can provide rapid response times for all your plumbing needs.
+              {siteSettings.businessName} is here to help. Based locally, I am familiar with the {location.name} area 
+              and can provide rapid response times for all your electrical needs.
             </p>
             <p className="mb-4">
-              We cover all postcodes in {location.name}, including {location.postcodes.join(" and ")}. 
-              Whether it's a small repair or a major installation, our work comes with a 12-month guarantee 
-              and is performed by fully qualified, insured professionals.
+              I cover all postcodes in {location.name}, including {location.postcodes.join(" and ")}. 
+              Whether it's a small repair or a major installation, my work is performed by a fully qualified, insured professional.
             </p>
           </div>
         </div>

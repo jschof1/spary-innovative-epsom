@@ -10,15 +10,15 @@ export const ReviewsPage = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": siteSettings.businessName,
-    "image": "https://southlondonplumbers.co.uk/logo.png", // Replace with actual logo URL
-    "@id": "https://southlondonplumbers.co.uk",
-    "url": "https://southlondonplumbers.co.uk",
+    "image": "https://dhelectricalservice.co.uk/logo.png", // Replace with actual logo URL
+    "@id": "https://dhelectricalservice.co.uk",
+    "url": "https://dhelectricalservice.co.uk",
     "telephone": siteSettings.phone,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteSettings.address,
-      "addressLocality": "London",
-      "addressRegion": "South London",
+      "addressLocality": "Birdingbury",
+      "addressRegion": "Warwickshire",
       "addressCountry": "GB"
     },
     "aggregateRating": {
@@ -49,7 +49,7 @@ export const ReviewsPage = () => {
     <>
       <Helmet>
         <title>Customer Reviews & Testimonials | {siteSettings.businessName}</title>
-        <meta name="description" content={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from ${reviewsStats.totalReviews} customers across South London.`} />
+        <meta name="description" content={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from customers across Rugby and the Midlands.`} />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
         </script>
@@ -70,11 +70,11 @@ export const ReviewsPage = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h1 className="font-header text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  What Our <span className="text-orange-500">Customers</span> Say
+                  What My <span className="text-orange-500">Customers</span> Say
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  We take pride in delivering exceptional plumbing and heating services across South London. 
-                  Read why hundreds of homeowners trust us with their repairs and installations.
+                  I take pride in delivering exceptional electrical services across the Midlands. 
+                  Read why local homeowners trust me with their repairs and installations.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-none font-bold">

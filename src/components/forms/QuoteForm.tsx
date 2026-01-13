@@ -48,7 +48,7 @@ export const QuoteForm = () => {
       <div className="relative z-10">
         <div className="text-center mb-8 md:mb-10">
           <h3 className="font-header text-2xl md:text-3xl font-bold text-navy-900 mb-2">Get Your Free Quote</h3>
-          <p className="text-sm text-gray-600 px-4">Join 2,500+ happy customers in South London</p>
+          <p className="text-sm text-gray-600 px-4">Local professional serving Rugby & the Midlands</p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
@@ -93,10 +93,12 @@ export const QuoteForm = () => {
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="emergency">🚨 Emergency Repair</SelectItem>
-                <SelectItem value="boiler">Boiler Repair/Service</SelectItem>
-                <SelectItem value="drain">Blocked Drain</SelectItem>
-                <SelectItem value="general">General Plumbing</SelectItem>
+                <SelectItem value="ev">EV Charger Install</SelectItem>
+                <SelectItem value="fusebox">Fuse Box Upgrade</SelectItem>
+                <SelectItem value="rewire">Property Rewire</SelectItem>
+                <SelectItem value="maintenance">Electrical Maintenance</SelectItem>
+                <SelectItem value="lighting">Outside Lighting</SelectItem>
+                <SelectItem value="other">Other Electrical Issue</SelectItem>
               </SelectContent>
             </Select>
           </div>

@@ -26,11 +26,11 @@ export const ContactPage = () => {
               </div>
               
               <h1 className="font-header text-3xl md:text-6xl font-extrabold text-navy-900 mb-6 leading-[1.1]">
-                Book Your Expert <span className="text-orange-500">London Plumber</span> Today
+                Book Your Expert <span className="text-orange-500">Local Electrician</span> Today
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl">
-                Need a repair, installation, or emergency service? Fill out the form or call our 24/7 helpline. We're local, Gas Safe registered, and ready to help.
+                Need a repair, installation, or emergency service? Fill out the form or call me 24/7. I'm local, fully qualified, and ready to help.
               </p>
 
               {/* Contact Cards */}
@@ -86,8 +86,8 @@ export const ContactPage = () => {
                     <Trophy className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-bold text-navy-900 text-sm md:text-base">Gas Safe Registered</p>
-                    <p className="text-gray-500 text-xs md:text-sm">Fully qualified engineers for your safety and peace of mind.</p>
+                    <p className="font-bold text-navy-900 text-sm md:text-base">Fully Certified</p>
+                    <p className="text-gray-500 text-xs md:text-sm">Qualified professional for your safety and peace of mind.</p>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export const ContactPage = () => {
               {/* Trust badges below form for extra conversion */}
               <div className="mt-8 flex justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                 <div className="flex flex-col items-center">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 text-center">Trusted Service Standards</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 text-center">Certified Service Standards</span>
                   <div className="flex gap-6">
                     <ShieldCheck className="w-8 h-8 text-navy-900" />
                     <CheckCircle2 className="w-8 h-8 text-navy-900" />
@@ -122,8 +122,8 @@ export const ContactPage = () => {
               <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
                 <Mail className="w-7 h-7 text-orange-500" />
               </div>
-              <h3 className="text-xl font-bold text-navy-900 mb-3">Email Us</h3>
-              <p className="text-gray-600 mb-4">For non-urgent enquiries, quotes, or business partnership requests.</p>
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Email Me</h3>
+              <p className="text-gray-600 mb-4">For non-urgent enquiries, quotes, or business requests.</p>
               <a href={`mailto:${siteSettings.email}`} className="text-orange-500 font-bold hover:underline">
                 {siteSettings.email}
               </a>
@@ -134,8 +134,8 @@ export const ContactPage = () => {
                 <MapPin className="w-7 h-7 text-orange-500" />
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-3">Service Areas</h3>
-              <p className="text-gray-600 mb-4">We are based in and serve all of South London including:</p>
-              <p className="font-semibold text-navy-900">Greenwich, Croydon, Brixton, Bromley, Lewisham & more.</p>
+              <p className="text-gray-600 mb-4">I am based in Birdingbury and serve:</p>
+              <p className="font-semibold text-navy-900">Rugby, Southam, Leamington Spa, Warwick, Coventry & more.</p>
             </div>
 
             <div>

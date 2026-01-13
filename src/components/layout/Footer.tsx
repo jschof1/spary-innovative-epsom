@@ -2,12 +2,9 @@ import { Link } from "react-router-dom"
 import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
-import gasSafeLogo from "../../assets/logos/gas-safe.svg";
+import { Zap } from "lucide-react"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
-import vaillantLogo from "../../assets/logos/valliant.webp";
-import worcesterBoschLogo from "../../assets/logos/bosch.webp";
-import slLogo from "@/assets/sl-logo.png";
-
+import niceicLogo from "../../assets/certifications/niceic240x172.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -19,16 +16,16 @@ export const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img src={slLogo} alt="South London Plumbers" className="h-full w-auto object-contain" />
+              <div className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg">
+                <Zap className="text-orange-500 w-6 h-6" />
               </div>
               <div className="leading-tight">
-                <span className="block font-header font-bold text-white text-lg uppercase tracking-tight">South London</span>
-                <span className="block font-header font-bold text-orange-500 text-sm tracking-widest -mt-1">PLUMBERS</span>
+                <span className="block font-header font-bold text-white text-lg uppercase tracking-tight">DH Electrical</span>
+                <span className="block font-header font-bold text-orange-500 text-sm tracking-widest -mt-1">SERVICES</span>
               </div>
             </Link>
             <p className="text-gray-400 mb-6">
-              South London's most trusted plumbing and heating experts. Available 24/7 for all your emergencies.
+              Expert electrical services for Rugby, Southam, and the Midlands. Fully qualified, insured, and available 24/7 for emergencies.
             </p>
             <div className="flex flex-col gap-2">
               <a href={`tel:${siteSettings.phoneFormatted}`} className="text-xl font-bold hover:text-orange-500 transition-colors">
@@ -41,7 +38,7 @@ export const Footer = () => {
                 Customer Reviews
               </Link>
               <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                About Us
+                About Daniel Hollands
               </Link>
               <Link to="/contact#booking-form" className="text-orange-500 font-bold hover:underline mt-2">
                 Book Online Now
@@ -65,12 +62,12 @@ export const Footer = () => {
 
           {/* Areas Column */}
           <div>
-            <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Areas We Cover</h4>
+            <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Areas I Cover</h4>
             <ul className="space-y-3">
               {locations.map(location => (
                 <li key={location.id}>
                   <Link to={`/locations/${location.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
-                    Plumber in {location.name}
+                    Electrician in {location.name}
                   </Link>
                 </li>
               ))}
@@ -83,8 +80,8 @@ export const Footer = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                 <img 
-                  src={gasSafeLogo} 
-                  alt="Gas Safe Registered" 
+                  src={niceicLogo} 
+                  alt="NICEIC Certified" 
                   className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
                 />
               </div>
@@ -95,19 +92,11 @@ export const Footer = () => {
                   className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
                 />
               </div>
-              <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
-                <img 
-                  src={vaillantLogo} 
-                  alt="Vaillant Advance" 
-                  className="max-h-10 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
-                />
-              </div>
-              <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
-                <img 
-                  src={worcesterBoschLogo} 
-                  alt="Worcester Bosch" 
-                  className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
-                />
+              <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300 col-span-2">
+                <div className="text-center">
+                  <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Registration No.</span>
+                  <p className="text-sm font-bold text-white/80">{siteSettings.registrationNumber}</p>
+                </div>
               </div>
             </div>
           </div>

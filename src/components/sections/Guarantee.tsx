@@ -4,17 +4,17 @@ import { Link } from "react-router-dom"
 const promises = [
   {
     title: "Upfront Pricing",
-    description: "You approve the price before we pick up a wrench. No hidden charges or surprise extras.",
+    description: "You approve the price before I start any work. No hidden charges or surprise extras.",
     icon: Award,
   },
   {
-    title: "12-Month Warranty",
-    description: "Our work is built to last. If our repair fails within a year, we'll fix it at no extra cost.",
+    title: "Professional Guarantee",
+    description: "My work is built to last. If any issue arises from my work within a year, I'll fix it at no extra cost.",
     icon: ShieldCheck,
   },
   {
     title: "Respect for Your Home",
-    description: "We treat your property like our own. We wear shoe covers and leave your space spotless.",
+    description: "I treat your property like my own. I wear shoe covers and leave your space spotless.",
     icon: Heart,
   },
 ]
@@ -34,7 +34,7 @@ export const Guarantee = () => {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <img 
                   src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Plumber shaking hands with customer" 
+                  alt="Electrician shaking hands with customer" 
                   className="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent" />
@@ -56,11 +56,11 @@ export const Guarantee = () => {
               Our Commitment To You
             </div>
             <h2 className="font-header text-2xl md:text-4xl font-bold mb-8 leading-tight">
-              We Stand Behind <br/>
+              I Stand Behind <br/>
               <span className="text-orange-500">Every Single Job</span>
             </h2>
             <p className="text-lg text-navy-100 mb-8 leading-relaxed max-w-xl">
-              We know hiring a tradesman can be stressful. That’s why we’ve removed all the risk. When you hire South London Plumbers, you’re hiring peace of mind.
+              I know hiring a tradesman can be stressful. That’s why I’ve removed all the risk. When you hire DH Electrical Services, you’re hiring peace of mind.
             </p>
             
             <div className="space-y-8">

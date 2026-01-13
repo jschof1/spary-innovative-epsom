@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { CheckCircle, MapPin } from "lucide-react"
 
-const locations = ["Clapham", "Brixton", "Wandsworth", "Greenwich", "Croydon", "Bromley", "Lewisham", "Putney", "Dulwich"]
-const services = ["Boiler Repair", "Blocked Drain", "Emergency Leak", "Tap Replacement", "Gas Safety Check"]
+const locations = ["Rugby", "Southam", "Leamington Spa", "Warwick", "Coventry", "Dunchurch", "Hillmorton", "Bilton"]
+const services = ["EV Charger Install", "Consumer Unit Upgrade", "Electrical Fault", "Rewire Project", "Security Lighting"]
 
 export const RecentActivity = () => {
   const [activity, setActivity] = useState<{location: string, service: string, time: string} | null>(null)
@@ -42,7 +42,7 @@ export const RecentActivity = () => {
         <div className="flex-grow">
           <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Live Activity</p>
           <p className="text-sm font-bold text-navy-900 leading-tight">
-            New booking in <span className="text-orange-500">{activity.location}</span>
+            Work completed in <span className="text-orange-500">{activity.location}</span>
           </p>
           <p className="text-xs text-gray-500 mt-1 flex items-center gap-1">
             <MapPin className="w-3 h-3" /> {activity.service} • {activity.time}
@@ -52,4 +52,3 @@ export const RecentActivity = () => {
     </div>
   )
 }
-

@@ -3,27 +3,27 @@ import { Users, Clock, Award, ShieldCheck } from "lucide-react"
 const stats = [
   {
     icon: Users,
-    value: "15,000+",
-    label: "Happy Customers",
-    description: "Serving South London for over 15 years"
+    value: "500+",
+    label: "Satisfied Clients",
+    description: "Reliable service across the Midlands"
   },
   {
     icon: Clock,
-    value: "60 Mins",
-    label: "Average Response",
-    description: "Fast emergency response across all SE & SW posts"
+    value: "24/7",
+    label: "Emergency Cover",
+    description: "Always available for urgent electrical repairs"
   },
   {
     icon: Award,
     value: "100%",
-    label: "Work Guaranteed",
-    description: "12-month warranty on every single repair"
+    label: "Quality Guaranteed",
+    description: "Certified work to BS 7671 standards"
   },
   {
     icon: ShieldCheck,
-    value: "Gas Safe",
-    label: "Fully Certified",
-    description: "Every engineer is registered and vetted"
+    value: "Certified",
+    label: "Fully Insured",
+    description: "Comprehensive public liability protection"
   }
 ]
 
@@ -47,4 +47,3 @@ export const Stats = () => {
     </section>
   )
 }
-

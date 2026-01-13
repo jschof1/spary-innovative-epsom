@@ -1,7 +1,7 @@
 import { QuoteForm } from "@/components/forms/QuoteForm"
 import { Star } from "lucide-react"
 import { motion } from "framer-motion"
-import gasSafeLogo from "../../assets/logos/gas-safe.svg";
+import niceicLogo from "../../assets/certifications/niceic240x172.png";
 
 interface HeroProps {
   title?: string | React.ReactNode
@@ -11,9 +11,9 @@ interface HeroProps {
 }
 
 export const Hero = ({ 
-  title = <>Expert Plumbers & <br/><span className="text-orange-500">Boiler Repair</span> in South London.</>,
-  subtitle = "We fix leaks, blocked drains, and boilers fast. No hidden fees. 12-Month Guarantee on all work.",
-  backgroundImage = "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+  title = <>Expert Electrician & <br/><span className="text-orange-500">EV Charger</span> Installation in Rugby.</>,
+  subtitle = "Professional electrical services across Rugby, Southam & Coventry. Specialising in EV charging, rewires, and fuse box upgrades.",
+  backgroundImage = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
   showForm = true
 }: HeroProps) => {
   return (
@@ -53,7 +53,7 @@ export const Hero = ({
                   </motion.div>
                 ))}
               </div>
-              <span className="text-sm text-white/80 font-medium">Trusted by 2,500+ London customers</span>
+              <span className="text-sm text-white/80 font-medium">Trusted Local Electrician</span>
             </motion.div>
             <h1 className="font-header font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-4 lg:mb-8">
               {title}
@@ -76,16 +76,16 @@ export const Hero = ({
                     <Star className="w-2.5 h-2.5 lg:w-3.5 lg:h-3.5 fill-current" />
                     <Star className="w-2.5 h-2.5 lg:w-3.5 lg:h-3.5 fill-current" />
                   </div>
-                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white truncate">4.9/5 Google</p>
+                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white truncate">5.0/5 Google</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 lg:gap-3 bg-white/10 backdrop-blur-sm p-2 lg:p-3 rounded-lg border border-white/20 w-[calc(50%-6px)] sm:w-56 h-16 lg:h-20">
-                <div className="flex-shrink-0 text-black font-extrabold px-1 lg:px-2 py-0.5 text-[10px] lg:text-[11px] rounded shadow-lg w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center text-center leading-tight uppercase bg-white/90">
-                 <img src={gasSafeLogo} alt="Gas Safe" className="w-7 h-7 lg:w-10 lg:h-10" />
+                <div className="flex-shrink-0 bg-white rounded shadow-lg w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center text-center overflow-hidden">
+                 <img src={niceicLogo} alt="NICEIC" className="w-full h-auto object-contain p-1" />
                 </div>
                 <div className="flex flex-col justify-center min-w-0">
-                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">Reg #543210</p>
+                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">Reg #7616886213</p>
                   <p className="text-[8px] lg:text-[9px] font-medium uppercase tracking-widest text-white/60 truncate">Certified</p>
                 </div>
               </div>

@@ -1,12 +1,10 @@
 import { Helmet } from "react-helmet-async"
 import { motion } from "framer-motion"
 import { siteSettings } from "@/data/siteSettings"
-import { Shield, Clock, Award, Heart, Phone, Zap, Map, Star } from "lucide-react"
+import { Shield, Clock, Award, Zap, Phone, Map, Star, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"
-import teamImage from "@/assets/team/south-london-plumbers-team.png"
-import founderAlex from "@/assets/team/founder-alex.png"
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -16,18 +14,18 @@ const fadeIn = {
 }
 
 const stats = [
-  { label: "Years in the Trade", value: "15+" },
-  { label: "Jobs Completed", value: "25k+" },
-  { label: "Expert Engineers", value: "12" },
-  { label: "Response Time", value: "45min" },
+  { label: "Years in the Trade", value: "8+" },
+  { label: "Jobs Completed", value: "500+" },
+  { label: "One-Man Team", value: "1" },
+  { label: "Response Time", value: "24/7" },
 ]
 
 export const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Our Team | {siteSettings.businessName} - South London's Finest</title>
-        <meta name="description" content={`The story behind ${siteSettings.businessName}. We're not just plumbers; we're your South London neighbors committed to excellence since 2010.`} />
+        <title>About Daniel Hollands | {siteSettings.businessName}</title>
+        <meta name="description" content={`Learn more about ${siteSettings.businessName}. Daniel Hollands is your local expert electrician serving Rugby, Southam, and the surrounding areas.`} />
       </Helmet>
 
       <div className="overflow-hidden bg-white">
@@ -35,7 +33,7 @@ export const AboutPage = () => {
         <section className="relative pt-32 pb-48 bg-navy-900 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504148455328-497c596d22e0?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10 grayscale" />
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10 grayscale" />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-900/90 to-white" />
           </div>
           
@@ -53,15 +51,15 @@ export const AboutPage = () => {
                 >
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-bold mb-8 uppercase tracking-[0.2em]">
                     <Zap className="w-4 h-4" />
-                    <span>The South London Standard</span>
+                    <span>Expert Local Electrician</span>
                   </div>
                   <h1 className="text-5xl lg:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
-                    WE DON'T JUST FIX <br/>
-                    <span className="text-orange-500">PIPES.</span> WE PROTECT <br/>
-                    <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">HOMES.</span>
+                    MEET <span className="text-orange-500">DANIEL.</span> <br/>
+                    YOUR LOCAL <br/>
+                    <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">SPECIALIST.</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed font-medium">
-                    South London's most trusted plumbing collective. Since 2010, we've been rewriting the rules of the trade with transparency, speed, and absolute precision.
+                    Based in Birdingbury, I provide expert electrical services across Rugby, Southam, and Leamington Spa. After years with a major firm, I've brought my skills to my own independent business.
                   </p>
                   <div className="flex flex-wrap gap-6">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-black py-8 px-10 rounded-none shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none text-lg uppercase tracking-wider">
@@ -91,12 +89,15 @@ export const AboutPage = () => {
               >
                 <div className="relative group">
                   <div className="absolute -inset-4 bg-orange-500/20 blur-2xl group-hover:bg-orange-500/30 transition-all rounded-full" />
-                  <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-                    <img 
-                      src={teamImage} 
-                      alt="The South London Plumbers Team" 
-                      className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    />
+                  <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5] flex items-center justify-center p-12">
+                    {/* Replaced placeholder with an icon representation since we don't have the photo yet */}
+                    <div className="text-center">
+                      <div className="w-32 h-32 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Zap className="w-16 h-16 text-white" />
+                      </div>
+                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Daniel Hollands</p>
+                      <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Certified Electrician</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -139,19 +140,19 @@ export const AboutPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-20 items-center">
               <motion.div className="lg:w-1/2" {...fadeIn}>
-                <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6">Our Mission</h2>
+                <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6">Professional Bio</h2>
                 <h3 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                  WAGING WAR ON <span className="text-orange-500 italic">COWBOY</span> CONTRACTORS.
+                  QUALITY WORK FROM A <span className="text-orange-500 italic">LOCAL</span> TRADESMAN.
                 </h3>
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
-                    We founded {siteSettings.businessName} because we were tired of the "standard" trade experience. No-shows, hidden fees, and shoddy workmanship were giving our industry a bad name.
+                    I founded DH Electrical Services 12 months ago with a clear goal: to provide high-quality, professional electrical services directly to my local community.
                   </p>
                   <p className="text-white border-l-4 border-orange-500 pl-6 py-2 italic">
-                    "Our goal was simple: Be the plumbers we'd want in our own mothers' homes."
+                    "I believe in transparency, safety, and doing the job right the first time."
                   </p>
                   <p>
-                    Since 2010, we've built our reputation on a foundation of absolute transparency. If a job doesn't need doing, we'll tell you. If we say we'll be there at 8:00 AM, we'll be there at 7:55 AM.
+                    With several years of experience at a large electrical company, I've developed expertise in complex installations, particularly EV chargers, consumer unit upgrades, and full property rewires.
                   </p>
                 </div>
               </motion.div>
@@ -165,8 +166,8 @@ export const AboutPage = () => {
                   className="relative z-10 rounded-2xl overflow-hidden border-8 border-white/10"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80" 
-                    alt="Our professional plumber" 
+                    src="https://images.unsplash.com/photo-1558211583-d28f6109314a?auto=format&fit=crop&q=80" 
+                    alt="Electrical installation work" 
                     className="w-full h-auto"
                   />
                 </motion.div>
@@ -176,7 +177,7 @@ export const AboutPage = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -top-10 -right-10 bg-orange-500 text-navy-900 w-32 h-32 rounded-full flex items-center justify-center text-center p-4 z-20 shadow-2xl"
                 >
-                  <span className="text-sm font-black uppercase leading-tight">100% Local Expert</span>
+                  <span className="text-sm font-black uppercase leading-tight">Licensed & Insured</span>
                 </motion.div>
               </div>
             </div>
@@ -187,10 +188,10 @@ export const AboutPage = () => {
         <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">How We Work</h2>
+              <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">My Core Promise</h2>
               <h3 className="text-4xl md:text-5xl font-black text-navy-900 leading-tight">
                 THE PRINCIPLES THAT <br/>
-                <span className="text-orange-500">DRIVE US.</span>
+                <span className="text-orange-500">DRIVE ME.</span>
               </h3>
             </div>
 
@@ -198,38 +199,38 @@ export const AboutPage = () => {
               {[
                 {
                   title: "RADICAL HONESTY",
-                  desc: "We provide upfront fixed quotes. No 'estimates', no hidden surcharges, and no 'extras' added at the end.",
+                  desc: "I provide upfront fixed quotes. No 'estimates', no hidden surcharges, and no 'extras' added at the end.",
                   icon: Shield,
                   color: "bg-orange-500"
                 },
                 {
                   title: "RAPID DEPLOYMENT",
-                  desc: "When a pipe bursts, minutes matter. Our fleet is strategically positioned across South London for sub-60min response.",
+                  desc: "Available 24/7 for electrical emergencies. I'm based locally in Birdingbury for fast response in Rugby and Southam.",
                   icon: Clock,
                   color: "bg-navy-900"
                 },
                 {
                   title: "LIFETIME QUALITY",
-                  desc: "We don't do 'quick fixes'. We use premium parts and provide a 12-month ironclad guarantee on everything.",
+                  desc: "I don't do 'quick fixes'. I use premium parts and provide certified work that lasts.",
                   icon: Award,
                   color: "bg-orange-500"
                 },
                 {
-                  title: "COMMUNITY FIRST",
-                  desc: "We're South Londoners. We support local projects and prioritize senior citizens in our scheduling.",
-                  icon: Heart,
+                  title: "LOCAL FIRST",
+                  desc: "I'm your neighbor. I care about my local reputation and prioritize providing value to local residents.",
+                  icon: Map,
                   color: "bg-navy-900"
                 },
                 {
-                  title: "TECH-DRIVEN",
-                  desc: "From digital diagnostic tools to real-time engineer tracking, we use technology to make your life easier.",
+                  title: "TECH-FOCUSED",
+                  desc: "Specialist in modern electrical tech, from EV chargers to smart home consumer unit upgrades.",
                   icon: Zap,
                   color: "bg-orange-500"
                 },
                 {
-                  title: "LOCAL INTEL",
-                  desc: "We know the quirks of Victorian terraces in Brixton and the plumbing of modern Greenwich builds.",
-                  icon: Map,
+                  title: "CERTIFIED SAFETY",
+                  desc: "Every job is tested and certified to current BS 7671 safety standards for your peace of mind.",
+                  icon: CheckCircle,
                   color: "bg-navy-900"
                 }
               ].map((value, index) => (
@@ -254,64 +255,17 @@ export const AboutPage = () => {
           </div>
         </section>
 
-        {/* Area Loyalty Section */}
-        <section className="py-32 bg-orange-500 relative">
-          <div className="absolute inset-0 bg-dot-pattern opacity-10" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="bg-navy-900 p-12 md:p-24 rounded-[3rem] shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -mr-48 -mt-48" />
-              
-              <div className="flex flex-col lg:flex-row items-center gap-16">
-                <div className="lg:w-1/2">
-                  <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6 text-center lg:text-left">Our Territory</h2>
-                  <h3 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight text-center lg:text-left">
-                    WE KNOW EVERY <span className="text-orange-500">STREET</span> IN SOUTH LONDON.
-                  </h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {["Brixton", "Croydon", "Greenwich", "Bromley", "Lewisham", "Peckham", "Dulwich", "Clapham"].map((area, i) => (
-                      <div key={i} className="flex items-center gap-3 text-white/80 font-bold py-2">
-                        <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
-                        <span>{area}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="lg:w-1/2">
-                  <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl">
-                    <p className="text-2xl text-white font-medium leading-relaxed mb-8">
-                      "We don't waste time on GPS. Our engineers were born here, trained here, and work here. We know the shortcuts, we know the building styles, and we know our neighbors."
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-orange-500 shadow-lg">
-                        <img 
-                          src={founderAlex} 
-                          alt="Alex Garnett - Founder" 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <div className="text-white font-black text-lg uppercase">Alex Garnett</div>
-                        <div className="text-orange-500 font-bold text-sm tracking-widest uppercase">Founder</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Final Heavyweight CTA */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-12 border-t-8 border-navy-900 pt-24">
               <div className="max-w-2xl">
                 <h2 className="text-5xl md:text-7xl font-black text-navy-900 leading-[0.9] tracking-tighter mb-8">
-                  READY TO EXPERIENCE <br/>
-                  <span className="text-orange-500 uppercase italic">A BETTER TRADE?</span>
+                  READY TO UPGRADE <br/>
+                  <span className="text-orange-500 uppercase italic">YOUR ELECTRICS?</span>
                 </h2>
                 <p className="text-xl text-gray-600 font-bold max-w-lg">
-                  Join the 25,000+ South Londoners who have made us their first call for everything from leaks to boilers.
+                  Contact me today for a free, no-obligation quote for any electrical project or repair.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
@@ -323,7 +277,7 @@ export const AboutPage = () => {
                   className="bg-orange-500 text-white font-black py-10 px-12 rounded-none text-xl uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-orange-600 transition-all w-full sm:w-auto"
                 >
                   <Phone className="w-6 h-6" />
-                  Call Us
+                  Call Me
                 </a>
               </div>
             </div>

@@ -2,6 +2,7 @@ import { ArrowRight, Clock, Search, Zap, Activity, Globe, PhoneCall, CheckCircle
 import { locations } from "@/data/locations"
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { siteSettings } from "@/data/siteSettings"
 
 export const ServiceAreas = () => {
   const [searchQuery, setSearchQuery] = useState("")
@@ -26,16 +27,16 @@ export const ServiceAreas = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              <span className="text-[11px] font-bold text-navy-900 uppercase tracking-widest">System Status: Active Coverage</span>
+              <span className="text-[11px] font-bold text-navy-900 uppercase tracking-widest">Service Status: Active & Available</span>
             </div>
             
             <h2 className="font-header text-3xl md:text-5xl font-black text-navy-900 mb-8 leading-[1.1] tracking-tight">
-              Strategic <span className="text-orange-500">Rapid-Response</span> <br />
-              Infrastructure.
+              Rapid <span className="text-orange-500">Local Response</span> <br />
+              Across the Midlands.
             </h2>
             
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
-              Our multi-hub deployment strategy ensures that <span className="text-navy-900 font-bold">94% of South London emergencies</span> are attended to within 45 minutes. We don't just "show up"—we deploy localized, vetted, and fully equipped engineering units.
+              Based in Birdingbury, I am strategically positioned to provide <span className="text-navy-900 font-bold">fast electrical support</span> across Rugby, Southam, and Leamington Spa. I pride myself on reliability and punctuality for every local appointment.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 max-w-xl">
@@ -44,8 +45,8 @@ export const ServiceAreas = () => {
                   <Zap className="w-5 h-5 text-orange-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy-900 text-sm mb-1">Localized Deployment</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Engineers stationed within 5 miles of every major SE/SW postcode.</p>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Local Expert</h4>
+                  <p className="text-xs text-gray-500 leading-relaxed">I live and work in the area, ensuring I know your neighborhood and its property styles.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
@@ -53,8 +54,8 @@ export const ServiceAreas = () => {
                   <Activity className="w-5 h-5 text-navy-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy-900 text-sm mb-1">Real-Time Dispatch</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Active monitoring of local traffic and engineer proximity for faster arrivals.</p>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Emergency Dispatch</h4>
+                  <p className="text-xs text-gray-500 leading-relaxed">Call 24/7 for urgent electrical repairs. Fast response for all CV postcodes.</p>
                 </div>
               </div>
             </div>
@@ -66,20 +67,20 @@ export const ServiceAreas = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-6">
                   <Globe className="w-5 h-5 text-orange-500" />
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-navy-100">Regional Statistics</span>
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-navy-100">Regional Coverage</span>
                 </div>
                 <div className="space-y-6">
                   <div className="pb-6 border-b border-white/10">
-                    <div className="text-4xl font-black text-white mb-1">32+</div>
-                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">South London Districts Covered</div>
+                    <div className="text-4xl font-black text-white mb-1">15+</div>
+                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Towns & Villages Covered</div>
                   </div>
                   <div className="pb-6 border-b border-white/10">
-                    <div className="text-4xl font-black text-orange-500 mb-1">35m</div>
-                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Average Response (Dec 2025)</div>
+                    <div className="text-4xl font-black text-orange-500 mb-1">FAST</div>
+                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Average Response (Local Area)</div>
                   </div>
                   <div>
                     <div className="text-4xl font-black text-white mb-1">24/7</div>
-                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Emergency Dispatch Uptime</div>
+                    <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Emergency Availability</div>
                   </div>
                 </div>
               </div>
@@ -91,13 +92,13 @@ export const ServiceAreas = () => {
         <div className="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 mb-12 shadow-sm flex flex-col md:flex-row items-center gap-8">
           <div className="shrink-0">
             <h3 className="text-lg font-bold text-navy-900 mb-1">Area Lookup</h3>
-            <p className="text-sm text-gray-500">Locate your nearest engineering unit</p>
+            <p className="text-sm text-gray-500">Check coverage in your specific area</p>
           </div>
           <div className="flex-grow w-full relative group">
             <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-orange-500 transition-colors" />
             <input 
               type="text" 
-              placeholder="Enter borough or postcode (e.g. SE10, Croydon, Brixton)..."
+              placeholder="Enter town or postcode (e.g. CV21, Rugby, Southam)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-200 focus:border-orange-500 focus:bg-white rounded-xl outline-none transition-all font-medium text-navy-900"
@@ -128,7 +129,7 @@ export const ServiceAreas = () => {
               <div className="p-6 flex flex-grow flex-col">
                 <h3 className="text-2xl font-bold text-navy-900 mb-3 group-hover:text-orange-600 transition-colors">{location.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                  Providing precision-engineered plumbing and heating solutions. Full coverage for {location.name} and surrounding areas.
+                  Providing professional electrical installations and repairs. Full coverage for {location.name} and surrounding areas.
                 </p>
                 
                 <div className="mt-auto space-y-4">
@@ -143,7 +144,7 @@ export const ServiceAreas = () => {
                   <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4 text-orange-500" />
-                      <span className="text-xs font-bold text-navy-900">~35 MIN RESPONSE</span>
+                      <span className="text-xs font-bold text-navy-900">LOCAL RESPONSE</span>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center group-hover:bg-orange-500 transition-colors">
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -158,7 +159,7 @@ export const ServiceAreas = () => {
         {filteredLocations.length === 0 && (
           <div className="text-center py-20 bg-white border border-gray-200 border-dashed rounded-3xl">
             <Search className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-navy-900 mb-2">No Service Centers Found</h3>
+            <h3 className="text-xl font-bold text-navy-900 mb-2">No Service Areas Found</h3>
             <p className="text-gray-500">We couldn't find a match for "{searchQuery}". Please try a different area or postcode.</p>
           </div>
         )}
@@ -173,19 +174,19 @@ export const ServiceAreas = () => {
               <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <h3 className="font-header text-3xl md:text-4xl font-black text-white mb-8 leading-tight">
-                    Beyond Our Primary <br />
+                    Outside Our Primary <br />
                     <span className="text-orange-500">Service Zones?</span>
                   </h3>
                   <p className="text-lg text-white mb-10 max-w-lg leading-relaxed">
-                    Our reach extends across most of Greater London for major projects and scheduled maintenance. If your area isn't listed, contact our central dispatch.
+                    I cover most of Warwickshire and surrounding areas for major projects and scheduled electrical work. If your area isn't listed, feel free to get in touch.
                   </p>
                   
                   <div className="space-y-4">
                     {[
-                      "Priority dispatch for SE & SW postcodes",
+                      "Priority response for CV postcodes",
                       "Full public liability insurance cover",
-                      "Gas Safe certified engineering fleet",
-                      "No-obligation diagnostic consultations"
+                      "Qualified and certified electrical work",
+                      "Free, no-obligation consultations"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0" />
@@ -197,18 +198,18 @@ export const ServiceAreas = () => {
 
                 <div className="flex flex-col items-center lg:items-end gap-10">
                   <div className="bg-navy-800/50 backdrop-blur-md border border-white/10 p-8 rounded-3xl w-full max-w-md text-center lg:text-right">
-                    <p className="text-orange-500 font-black tracking-[0.3em] uppercase text-sm mb-4">Central Dispatch Desk</p>
-                    <a href="tel:02081234567" className="group block mb-8">
+                    <p className="text-orange-500 font-black tracking-[0.3em] uppercase text-sm mb-4">Direct Contact</p>
+                    <a href={`tel:${siteSettings.phoneFormatted}`} className="group block mb-8">
                       <div className="text-4xl md:text-5xl font-black text-white hover:text-orange-500 transition-colors flex items-center justify-center lg:justify-end gap-4">
                         <PhoneCall className="w-8 h-8 text-orange-500 group-hover:scale-110 transition-transform" />
-                        020 8123 4567
+                        {siteSettings.phone}
                       </div>
                     </a>
                     <Link 
-                      to="/locations" 
+                      to="/contact" 
                       className="inline-flex w-full lg:w-auto items-center justify-center gap-3 bg-white text-navy-900 hover:bg-orange-500 hover:text-white font-black px-8 py-5 rounded-2xl transition-all shadow-xl group"
                     >
-                      VIEW ALL 32+ AREAS
+                      GET A FREE QUOTE
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>

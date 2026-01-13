@@ -2,29 +2,29 @@ import { Shield, Zap, HeartHandshake, Banknote, Star } from "lucide-react"
 
 const benefits = [
   {
-    title: "Emergency 24/7 Support",
-    description: "Burst pipe at 3 AM? No problem. We have engineers on standby 24 hours a day, 365 days a year.",
+    title: "24/7 Emergency Support",
+    description: "Electrical fault at 3 AM? No problem. I am on standby for emergency repairs whenever you need them.",
     icon: Zap,
     accent: "text-blue-400",
     bg: "bg-blue-500/10"
   },
   {
     title: "No Hidden Costs",
-    description: "The price we quote is the price you pay. We provide clear, itemized digital invoices for every job.",
+    description: "The price I quote is the price you pay. I provide clear, transparent pricing for every electrical job.",
     icon: Banknote,
     accent: "text-green-400",
     bg: "bg-green-500/10"
   },
   {
-    title: "100% Licensed & Insured",
-    description: "Every engineer is Gas Safe registered and we carry £5M in public liability insurance for your peace of mind.",
+    title: "Licensed & Insured",
+    description: "Fully qualified and insured professional. I carry comprehensive public liability insurance for your peace of mind.",
     icon: Shield,
     accent: "text-orange-400",
     bg: "bg-orange-500/10"
   },
   {
-    title: "Local & Friendly",
-    description: "We're not a national franchise. We're a family-run South London business that cares about our community.",
+    title: "Local & Reliable",
+    description: "I'm a local Midlands business. I take pride in providing reliable, professional service to my community.",
     icon: HeartHandshake,
     accent: "text-purple-400",
     bg: "bg-purple-500/10"
@@ -44,14 +44,14 @@ export const BrandBenefits = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-400 uppercase bg-orange-400/10 rounded-full border border-orange-400/20">
-              Why Choose South London Plumbers
+              Why Choose DH Electrical Services
             </div>
             <h2 className="font-header text-2xl md:text-4xl font-bold mb-8 leading-tight">
-              South London's Most Reliable <br/>
-              <span className="text-orange-500">Plumbing Team</span>
+              Rugby's Most Professional <br/>
+              <span className="text-orange-500">Electrical Specialist</span>
             </h2>
             <p className="text-lg text-navy-100 mb-8 leading-relaxed max-w-xl">
-              We've built our reputation on honesty, speed, and quality. Whether it's a dripping tap or a full boiler installation, we treat every job with the same level of professionalism.
+              I've built my reputation on safe work, reliability, and technical expertise. Whether it's an EV charger installation or a full property rewire, I handle every job with absolute professionalism.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-12">
@@ -73,7 +73,7 @@ export const BrandBenefits = () => {
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white/5 group">
               <img 
                 src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Plumbing work in progress" 
+                alt="Electrical installation work" 
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/20 to-transparent" />
@@ -85,16 +85,16 @@ export const BrandBenefits = () => {
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm font-bold tracking-wider uppercase">150+ 5-Star Reviews</span>
+                  <span className="text-sm font-bold tracking-wider uppercase">Verified 5-Star Reviews</span>
                 </div>
                 <blockquote className="font-header italic text-xl mb-4 leading-relaxed">
-                  "The most professional tradesmen I've ever had in my house. Prompt, clean, and honest."
+                  "Daniel was incredibly professional, prompt, and his work was exceptional. Highly recommend for any electrical needs."
                 </blockquote>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold text-white shadow-lg">J</div>
+                  <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold text-white shadow-lg">M</div>
                   <div>
-                    <p className="font-bold text-white">James Wilson</p>
-                    <p className="text-sm text-orange-400">Dulwich, SE21</p>
+                    <p className="font-bold text-white">Mark Stevens</p>
+                    <p className="text-sm text-orange-400">Rugby, CV21</p>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export const BrandBenefits = () => {
             {/* Floating Achievement Badge */}
             <div className="absolute -top-10 -right-10 z-20 bg-white p-6 rounded-2xl shadow-2xl hidden md:block animate-bounce-slow">
               <div className="text-center">
-                <p className="text-navy-900 font-extrabold text-3xl mb-1">15+</p>
+                <p className="text-navy-900 font-extrabold text-3xl mb-1">8+</p>
                 <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Years Experience</p>
               </div>
             </div>
