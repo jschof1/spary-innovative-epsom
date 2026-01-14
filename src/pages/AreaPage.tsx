@@ -25,10 +25,10 @@ import {
   Construction
 } from "lucide-react";
 
-// Using Unsplash images for a professional look
-const heroElectrician = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=1200";
-const serviceVan = "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=1200";
-const localAerial = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200";
+// Import local assets
+import heroElectrician from "../assets/photos/the-specialist--bio---professional-electrician-in-navy-uniform--standing-in-modern-kitchen--high-end-toolkit-nearby--friendly-atmosphere.webp";
+import serviceVan from "../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp";
+import localAerial from "../assets/photos/midlands-service-area--aerial-drone-view-of-classic-english-town-square--historic-brick-buildings--soft-sunset-lighting.webp";
 
 const AreaPage = () => {
   const { areaSlug } = useParams<{ areaSlug: string }>();

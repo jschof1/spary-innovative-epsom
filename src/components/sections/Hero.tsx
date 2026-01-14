@@ -2,6 +2,7 @@ import { QuoteForm } from "@/components/forms/QuoteForm"
 import { Star } from "lucide-react"
 import { motion } from "framer-motion"
 import niceicLogo from "../../assets/certifications/niceic240x172.png";
+import heroBg from "../../assets/photos/main-hero-background--wide-angle-modern-living-room--smart-lighting--blurred-background-for-text-overlay--navy-and-orange-accents.webp";
 
 interface HeroProps {
   title?: string | React.ReactNode
@@ -13,7 +14,7 @@ interface HeroProps {
 export const Hero = ({ 
   title = <>Expert Electrician & <br/><span className="text-orange-500">EV Charger</span> Installation in Rugby.</>,
   subtitle = "Professional electrical services across Rugby, Southam & Coventry. Specialising in EV charging, rewires, and fuse box upgrades.",
-  backgroundImage = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+  backgroundImage = heroBg,
   showForm = true
 }: HeroProps) => {
   return (

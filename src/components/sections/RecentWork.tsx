@@ -1,6 +1,12 @@
 import { MapPin, CheckCircle2, ArrowRight, Gauge, Clock, ShieldCheck, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Import local assets
+import evProjectImg from "../../assets/photos/ev-charger-installation--sleek-wall-mounted-smart-ev-charger-on-brick-wall--electric-car-plugged-in--cinematic-lighting--professional-photography.webp";
+import cuProjectImg from "../../assets/photos/consumer-unit-upgrade--close-up-of-modern-metal-fuse-box--neat-circuit-breakers--glowing-led-indicators--ultra-clean-installation.webp";
+import lightProjectImg from "../../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp";
+import smartHomeProjectImg from "../../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp";
+
 const projects = [
   {
     title: "EV Charger Home Installation",
@@ -10,7 +16,7 @@ const projects = [
     specs: ["Ohme ePod Charger", "Surge Protection", "Smart Integration"],
     impact: "60% Fuel Savings",
     status: "Certified",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: evProjectImg
   },
   {
     title: "Consumer Unit Upgrade",
@@ -20,7 +26,7 @@ const projects = [
     specs: ["Dual RCD Board", "Surge Protection", "Circuit Testing"],
     impact: "Enhanced Safety",
     status: "Secured",
-    image: "https://images.unsplash.com/photo-1558211583-d28f6109314a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: cuProjectImg
   },
   {
     title: "Smart Security Lighting",
@@ -30,7 +36,17 @@ const projects = [
     specs: ["LED Floodlights", "PIR Sensors", "Remote Access"],
     impact: "Improved Security",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1565814329452-e1efa71c57da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: lightProjectImg
+  },
+  {
+    title: "Smart Home Integration",
+    location: "Warwick CV34",
+    category: "Smart Home",
+    description: "Full residential smart home transformation. Installation of Hive smart heating, Philips Hue adaptive lighting, and Ring security infrastructure with central app control.",
+    specs: ["Smart Heating", "Adaptive Lighting", "Security Hub"],
+    impact: "25% Energy Reduction",
+    status: "Verified",
+    image: smartHomeProjectImg
   }
 ]
 

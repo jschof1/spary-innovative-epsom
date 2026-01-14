@@ -7,9 +7,10 @@ export const siteSettings = {
   googleRating: "5.0/5",
   reviewCount: "50+",
   registrationNumber: "7616886213",
-  feedbackWebhook: "https://services.leadconnectorhq.com/hooks/fYvWQOLfXBKapBOzglwl/webhook-trigger/25a40d0d-c167-4e22-8402-1dbfe18f2f16",
+  feedbackWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/Yzm0pyxzTPugTndww5GR",
   feedbackGoogleReviewUrl: "https://g.page/r/CVci07KZU9WxEBM/review",
-  formWebhook: "https://services.leadconnectorhq.com/hooks/fYvWQOLfXBKapBOzglwl/webhook-trigger/25a40d0d-c167-4e22-8402-1dbfe18f2f16",
+  formWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/BXIQjzJZsbUqwcShEgQq",
+  discountWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/qyuwsbLtAVuyb5bFBGnP",
   standardFaqs: [
     {
       category: "Pricing",

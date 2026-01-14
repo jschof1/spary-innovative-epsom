@@ -53,13 +53,15 @@ export const ServicesPage = () => {
       {/* Main Services Listing */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-4xl mb-20">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">What I Do</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-navy-900 mb-6 leading-tight">
-              Comprehensive Solutions for Every <span className="text-orange-500">Electrical Need.</span>
+            <h3 className="text-4xl md:text-6xl font-black text-navy-900 mb-8 leading-tight">
+              Comprehensive Electrical <br/>
+              <span className="text-orange-500">Solutions for Every Need.</span>
             </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              I specialize in providing top-tier electrical services tailored to the unique needs of homeowners and businesses in the Midlands.
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+              I specialize in providing top-tier electrical services tailored to the unique needs of homeowners and businesses in the Midlands. 
+              From emergency repairs to complex smart home integrations, I bring technical excellence to every project.
             </p>
           </div>
 
@@ -94,11 +96,11 @@ export const ServicesPage = () => {
                     {service.longDescription}
                   </p>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    {["Fast Response", "Expert Engineers", "Fixed Pricing", "Quality Parts"].map((item, i) => (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
+                    {service.features.slice(0, 4).map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-navy-900 font-bold">
                         <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                        <span>{item}</span>
+                        <span className="text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>

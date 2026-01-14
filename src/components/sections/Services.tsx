@@ -20,7 +20,8 @@ const getServiceFeatures = (id: string) => {
     "rewires": ["Full & Partial", "Testing & Cert", "Modern Safety"],
     "consumer-unit": ["RCD Protection", "Surge Protection", "Fully Certified"],
     "maintenance": ["Safety Checks", "Socket Upgrades", "Fault Finding"],
-    "lighting": ["LED Efficiency", "PIR Sensors", "Garden Lighting"]
+    "lighting": ["LED Efficiency", "PIR Sensors", "Garden Lighting"],
+    "smart-home": ["App Control", "Heating & Lighting", "Security Integration"]
   }
   return features[id] || ["Professional Repair", "Quality Parts", "Expert Labor"]
 }

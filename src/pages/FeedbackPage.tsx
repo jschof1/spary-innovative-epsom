@@ -80,7 +80,7 @@ const FeedbackPage = () => {
   return (
     <>
       <Helmet>
-        <title>Feedback | IQ Plumbing London</title>
+        <title>Feedback | {siteSettings.businessName}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 

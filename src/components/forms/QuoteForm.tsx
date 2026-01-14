@@ -9,19 +9,52 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Check, Lock } from "lucide-react"
+import { siteSettings } from "@/data/siteSettings"
+import { useToast } from "@/hooks/use-toast"
 
 export const QuoteForm = () => {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "",
+  })
+  const { toast } = useToast()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false)
+    
+    try {
+      const response = await fetch(siteSettings.formWebhook, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: "quote-form",
+          timestamp: new Date().toISOString(),
+        }),
+      })
+
+      if (!response.ok) throw new Error("Failed to submit")
+
       setSubmitted(true)
-    }, 1500)
+      toast({
+        title: "Request Received!",
+        description: "Our team will be in touch shortly.",
+      })
+    } catch {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or call us.",
+        variant: "destructive",
+      })
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -59,36 +92,32 @@ export const QuoteForm = () => {
               id="name" 
               required 
               placeholder="Your Name" 
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full px-4 py-4 md:py-6 rounded-xl border-2 border-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition-all bg-gray-50/50" 
             />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="space-y-1.5">
-              <label htmlFor="phone" className="text-sm font-semibold text-gray-700 px-1">Phone Number</label>
-              <Input 
-                type="tel" 
-                id="phone" 
-                required 
-                placeholder="Phone Number" 
-                className="w-full px-4 py-4 md:py-6 rounded-xl border-2 border-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition-all bg-gray-50/50" 
-              />
-            </div>
-            <div className="space-y-1.5">
-              <label htmlFor="postcode" className="text-sm font-semibold text-gray-700 px-1">Postcode</label>
-              <Input 
-                type="text" 
-                id="postcode" 
-                required 
-                placeholder="e.g. SW4" 
-                className="w-full px-4 py-4 md:py-6 rounded-xl border-2 border-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition-all bg-gray-50/50" 
-              />
-            </div>
+          <div className="space-y-1.5">
+            <label htmlFor="phone" className="text-sm font-semibold text-gray-700 px-1">Phone Number</label>
+            <Input 
+              type="tel" 
+              id="phone" 
+              required 
+              placeholder="Phone Number" 
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="w-full px-4 py-4 md:py-6 rounded-xl border-2 border-gray-100 focus:border-orange-500 focus:ring-0 outline-none transition-all bg-gray-50/50" 
+            />
           </div>
 
           <div className="space-y-1.5">
             <label htmlFor="service" className="text-sm font-semibold text-gray-700 px-1">Service Needed</label>
-            <Select>
+            <Select 
+              value={formData.service} 
+              onValueChange={(value) => setFormData({ ...formData, service: value })}
+              required
+            >
               <SelectTrigger className="w-full px-4 py-6 md:py-7 rounded-xl border-2 border-gray-100 focus:border-orange-500 focus:ring-0 outline-none bg-gray-50/50 text-gray-600">
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>

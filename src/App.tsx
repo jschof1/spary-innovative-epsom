@@ -4,7 +4,6 @@ import { PromoBanner } from "@/components/layout/PromoBanner"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { FloatingCTA } from "@/components/layout/FloatingCTA"
-import { RecentActivity } from "@/components/ui/RecentActivity"
 import { HomePage } from "@/pages/HomePage"
 import { ServicesPage } from "@/pages/ServicesPage"
 import { ServicePage } from "@/pages/ServicePage"
@@ -14,6 +13,7 @@ import { ContactPage } from "@/pages/ContactPage"
 import { ReviewsPage } from "@/pages/ReviewsPage"
 import { AboutPage } from "@/pages/AboutPage"
 import FeedbackPage from "@/pages/FeedbackPage"
+import { DiscountPage } from "@/pages/DiscountPage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
@@ -87,6 +87,7 @@ function App() {
               <Route path="/locations/:locationSlug" element={<LocationPage />} />
               <Route path="/locations/:locationSlug/:serviceSlug" element={<ServiceLocationPage />} />
               <Route path="/feedback" element={<FeedbackPage />} />
+              <Route path="/discount" element={<DiscountPage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}
@@ -96,7 +97,6 @@ function App() {
 
         <Footer />
         <FloatingCTA />
-        <RecentActivity />
         <Toaster />
       </div>
 
