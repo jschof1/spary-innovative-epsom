@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
-import { Zap } from "lucide-react"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
 import niceicLogo from "../../assets/certifications/niceic240x172.png";
+import logo from "../../assets/sl-logo.png"
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -16,13 +16,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg">
-                <Zap className="text-orange-500 w-6 h-6" />
-              </div>
-              <div className="leading-tight">
-                <span className="block font-header font-bold text-white text-lg uppercase tracking-tight">DH Electrical</span>
-                <span className="block font-header font-bold text-orange-500 text-sm tracking-widest -mt-1">SERVICES</span>
-              </div>
+              <img src={logo} alt="DH Electrical Services" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
             </Link>
             <p className="text-gray-400 mb-6">
               Expert electrical services for Rugby, Southam, and the Midlands. Fully qualified, insured, and available 24/7 for emergencies.

@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button"
 import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
-import { Menu, X, ChevronDown, Phone, Clock, MapPin, Zap } from "lucide-react"
+import { Menu, X, ChevronDown, Phone, Clock, MapPin } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
+import logo from "../../assets/sl-logo.png"
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,13 +34,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-1">
           <Link to="/" className="flex items-center gap-2 group relative z-50 w-fit">
-            <div className="w-9 h-9 flex items-center justify-center bg-navy-900 rounded-lg">
-              <Zap className="text-orange-500 w-6 h-6" />
-            </div>
-            <div className="leading-tight">
-              <span className="block font-header font-bold text-navy-900 text-base uppercase tracking-tight">DH Electrical</span>
-              <span className="block font-header font-bold text-orange-500 text-xs tracking-widest -mt-1">SERVICES</span>
-            </div>
+            <img src={logo} alt="DH Electrical Services" className="h-10 md:h-14 w-auto object-contain" />
           </Link>
         </div>
 

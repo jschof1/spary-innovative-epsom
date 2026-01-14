@@ -13,6 +13,8 @@ import { ServiceLocationPage } from "@/pages/ServiceLocationPage"
 import { ContactPage } from "@/pages/ContactPage"
 import { ReviewsPage } from "@/pages/ReviewsPage"
 import { AboutPage } from "@/pages/AboutPage"
+import FeedbackPage from "@/pages/FeedbackPage"
+import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
 const ScrollProgress = () => {
@@ -84,6 +86,7 @@ function App() {
               <Route path="/services/:serviceSlug" element={<ServicePage />} />
               <Route path="/locations/:locationSlug" element={<LocationPage />} />
               <Route path="/locations/:locationSlug/:serviceSlug" element={<ServiceLocationPage />} />
+              <Route path="/feedback" element={<FeedbackPage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}
@@ -94,6 +97,7 @@ function App() {
         <Footer />
         <FloatingCTA />
         <RecentActivity />
+        <Toaster />
       </div>
 
       {/* Branded Corner Accents for depth */}
