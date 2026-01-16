@@ -14,6 +14,9 @@ import { ReviewsPage } from "@/pages/ReviewsPage"
 import { AboutPage } from "@/pages/AboutPage"
 import FeedbackPage from "@/pages/FeedbackPage"
 import { DiscountPage } from "@/pages/DiscountPage"
+import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage"
+import { CookiePolicyPage } from "@/pages/CookiePolicyPage"
+import { TermsOfServicePage } from "@/pages/TermsOfServicePage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
@@ -88,6 +91,9 @@ function App() {
               <Route path="/locations/:locationSlug/:serviceSlug" element={<ServiceLocationPage />} />
               <Route path="/feedback" element={<FeedbackPage />} />
               <Route path="/discount" element={<DiscountPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+              <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}

@@ -6,6 +6,8 @@ import evProjectImg from "../../assets/photos/ev-charger-installation--sleek-wal
 import cuProjectImg from "../../assets/photos/consumer-unit-upgrade--close-up-of-modern-metal-fuse-box--neat-circuit-breakers--glowing-led-indicators--ultra-clean-installation.webp";
 import lightProjectImg from "../../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp";
 import smartHomeProjectImg from "../../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp";
+import commercialProjectImg from "../../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp";
+import emergencyProjectImg from "../../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp";
 
 const projects = [
   {
@@ -47,6 +49,26 @@ const projects = [
     impact: "25% Energy Reduction",
     status: "Verified",
     image: smartHomeProjectImg
+  },
+  {
+    title: "Commercial Office Lighting Upgrade",
+    location: "Coventry CV1",
+    category: "Commercial",
+    description: "Complete LED lighting overhaul for a modern office space. Implementation of automated motion sensors and daylight harvesting to reduce energy costs by 40%.",
+    specs: ["LED Panel Lighting", "Motion Sensors", "Daylight Sensors"],
+    impact: "40% Energy Savings",
+    status: "Certified",
+    image: commercialProjectImg
+  },
+  {
+    title: "Emergency Power Restoration",
+    location: "Rugby CV22",
+    category: "Emergency",
+    description: "Rapid response to a major power failure in a residential property. Identified a faulty main isolator, replaced components, and restored full power within 90 minutes.",
+    specs: ["Fault Diagnosis", "Isolator Replacement", "Safety Certification"],
+    impact: "Power Restored",
+    status: "Verified",
+    image: emergencyProjectImg
   }
 ]
 

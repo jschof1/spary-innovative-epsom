@@ -5,6 +5,7 @@ import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle } from "lucide-react
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"
+import teamImage from "@/assets/team/gh-electrical-team.webp"
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -89,12 +90,13 @@ export const AboutPage = () => {
               >
                 <div className="relative group">
                   <div className="absolute -inset-4 bg-orange-500/20 blur-2xl group-hover:bg-orange-500/30 transition-all rounded-full" />
-                  <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5] flex items-center justify-center p-12">
-                    {/* Replaced placeholder with an icon representation since we don't have the photo yet */}
-                    <div className="text-center">
-                      <div className="w-32 h-32 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Zap className="w-16 h-16 text-white" />
-                      </div>
+                  <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5]">
+                    <img 
+                      src={teamImage} 
+                      alt="Daniel Hollands - DH Electrical Services" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy-900 to-transparent">
                       <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Daniel Hollands</p>
                       <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Certified Electrician</p>
                     </div>
@@ -166,8 +168,8 @@ export const AboutPage = () => {
                   className="relative z-10 rounded-2xl overflow-hidden border-8 border-white/10"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1558211583-d28f6109314a?auto=format&fit=crop&q=80" 
-                    alt="Electrical installation work" 
+                    src={teamImage} 
+                    alt="DH Electrical Services Team" 
                     className="w-full h-auto"
                   />
                 </motion.div>

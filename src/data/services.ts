@@ -1,4 +1,4 @@
-import { Zap, Battery, Home, Lightbulb, Shield, Settings, Smartphone, ShieldCheck, Award, Heart, Clock, ClipboardCheck, type LucideIcon } from "lucide-react"
+import { Zap, Battery, Home, Lightbulb, Shield, Settings, Smartphone, ShieldCheck, Award, Heart, Clock, ClipboardCheck, Phone, Building2, type LucideIcon } from "lucide-react"
 
 // Import local assets
 import evImg from "../assets/photos/ev-charger-installation--sleek-wall-mounted-smart-ev-charger-on-brick-wall--electric-car-plugged-in--cinematic-lighting--professional-photography.webp"
@@ -7,6 +7,8 @@ import cuImg from "../assets/photos/consumer-unit-upgrade--close-up-of-modern-me
 import maintenanceImg from "../assets/photos/electrical-maintenance--close-up-of-electrician-s-hands-using-digital-multimeter-on-white-socket--shallow-depth-of-field--technical-precision.webp"
 import lightingImg from "../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp"
 import smartHomeImg from "../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp"
+import commercialImg from "../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp"
+import emergencyImg from "../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp"
 
 export interface Service {
   id: string
@@ -494,6 +496,138 @@ export const services: Service[] = [
         category: "Smart Home",
         question: "Do I need a hub for my smart lights?",
         answer: "Some systems like Philips Hue require a 'bridge' or hub, while others connect directly to Wi-Fi. I can help you decide which is right for your home."
+      }
+    ]
+  },
+  {
+    id: "commercial",
+    slug: "commercial-electrical-services",
+    title: "Commercial Electrical Services",
+    shortTitle: "Commercial",
+    icon: Building2,
+    image: commercialImg,
+    description: "Comprehensive electrical solutions for offices, retail units, and industrial spaces.",
+    longDescription: "I provide specialized electrical services for commercial clients, from high-end retail shopfitting to industrial warehouse maintenance. Understanding the unique requirements of business environments, I deliver work that ensures operational continuity, safety compliance, and energy efficiency. Whether you need a full office rewire or ongoing planned maintenance, I offer professional, reliable service tailored to your business needs.",
+    detailedContent: "Commercial electrical systems require a higher level of expertise and attention to detail. I handle 3-phase installations, emergency lighting systems, commercial-grade security infrastructure, and energy-efficient lighting upgrades that can significantly reduce your business's overheads. I work flexibly to minimize downtime, often performing major works outside of standard business hours to ensure your operations remain uninterrupted.",
+    features: [
+      "3-Phase Power Installations",
+      "Emergency Lighting Testing",
+      "Commercial EICR & Compliance",
+      "Retail & Office Fit-outs",
+      "Data Cabling & Networking",
+      "Planned Maintenance Contracts"
+    ],
+    benefits: [
+      {
+        title: "Business Continuity",
+        description: "Reliable systems and rapid support to keep your operations running smoothly.",
+        icon: ShieldCheck
+      },
+      {
+        title: "Energy Efficiency",
+        description: "Reduce overheads with high-efficiency commercial lighting and power solutions.",
+        icon: Zap
+      },
+      {
+        title: "Total Compliance",
+        description: "Ensure your business meets all legal health and safety electrical standards.",
+        icon: Award
+      }
+    ],
+    processSteps: [
+      {
+        title: "Site Survey",
+        description: "Comprehensive assessment of your commercial electrical infrastructure."
+      },
+      {
+        title: "Technical Design",
+        description: "Bespoke electrical planning tailored to your specific business requirements."
+      },
+      {
+        title: "Phased Execution",
+        description: "Strategic installation scheduled to minimize disruption to your business."
+      },
+      {
+        title: "Certification",
+        description: "Full commercial certification and detailed O&M manuals provided."
+      }
+    ],
+    faqs: [
+      {
+        category: "Commercial",
+        question: "Do you offer out-of-hours commercial work?",
+        answer: "Yes, I understand that many businesses cannot afford downtime. I can schedule major works for evenings or weekends."
+      },
+      {
+        category: "Commercial",
+        question: "Can you handle 3-phase power installations?",
+        answer: "Absolutely. I am fully qualified and experienced in installing and maintaining 3-phase commercial and industrial systems."
+      }
+    ]
+  },
+  {
+    id: "emergency",
+    slug: "emergency-electrician",
+    title: "24/7 Emergency Call-Out",
+    shortTitle: "Emergency 24/7",
+    icon: Phone,
+    image: emergencyImg,
+    description: "Rapid response for electrical faults, power outages, and urgent safety issues.",
+    longDescription: "Electrical emergencies don't wait for business hours. Whether it's a complete power failure, a burning smell from a socket, or a fuse box that won't reset, I provide a rapid response emergency service across Rugby, Southam, and the surrounding areas. My priority is to make your installation safe and restore power as quickly as possible, 24 hours a day, 7 days a week.",
+    detailedContent: "When you call for an emergency, you'll speak directly to me, not a call center. I carry a wide range of diagnostic tools and spare parts in my van, allowing me to resolve over 90% of emergency faults on the first visit. I provide clear, upfront pricing for emergency call-outs and will always prioritize your safety, giving you peace of mind when you need it most.",
+    features: [
+      "24/7 Rapid Response Team",
+      "Advanced Fault Diagnosis",
+      "Immediate Safety Isolation",
+      "Temporary Power Solutions",
+      "Storm Damage Repairs",
+      "Direct Engineer Contact"
+    ],
+    benefits: [
+      {
+        title: "Instant Support",
+        description: "Direct access to a qualified engineer when you need it most, day or night.",
+        icon: Clock
+      },
+      {
+        title: "Peace of Mind",
+        description: "Expert safety assessments to identify and isolate dangerous electrical faults.",
+        icon: Shield
+      },
+      {
+        title: "Reliable Fix",
+        description: "Professional repairs that address the root cause, not just the symptoms.",
+        icon: Award
+      }
+    ],
+    processSteps: [
+      {
+        title: "Urgent Call",
+        description: "Speak directly with an engineer to assess the severity of the issue."
+      },
+      {
+        title: "Rapid Dispatch",
+        description: "I'll be on-site as quickly as possible, usually within 60 minutes."
+      },
+      {
+        title: "Fault Isolation",
+        description: "The primary goal is to make the installation safe and identify the fault."
+      },
+      {
+        title: "Power Restore",
+        description: "Immediate repair or temporary solution to get your power back on."
+      }
+    ],
+    faqs: [
+      {
+        category: "Emergency",
+        question: "What should I do if I smell burning from a socket?",
+        answer: "Turn off the power at the main consumer unit immediately and call me. Do not attempt to use the socket or investigate yourself."
+      },
+      {
+        category: "Emergency",
+        question: "What are your emergency call-out charges?",
+        answer: "I provide transparent, fixed-rate call-out charges which I will confirm with you over the phone before I depart."
       }
     ]
   }
