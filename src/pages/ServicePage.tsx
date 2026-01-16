@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
-import { motion } from "framer-motion"
 import { Hero } from "@/components/sections/Hero"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { Guarantee } from "@/components/sections/Guarantee"

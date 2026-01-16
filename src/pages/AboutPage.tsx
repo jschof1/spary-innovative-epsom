@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async"
 import { motion } from "framer-motion"
 import { siteSettings } from "@/data/siteSettings"
-import { Shield, Clock, Award, Zap, Phone, Map, Star, CheckCircle } from "lucide-react"
+import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"

@@ -1,4 +1,4 @@
-import { Zap, Battery, Home, Lightbulb, Shield, Settings, Smartphone, ShieldCheck, Award, Heart, FileSearch, Clock, ClipboardCheck, type LucideIcon } from "lucide-react"
+import { Zap, Battery, Home, Lightbulb, Shield, Settings, Smartphone, ShieldCheck, Award, Heart, Clock, ClipboardCheck, type LucideIcon } from "lucide-react"
 
 // Import local assets
 import evImg from "../assets/photos/ev-charger-installation--sleek-wall-mounted-smart-ev-charger-on-brick-wall--electric-car-plugged-in--cinematic-lighting--professional-photography.webp"
