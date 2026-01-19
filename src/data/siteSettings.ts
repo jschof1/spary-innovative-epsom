@@ -1,6 +1,6 @@
 export const siteSettings = {
   businessName: "DH Electrical Services",
-  phone: "07930 937358",
+  phone: "+447882966892",
   phoneFormatted: "07930937358",
   email: "info@dhelectricalservice.co.uk",
   address: "Avonlea, Marton Road, Birdingbury CV23 8EH",
