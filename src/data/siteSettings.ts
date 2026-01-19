@@ -8,7 +8,7 @@ export const siteSettings = {
   reviewCount: "50+",
   registrationNumber: "7616886213",
   feedbackWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/Yzm0pyxzTPugTndww5GR",
-  feedbackGoogleReviewUrl: "https://g.page/r/CVci07KZU9WxEBM/review",
+  feedbackGoogleReviewUrl: "https://g.page/r/CcA32bot6SBbEBM/review",
   formWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/BXIQjzJZsbUqwcShEgQq",
   discountWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/qyuwsbLtAVuyb5bFBGnP",
   standardFaqs: [
