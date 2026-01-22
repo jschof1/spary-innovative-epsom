@@ -54,7 +54,6 @@ export const Header = () => {
               ))}
             </div>
           </div>
-          <Link to="/reviews" className="hover:text-orange-500 transition-colors">Reviews</Link>
           <div className="relative group">
             <button type="button" className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
               Areas <ChevronDown className="w-4 h-4" />
@@ -65,6 +64,7 @@ export const Header = () => {
               ))}
             </div>
           </div>
+          <Link to="/reviews" className="hover:text-orange-500 transition-colors">Reviews</Link>
         </nav>
 
         {/* CTA Right */}
