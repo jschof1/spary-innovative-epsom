@@ -17,6 +17,7 @@ import { DiscountPage } from "@/pages/DiscountPage"
 import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage"
 import { CookiePolicyPage } from "@/pages/CookiePolicyPage"
 import { TermsOfServicePage } from "@/pages/TermsOfServicePage"
+import { QuotePage } from "@/pages/QuotePage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
@@ -50,6 +51,7 @@ const ScrollProgress = () => {
 
 function App() {
   const location = useLocation()
+  const isQuotePage = location.pathname === "/get-quote"
   
   // Scroll to top or hash on route change
   useEffect(() => {
@@ -74,12 +76,12 @@ function App() {
       <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03] bg-dot-pattern" />
       
       <div className="relative z-10 flex flex-col min-h-screen">
-        <PromoBanner />
-        <Header />
+        {!isQuotePage && <PromoBanner />}
+        {!isQuotePage && <Header />}
         
-        <main className="flex-grow">
+        <main className={`flex-grow ${isQuotePage ? "flex flex-col" : ""}`}>
           {/* Main content wrapper with subtle side borders on large screens for a "framed" premium layout */}
-          <div className="max-w-[1920px] mx-auto bg-white xl:border-x border-gray-100/80 shadow-sm relative">
+          <div className={`max-w-[1920px] mx-auto bg-white xl:border-x border-gray-100/80 shadow-sm relative ${isQuotePage ? "flex-grow flex flex-col w-full" : ""}`}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -94,15 +96,16 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/cookie-policy" element={<CookiePolicyPage />} />
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+              <Route path="/get-quote" element={<QuotePage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />
+            {!isQuotePage && <div className="h-px w-full bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />}
           </div>
         </main>
 
-        <Footer />
-        <FloatingCTA />
+        {!isQuotePage && <Footer />}
+        {!isQuotePage && <FloatingCTA />}
         <Toaster />
       </div>
 
