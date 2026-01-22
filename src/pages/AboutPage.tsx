@@ -213,7 +213,7 @@ export const AboutPage = () => {
                 },
                 {
                   title: "LIFETIME QUALITY",
-                  desc: "I don't do 'quick fixes'. I use premium parts and provide certified work that lasts.",
+                  desc: "We don't do 'quick fixes'. I use premium parts and provide certified work that lasts.",
                   icon: Award,
                   color: "bg-orange-500"
                 },

@@ -56,7 +56,7 @@ export const Services = ({
               <span className="text-orange-600">Electrical Services.</span>
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed max-w-2xl font-medium">
-              I don't just install wires; I optimize your home's critical systems. Using advanced diagnostics 
+              We don't just install wires; I optimize your home's critical systems. Using advanced diagnostics 
               and precision components to ensure long-term safety and reliability.
             </p>
           </div>

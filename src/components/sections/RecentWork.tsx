@@ -97,7 +97,7 @@ export const RecentWork = () => {
               Electrical <span className="text-orange-500">Excellence</span> Across the Midlands
             </h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
-              I don't just install wires; I engineer long-term safety and reliability. Every project is executed to strict technical standards with verifiable performance outcomes.
+              We don't just install wires; I engineer long-term safety and reliability. Every project is executed to strict technical standards with verifiable performance outcomes.
             </p>
           </div>
           

@@ -56,7 +56,7 @@ export const Guarantee = () => {
               Our Commitment To You
             </div>
             <h2 className="font-header text-2xl md:text-4xl font-bold mb-8 leading-tight">
-              I Stand Behind <br/>
+              We Stand Behind <br/>
               <span className="text-orange-500">Every Single Job</span>
             </h2>
             <p className="text-lg text-navy-100 mb-8 leading-relaxed max-w-xl">

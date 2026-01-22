@@ -345,7 +345,7 @@ const AreaPage = () => {
                   </div>
                   <div className="absolute bottom-0 left-0 w-full h-1.5 bg-orange-500" />
                   <h3 className="text-4xl font-header font-bold mb-6 relative z-10 uppercase">Planning a <span className="text-orange-500">Project?</span></h3>
-                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">I don't just do emergencies. If you're planning a home renovation or EV charger installation in {area.name}, I provide free site surveys.</p>
+                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">We don't just do emergencies. If you're planning a home renovation or EV charger installation in {area.name}, I provide free site surveys.</p>
                   <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white w-fit rounded-xl h-14 px-10 text-lg font-bold shadow-xl shadow-orange-500/20 relative z-10 transition-transform hover:scale-105 active:scale-95">
                     <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center gap-3">
                       <FileText className="w-5 h-5" />

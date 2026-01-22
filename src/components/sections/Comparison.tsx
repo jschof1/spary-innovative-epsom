@@ -5,7 +5,7 @@ import { siteSettings } from "@/data/siteSettings"
 const features = [
   {
     name: "Certified Safety Protocol",
-    description: "Fully qualified and registered electrician. I undergo regular technical assessments to ensure all work meets the latest BS 7671 safety standards. I don't just 'follow' regulations; I set the benchmark for local electrical safety.",
+    description: "Fully qualified and registered electrician. I undergo regular technical assessments to ensure all work meets the latest BS 7671 safety standards. We don't just 'follow' regulations; I set the benchmark for local electrical safety.",
     benefit: "Absolute peace of mind for your family.",
     icon: Shield,
     us: "Full Certification",
