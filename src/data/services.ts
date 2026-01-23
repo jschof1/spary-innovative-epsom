@@ -7,7 +7,7 @@ import cuImg from "../assets/photos/consumer-unit-upgrade--close-up-of-modern-me
 import maintenanceImg from "../assets/photos/electrical-maintenance--close-up-of-electrician-s-hands-using-digital-multimeter-on-white-socket--shallow-depth-of-field--technical-precision.webp"
 import lightingImg from "../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp"
 import smartHomeImg from "../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp"
-import commercialImg from "../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp"
+// import commercialImg from "../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp"
 import emergencyImg from "../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp"
 
 export interface Service {
@@ -111,7 +111,7 @@ export const services: Service[] = [
     features: [
       "Landlord Compliance Testing",
       "Homebuyer Pre-purchase Surveys",
-      "Commercial Periodic Inspections",
+      "Residential Periodic Inspections",
       "Fault Identification & Reporting",
       "Remedial Quote Included",
       "Digital Reports Sent Within 24 Hours"
@@ -309,8 +309,8 @@ export const services: Service[] = [
     icon: Settings,
     image: maintenanceImg,
     description: "Prompt repairs, socket replacements, and safety checks for home and business.",
-    longDescription: "From replacing broken sockets and switches to regular maintenance of commercial electrical systems, I provide a full range of electrical maintenance services to keep your property running smoothly and safely. No job is too small, whether it's a flickering light or a faulty circuit breaker that keeps tripping.",
-    detailedContent: "I pride myself on my fault-finding expertise. Many electrical issues are hidden behind walls or under floors, and I use advanced diagnostic equipment to locate and repair faults quickly. I offer a transparent pricing structure for maintenance and small jobs, serving residential and commercial clients across Rugby, Southam, and the wider Midlands area.",
+    longDescription: "From replacing broken sockets and switches to regular maintenance of residential electrical systems, I provide a full range of electrical maintenance services to keep your property running smoothly and safely. No job is too small, whether it's a flickering light or a faulty circuit breaker that keeps tripping.",
+    detailedContent: "I pride myself on my fault-finding expertise. Many electrical issues are hidden behind walls or under floors, and I use advanced diagnostic equipment to locate and repair faults quickly. I offer a transparent pricing structure for maintenance and small jobs, serving residential clients across Rugby, Southam, and the wider Midlands area.",
     features: [
       "Advanced Fault Finding",
       "Socket & Switch Replacements",
@@ -500,68 +500,65 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "commercial",
-    slug: "commercial-electrical-services",
-    title: "Commercial Electrical Services",
-    shortTitle: "Commercial",
+    id: "residential",
+    slug: "residential-electrical-services",
+    title: "Residential Electrical Services",
+    shortTitle: "Residential",
     icon: Building2,
-    image: commercialImg,
-    description: "Comprehensive electrical solutions for offices, retail units, and industrial spaces.",
-    longDescription: "I provide specialized electrical services for commercial clients, from high-end retail shopfitting to industrial warehouse maintenance. Understanding the unique requirements of business environments, I deliver work that ensures operational continuity, safety compliance, and energy efficiency. Whether you need a full office rewire or ongoing planned maintenance, I offer professional, reliable service tailored to your business needs.",
-    detailedContent: "Commercial electrical systems require a higher level of expertise and attention to detail. I handle 3-phase installations, emergency lighting systems, commercial-grade security infrastructure, and energy-efficient lighting upgrades that can significantly reduce your business's overheads. I work flexibly to minimize downtime, often performing major works outside of standard business hours to ensure your operations remain uninterrupted.",
+    image: maintenanceImg,
+    description: "Comprehensive electrical solutions for residential clients.",
+    longDescription: "I provide specialized electrical services for residential clients, from high-end retail shopfitting to industrial warehouse maintenance. Understanding the unique requirements of business environments, I deliver work that ensures operational continuity, safety compliance, and energy efficiency. Whether you need a full office rewire or ongoing planned maintenance, I offer professional, reliable service tailored to your business needs.",
+    detailedContent: "Residential electrical systems require a higher level of expertise and attention to detail. I handle 3-phase installations, emergency lighting systems, residential-grade security infrastructure, and energy-efficient lighting upgrades that can significantly reduce your business's overheads. I work flexibly to minimize downtime, often performing major works outside of standard business hours to ensure your operations remain uninterrupted.",
     features: [
       "3-Phase Power Installations",
       "Emergency Lighting Testing",
-      "Commercial EICR & Compliance",
-      "Retail & Office Fit-outs",
-      "Data Cabling & Networking",
-      "Planned Maintenance Contracts"
+      "Residential EICR & Compliance"
     ],
     benefits: [
       {
-        title: "Business Continuity",
+        title: "Residential Continuity",
         description: "Reliable systems and rapid support to keep your operations running smoothly.",
         icon: ShieldCheck
       },
       {
         title: "Energy Efficiency",
-        description: "Reduce overheads with high-efficiency commercial lighting and power solutions.",
+        description: "Reduce overheads with high-efficiency residential lighting and power solutions.",
         icon: Zap
       },
       {
         title: "Total Compliance",
-        description: "Ensure your business meets all legal health and safety electrical standards.",
+        description: "Ensure your residential meets all legal health and safety electrical standards.",
         icon: Award
       }
     ],
     processSteps: [
       {
         title: "Site Survey",
-        description: "Comprehensive assessment of your commercial electrical infrastructure."
+        description: "Comprehensive assessment of your residential electrical infrastructure."
       },
       {
         title: "Technical Design",
-        description: "Bespoke electrical planning tailored to your specific business requirements."
+        description: "Bespoke electrical planning tailored to your specific residential requirements."
       },
       {
         title: "Phased Execution",
-        description: "Strategic installation scheduled to minimize disruption to your business."
+        description: "Strategic installation scheduled to minimize disruption to your residential."
       },
       {
         title: "Certification",
-        description: "Full commercial certification and detailed O&M manuals provided."
+        description: "Full residential certification and detailed O&M manuals provided."
       }
     ],
     faqs: [
       {
-        category: "Commercial",
-        question: "Do you offer out-of-hours commercial work?",
-        answer: "Yes, I understand that many businesses cannot afford downtime. I can schedule major works for evenings or weekends."
+        category: "Residential",
+        question: "Do you offer out-of-hours residential work?",
+        answer: "Yes, I understand that many clients cannot afford downtime. I can schedule major works for evenings or weekends."
       },
       {
-        category: "Commercial",
+        category: "Residential",
         question: "Can you handle 3-phase power installations?",
-        answer: "Absolutely. I am fully qualified and experienced in installing and maintaining 3-phase commercial and industrial systems."
+        answer: "Absolutely. I am fully qualified and experienced in installing and maintaining 3-phase residential systems."
       }
     ]
   },

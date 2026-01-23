@@ -31,7 +31,7 @@ export const ServicesPage = () => {
     {
       icon: CheckCircle2,
       title: "Certified Professional",
-      description: "Fully qualified and registered to handle all residential and commercial electrical work."
+      description: "Fully qualified and registered to handle all residential electrical work."
     }
   ]
 

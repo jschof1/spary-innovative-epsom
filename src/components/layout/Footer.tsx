@@ -3,12 +3,12 @@ import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
-import niceicLogo from "../../assets/certifications/niceic240x172.png";
+import NAPITLogo from "../../assets/certifications/NAPIT-logo.svg";
 import logo from "../../assets/sl-logo.png"
-import visaLogo from "../../assets/payment/visa-202311.svg";
-import mastercardLogo from "../../assets/payment/mastercard-202311.svg";
-import amexLogo from "../../assets/payment/amex-202311.svg";
-import maestroLogo from "../../assets/payment/maestro-202311.svg";
+// import visaLogo from "../../assets/payment/visa-202311.svg";
+// import mastercardLogo from "../../assets/payment/mastercard-202311.svg";
+// import amexLogo from "../../assets/payment/amex-202311.svg";
+// import maestroLogo from "../../assets/payment/maestro-202311.svg";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -79,7 +79,7 @@ export const Footer = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                   <img 
-                    src={niceicLogo} 
+                    src={NAPITLogo} 
                     alt="NICEIC Certified" 
                     className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
                   />
@@ -100,7 +100,7 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h4 className="font-header font-bold text-lg mb-4 uppercase tracking-wider">Accepted Payments</h4>
               <div className="flex flex-wrap gap-3">
                 <img src={visaLogo} alt="Visa" className="h-6 w-auto opacity-80" />
@@ -108,7 +108,7 @@ export const Footer = () => {
                 <img src={amexLogo} alt="American Express" className="h-6 w-auto opacity-80" />
                 <img src={maestroLogo} alt="Maestro" className="h-6 w-auto opacity-80" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

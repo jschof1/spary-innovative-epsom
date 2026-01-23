@@ -12,7 +12,7 @@ import emergencyProjectImg from "../../assets/photos/the-service-van--white-tran
 const projects = [
   {
     title: "EV Charger Home Installation",
-    location: "Rugby CV21",
+    location: "Rugby CV21, Rugby",
     category: "EV Charging",
     description: "Installation of Ohme ePod smart charger. Full integration with home Wi-Fi and setup of dynamic tariff charging for maximum cost efficiency.",
     specs: ["Ohme ePod Charger", "Surge Protection", "Smart Integration"],
@@ -51,12 +51,12 @@ const projects = [
     image: smartHomeProjectImg
   },
   {
-    title: "Commercial Office Lighting Upgrade",
+    title: "Residential Lighting Upgrade",
     location: "Coventry CV1",
-    category: "Commercial",
-    description: "Complete LED lighting overhaul for a modern office space. Implementation of automated motion sensors and daylight harvesting to reduce energy costs by 40%.",
+    category: "Residential",
+    description: "Complete LED lighting overhaul for a modern residential space. Implementation of automated motion sensors and daylight harvesting to reduce energy costs by 40%.",
     specs: ["LED Panel Lighting", "Motion Sensors", "Daylight Sensors"],
-    impact: "40% Energy Savings",
+    impact: "40% Energy Savings", 
     status: "Certified",
     image: commercialProjectImg
   },

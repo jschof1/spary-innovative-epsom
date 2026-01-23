@@ -23,7 +23,7 @@ const getServiceFeatures = (id: string) => {
     "lighting": ["LED Efficiency", "PIR Sensors", "Garden Lighting"],
     "smart-home": ["App Control", "Heating & Lighting", "Security Integration"],
     "eicr": ["Landlord Compliance", "Safety Surveys", "Digital Reports"],
-    "commercial": ["3-Phase Power", "Planned Maintenance", "Compliance Testing"],
+    "residential": ["3-Phase Power", "Planned Maintenance", "Compliance Testing"],
     "emergency": ["24/7 Response", "Fault Finding", "Safety Isolation"]
   }
   return features[id] || ["Professional Repair", "Quality Parts", "Expert Labor"]
