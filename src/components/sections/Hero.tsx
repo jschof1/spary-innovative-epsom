@@ -1,7 +1,7 @@
 import { QuoteForm } from "@/components/forms/QuoteForm"
 import { Star } from "lucide-react"
 import { motion } from "framer-motion"
-import niceicLogo from "../../assets/certifications/niceic240x172.png";
+import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
 import heroBg from "../../assets/photos/main-hero-background--wide-angle-modern-living-room--smart-lighting--blurred-background-for-text-overlay--navy-and-orange-accents.webp";
 
 interface HeroProps {
@@ -83,11 +83,11 @@ export const Hero = ({
 
               <div className="flex items-center gap-2 lg:gap-3 bg-white/10 backdrop-blur-sm p-2 lg:p-3 rounded-lg border border-white/20 w-[calc(50%-6px)] sm:w-56 h-16 lg:h-20">
                 <div className="flex-shrink-0 bg-white rounded shadow-lg w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center text-center overflow-hidden">
-                 <img src={niceicLogo} alt="NICEIC" className="w-full h-auto object-contain p-1" />
+                 <img src={cityAndGuildsLogo} alt="City & Guilds" className="w-full h-auto object-contain p-1" />
                 </div>
                 <div className="flex flex-col justify-center min-w-0">
-                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">Reg #7616886213</p>
-                  <p className="text-[8px] lg:text-[9px] font-medium uppercase tracking-widest text-white/60 truncate">Certified</p>
+                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">City & Guilds</p>
+                  <p className="text-[8px] lg:text-[9px] font-medium uppercase tracking-widest text-white/60 truncate">Qualified</p>
                 </div>
               </div>
             </div>
