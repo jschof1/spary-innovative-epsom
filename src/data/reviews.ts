@@ -113,7 +113,6 @@ export const reviewsStats = {
   },
   platforms: [
     { name: 'Google', rating: 5.0, count: 38 },
-    { name: 'Trustpilot', rating: 4.9, count: 12 },
-    { name: 'Checkatrade', rating: 5.0, count: 4 }
+    { name: 'Trustpilot', rating: 4.9, count: 12 }
   ]
 };

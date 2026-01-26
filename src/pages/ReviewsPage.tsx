@@ -153,9 +153,6 @@ export const ReviewsPage = () => {
                         {platform.name === 'Trustpilot' && (
                           <svg className="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         )}
-                        {platform.name === 'Checkatrade' && (
-                          <CheckCircle className="w-6 h-6 text-red-600" />
-                        )}
                       </div>
                       <span className="text-xs font-bold text-gray-700">{platform.rating}/5</span>
                       <span className="text-[10px] text-gray-400">{platform.count} reviews</span>
@@ -263,11 +260,6 @@ export const ReviewsPage = () => {
                   <a href="#" className="bg-white/5 hover:bg-white/10 p-6 rounded-xl border border-white/10 transition-colors flex flex-col items-center">
                     <Star className="w-8 h-8 text-green-400 mb-3 fill-current" />
                     <span className="text-white font-bold">Trustpilot</span>
-                    <span className="text-xs text-gray-400 mt-1 flex items-center gap-1">View Profile <ExternalLink size={10} /></span>
-                  </a>
-                  <a href="#" className="bg-white/5 hover:bg-white/10 p-6 rounded-xl border border-white/10 transition-colors flex flex-col items-center">
-                    <CheckCircle className="w-8 h-8 text-red-400 mb-3" />
-                    <span className="text-white font-bold">Checkatrade</span>
                     <span className="text-xs text-gray-400 mt-1 flex items-center gap-1">View Profile <ExternalLink size={10} /></span>
                   </a>
                 </div>
