@@ -1,5 +1,4 @@
 import niceicLogo from "../../assets/certifications/niceic240x172.png";
-import checkatradeLogo from "../../assets/logos/checkatrade.svg";
 import trustpilotLogo from "../../assets/logos/trustpilot.svg";
 import googleLogo from "../../assets/logos/Google__G__logo.svg";
 
@@ -17,14 +16,6 @@ export const TrustBar = () => {
             <span className="text-[10px] font-bold mt-1 text-gray-500">Reg #7616886213</span>
           </div>
           
-          <div className="flex items-center">
-            <img 
-              src={checkatradeLogo} 
-              alt="Checkatrade" 
-              className="h-8 w-auto object-contain"
-            />
-          </div>
-
           <div className="flex items-center">
             <img 
               src={googleLogo} 
