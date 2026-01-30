@@ -7,14 +7,14 @@ export const TrustBar = () => {
     <section className="bg-white border-b border-gray-200 py-6" id="trust-logos">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <img 
               src={niceicLogo} 
               alt="NICEIC Certified" 
               className="h-10 w-auto object-contain"
             />
             <span className="text-[10px] font-bold mt-1 text-gray-500">Reg #7616886213</span>
-          </div>
+          </div> */}
           
           <div className="flex items-center">
             <img 
