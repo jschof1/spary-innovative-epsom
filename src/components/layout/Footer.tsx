@@ -3,7 +3,6 @@ import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
-// import NAPITLogo from "../../assets/certifications/NAPIT-logo.svg";
 import logo from "../../assets/sl-logo.png"
 // import visaLogo from "../../assets/payment/visa-202311.svg";
 // import mastercardLogo from "../../assets/payment/mastercard-202311.svg";
@@ -76,7 +75,7 @@ export const Footer = () => {
           <div>
             <div className="mb-10">
               <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Accreditations</h4>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1">
                 {/* <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                   <img 
                     src={NAPITLogo} 
@@ -91,12 +90,12 @@ export const Footer = () => {
                     className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300 col-span-2">
+                {/* <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300 col-span-2">
                   <div className="text-center">
                     <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Registration No.</span>
                     <p className="text-sm font-bold text-white/80">{siteSettings.registrationNumber}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
