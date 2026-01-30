@@ -7,11 +7,12 @@ export const siteSettings = {
   googleRating: "5.0/5",
   reviewCount: "50+",
   registrationNumber: "7616886213",
-  quoteWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/YnLUYbKKTCRhYm6fNWwL",
-  feedbackWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/Yzm0pyxzTPugTndww5GR",
+  // API endpoints (proxied through Cloudflare Functions for security)
+  quoteApiEndpoint: "/api/quote",
+  feedbackApiEndpoint: "/api/feedback",
+  formApiEndpoint: "/api/form",
+  discountApiEndpoint: "/api/discount",
   feedbackGoogleReviewUrl: "https://g.page/r/CcA32bot6SBbEBM/review",
-  formWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/BXIQjzJZsbUqwcShEgQq",
-  discountWebhook: "https://services.leadconnectorhq.com/hooks/bSyVQ0SSnm1MyCild7MP/webhook-trigger/qyuwsbLtAVuyb5bFBGnP",
   standardFaqs: [
     {
       category: "Pricing",

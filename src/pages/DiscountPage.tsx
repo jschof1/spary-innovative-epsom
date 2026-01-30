@@ -22,7 +22,7 @@ export const DiscountPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(siteSettings.discountWebhook, {
+      const response = await fetch(siteSettings.discountApiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

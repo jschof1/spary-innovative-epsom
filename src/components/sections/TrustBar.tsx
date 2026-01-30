@@ -1,4 +1,4 @@
-import niceicLogo from "../../assets/certifications/niceic240x172.png";
+// import niceicLogo from "../../assets/certifications/niceic240x172.png";
 import trustpilotLogo from "../../assets/logos/trustpilot.svg";
 import googleLogo from "../../assets/logos/Google__G__logo.svg";
 

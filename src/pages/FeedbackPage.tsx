@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { siteSettings } from "@/data/siteSettings";
 
 const GOOGLE_REVIEW_URL = siteSettings.feedbackGoogleReviewUrl;
-const WEBHOOK_URL = siteSettings.feedbackWebhook;
+const API_URL = siteSettings.feedbackApiEndpoint;
 
 const FeedbackPage = () => {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
@@ -41,7 +41,7 @@ const FeedbackPage = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(WEBHOOK_URL, {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ export const QuoteForm = () => {
     setLoading(true)
     
     try {
-      const response = await fetch(siteSettings.formWebhook, {
+      const response = await fetch(siteSettings.formApiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

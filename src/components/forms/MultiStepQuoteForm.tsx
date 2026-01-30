@@ -79,7 +79,7 @@ export const MultiStepQuoteForm = () => {
     setLoading(true)
 
     try {
-      const response = await fetch(siteSettings.quoteWebhook, {
+      const response = await fetch(siteSettings.quoteApiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
