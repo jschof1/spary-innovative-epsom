@@ -43,7 +43,6 @@ export const services: Service[] = [
       "Solar PV Integration Options",
       "Smart App Control & Scheduling",
       "Dynamic Load Balancing Protection",
-      "Full NICEIC Certification & Part P"
     ],
     benefits: [
       {

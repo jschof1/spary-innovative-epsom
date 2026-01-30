@@ -35,9 +35,9 @@ export const QuotePage = () => {
           <div className="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/20">
             {/* Header Area inside Card */}
             <div className="bg-orange-500 p-8 text-center">
-              <div className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
+              {/* <div className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
                 <Star className="w-3 h-3 fill-white" /> NICEIC Registered
-              </div>
+              </div> */}
               <h1 className="text-3xl md:text-4xl font-header font-bold text-white mb-2">
                 Get Your Fixed Quote
               </h1>
