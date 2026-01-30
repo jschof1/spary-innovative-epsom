@@ -27,7 +27,7 @@ import {
 
 // Import local assets
 import heroElectrician from "../assets/photos/the-specialist--bio---professional-electrician-in-navy-uniform--standing-in-modern-kitchen--high-end-toolkit-nearby--friendly-atmosphere.webp";
-import serviceVan from "../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp";
+import serviceVan from "../assets/photos/van-picture.webp";
 import localAerial from "../assets/photos/midlands-service-area--aerial-drone-view-of-classic-english-town-square--historic-brick-buildings--soft-sunset-lighting.webp";
 
 const AreaPage = () => {

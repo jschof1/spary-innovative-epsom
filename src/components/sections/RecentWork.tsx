@@ -7,7 +7,7 @@ import cuProjectImg from "../../assets/photos/consumer-unit-upgrade--close-up-of
 import lightProjectImg from "../../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp";
 import smartHomeProjectImg from "../../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp";
 import commercialProjectImg from "../../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp";
-import emergencyProjectImg from "../../assets/photos/the-service-van--white-transit-van-on-uk-residential-street--brick-homes-in-background--shallow-depth-of-field--professional-fleet-style.webp";
+import emergencyProjectImg from "../../assets/photos/van-picture.webp";
 
 const projects = [
   {
