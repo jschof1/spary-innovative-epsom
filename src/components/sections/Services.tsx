@@ -88,7 +88,7 @@ export const Services = ({
                 <div className="absolute top-0 right-0 w-8 h-px bg-slate-200 group-hover:bg-orange-400 transition-colors" />
               </div>
 
-              <div className="flex-grow">
+                <div className="flex-grow">
                 <div className="mb-6 inline-flex items-center justify-center">
                   <div className="w-14 h-14 bg-slate-900 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-600 transition-all duration-500 shadow-lg">
                     <service.icon className="w-7 h-7 text-white" />
@@ -103,6 +103,15 @@ export const Services = ({
                 <p className="text-slate-500 mb-8 leading-relaxed text-[15px] font-medium">
                   {service.description}
                 </p>
+
+                {service.image && (
+                  <img 
+                    src={service.image} 
+                    alt={`${service.title} - Professional Electrical Service`}
+                    className="hidden" // Hidden from view but available for SEO and crawlers
+                    loading="lazy"
+                  />
+                )}
 
                 {/* Technical Features List */}
                 <div className="space-y-3 mb-6 pt-6 border-t border-slate-100">

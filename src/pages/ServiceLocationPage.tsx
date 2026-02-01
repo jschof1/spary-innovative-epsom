@@ -9,6 +9,7 @@ import { getServiceBySlug } from "@/data/services"
 import { getLocationBySlug } from "@/data/locations"
 import { siteSettings } from "@/data/siteSettings"
 import { CheckCircle2, Phone, ArrowRight, ShieldCheck, Clock } from "lucide-react"
+import { getServiceSchema, getFAQSchema } from "@/lib/seo-schemas"
 
 export const ServiceLocationPage = () => {
   const { locationSlug, serviceSlug } = useParams<{ locationSlug: string; serviceSlug: string }>()
@@ -27,11 +28,21 @@ export const ServiceLocationPage = () => {
   const title = `${service.shortTitle} in ${location.name}`
   const description = `Need ${service.shortTitle.toLowerCase()} in ${location.name}? I offer fast, reliable ${service.title.toLowerCase()} across the ${location.name} area and ${location.postcodes.join(", ")} postcodes.`
 
+  const serviceSchema = getServiceSchema(service, location.name);
+  const faqSchema = getFAQSchema(service.faqs.length > 0 ? service.faqs : siteSettings.standardFaqs);
+
   return (
     <>
       <Helmet>
         <title>{title} | {siteSettings.businessName}</title>
         <meta name="description" content={description} />
+        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${location.slug}/${service.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <Hero 

@@ -9,6 +9,7 @@ import { services, getServiceBySlug } from "@/data/services"
 import { locations } from "@/data/locations"
 import { siteSettings } from "@/data/siteSettings"
 import { CheckCircle2, ArrowRight, Phone, Mail, Clock, ShieldCheck, Star } from "lucide-react"
+import { getServiceSchema, getFAQSchema } from "@/lib/seo-schemas"
 
 export const ServicePage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: string }>()
@@ -23,11 +24,21 @@ export const ServicePage = () => {
     )
   }
 
+  const serviceSchema = getServiceSchema(service);
+  const faqSchema = getFAQSchema(service.faqs);
+
   return (
     <>
       <Helmet>
         <title>{service.title} | {siteSettings.businessName}</title>
         <meta name="description" content={service.description} />
+        <link rel="canonical" href={`https://dhelectricalservice.co.uk/services/${service.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <Hero 

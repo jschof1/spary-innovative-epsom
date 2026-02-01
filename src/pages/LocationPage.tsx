@@ -10,6 +10,7 @@ import { FAQ } from "@/components/sections/FAQ"
 import { getLocationBySlug } from "@/data/locations"
 import { services } from "@/data/services"
 import { siteSettings } from "@/data/siteSettings"
+import { getServiceSchema } from "@/lib/seo-schemas"
 
 export const LocationPage = () => {
   const { locationSlug } = useParams<{ locationSlug: string }>()
@@ -24,11 +25,28 @@ export const LocationPage = () => {
     )
   }
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": `${siteSettings.businessName} - ${location.name}`,
+    "description": `Expert electrical services in ${location.name}. ${location.description}`,
+    "url": `https://dhelectricalservice.co.uk/locations/${location.slug}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": location.name,
+      "addressCountry": "GB"
+    }
+  };
+
   return (
     <>
       <Helmet>
         <title>Electrician in {location.name} | {siteSettings.businessName}</title>
         <meta name="description" content={`Expert electrical services in ${location.name}. ${location.description}`} />
+        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${location.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       </Helmet>
 
       <Hero 

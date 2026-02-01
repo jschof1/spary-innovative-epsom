@@ -39,7 +39,7 @@ export const Hero = ({
             >
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
-                alt="Google Logo" 
+                alt="Google Reviews" 
                 className="w-5 h-5"
               />
               <div className="flex">
@@ -62,6 +62,16 @@ export const Hero = ({
             <p className={`text-xl md:text-2xl text-gray-200 mb-6 lg:mb-10 max-w-lg mx-auto lg:mx-0 ${!showForm && "mx-auto max-w-2xl"}`}>
               {subtitle}
             </p>
+
+            {/* Hidden image for SEO if backgroundImage is provided */}
+            {backgroundImage && (
+              <img 
+                src={backgroundImage} 
+                alt="DH Electrical Services - Professional Electrician" 
+                className="hidden" 
+                aria-hidden="true"
+              />
+            )}
             
             {/* Trust Snippet */}
             <div className={`mt-6 lg:mt-10 flex flex-row items-center gap-3 lg:gap-6 justify-center lg:justify-start ${!showForm ? "justify-center" : ""}`}>

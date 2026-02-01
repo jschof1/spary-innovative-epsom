@@ -13,13 +13,20 @@ import { ServiceAreas } from "@/components/sections/ServiceAreas"
 import { BrandBenefits } from "@/components/sections/BrandBenefits"
 import { RecentWork } from "@/components/sections/RecentWork"
 import { siteSettings } from "@/data/siteSettings"
+import { getLocalBusinessSchema } from "@/lib/seo-schemas"
 
 export const HomePage = () => {
+  const schema = getLocalBusinessSchema();
+
   return (
     <>
       <Helmet>
         <title>{siteSettings.businessName} | Expert Electrician in Rugby & Southam</title>
         <meta name="description" content="Professional electrical services across Rugby, Southam and Coventry. 24/7 emergency repairs, EV charger installations, and more. Certified work with free quotes." />
+        <link rel="canonical" href="https://dhelectricalservice.co.uk/" />
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       </Helmet>
       
       <Hero />
