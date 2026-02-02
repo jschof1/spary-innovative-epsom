@@ -21,6 +21,16 @@ export const DiscountPage = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Format phone number
+    let formattedPhone = formData.number.trim().replace(/[^\d+]/g, '');
+    if (formattedPhone.startsWith('0')) {
+      formattedPhone = '+44' + formattedPhone.substring(1);
+    } else if (formattedPhone.startsWith('44')) {
+      formattedPhone = '+' + formattedPhone;
+    } else if (!formattedPhone.startsWith('+') && formattedPhone.length > 0) {
+      formattedPhone = '+44' + formattedPhone;
+    }
+
     try {
       const response = await fetch(siteSettings.discountApiEndpoint, {
         method: "POST",
@@ -29,7 +39,7 @@ export const DiscountPage = () => {
         },
         body: JSON.stringify({
           name: formData.name.trim(),
-          phone: formData.number.trim(),
+          phone: formattedPhone,
           summary: formData.message.trim(),
           source: "discount-page",
           timestamp: new Date().toISOString(),

@@ -40,6 +40,19 @@ const FeedbackPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Format phone number if provided
+    let formattedPhone = formData.phone.trim();
+    if (formattedPhone) {
+      formattedPhone = formattedPhone.replace(/[^\d+]/g, '');
+      if (formattedPhone.startsWith('0')) {
+        formattedPhone = '+44' + formattedPhone.substring(1);
+      } else if (formattedPhone.startsWith('44')) {
+        formattedPhone = '+' + formattedPhone;
+      } else if (!formattedPhone.startsWith('+') && formattedPhone.length > 0) {
+        formattedPhone = '+44' + formattedPhone;
+      }
+    }
+
     try {
       const response = await fetch(API_URL, {
         method: "POST",
@@ -50,7 +63,7 @@ const FeedbackPage = () => {
           rating: selectedRating,
           name: formData.name.trim(),
           email: formData.email.trim(),
-          phone: formData.phone.trim(),
+          phone: formattedPhone,
           feedback: formData.feedback.trim(),
           source: "feedback-page",
           timestamp: new Date().toISOString(),

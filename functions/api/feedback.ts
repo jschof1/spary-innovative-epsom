@@ -32,15 +32,27 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
+    let requestBody = { ...body, timestamp: new Date().toISOString() };
+
+    // Format phone number if provided
+    if (body.phone) {
+      let formattedPhone = body.phone.replace(/[^\d+]/g, '');
+      if (formattedPhone.startsWith('0')) {
+        formattedPhone = '+44' + formattedPhone.substring(1);
+      } else if (formattedPhone.startsWith('44')) {
+        formattedPhone = '+' + formattedPhone;
+      } else if (!formattedPhone.startsWith('+') && formattedPhone.length > 0) {
+        formattedPhone = '+44' + formattedPhone;
+      }
+      requestBody.phone = formattedPhone;
+    }
+
     const webhookResponse = await fetch(env.FEEDBACK_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        ...body,
-        timestamp: new Date().toISOString(),
-      }),
+      body: JSON.stringify(requestBody),
     });
 
     if (!webhookResponse.ok) {

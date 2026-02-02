@@ -26,6 +26,16 @@ export const QuoteForm = () => {
     e.preventDefault()
     setLoading(true)
     
+    // Format phone number
+    let formattedPhone = formData.phone.replace(/[^\d+]/g, '');
+    if (formattedPhone.startsWith('0')) {
+      formattedPhone = '+44' + formattedPhone.substring(1);
+    } else if (formattedPhone.startsWith('44')) {
+      formattedPhone = '+' + formattedPhone;
+    } else if (!formattedPhone.startsWith('+') && formattedPhone.length > 0) {
+      formattedPhone = '+44' + formattedPhone;
+    }
+    
     try {
       const response = await fetch(siteSettings.formApiEndpoint, {
         method: "POST",
@@ -34,6 +44,7 @@ export const QuoteForm = () => {
         },
         body: JSON.stringify({
           ...formData,
+          phone: formattedPhone,
           source: "quote-form",
           timestamp: new Date().toISOString(),
         }),

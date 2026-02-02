@@ -32,6 +32,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
+    // Format phone number to ensure +44 prefix
+    let formattedPhone = body.phone.replace(/[^\d+]/g, '');
+    if (formattedPhone.startsWith('0')) {
+      formattedPhone = '+44' + formattedPhone.substring(1);
+    } else if (formattedPhone.startsWith('44')) {
+      formattedPhone = '+' + formattedPhone;
+    } else if (!formattedPhone.startsWith('+') && formattedPhone.length > 0) {
+      formattedPhone = '+44' + formattedPhone;
+    }
+
     const webhookResponse = await fetch(env.DISCOUNT_WEBHOOK_URL, {
       method: "POST",
       headers: {
@@ -39,6 +49,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       },
       body: JSON.stringify({
         ...body,
+        phone: formattedPhone,
         timestamp: new Date().toISOString(),
       }),
     });
