@@ -1,4 +1,5 @@
 import { Shield, HeartHandshake, Banknote, Star, Award } from "lucide-react"
+import { motion } from "framer-motion"
 
 const benefits = [
   {
@@ -56,7 +57,14 @@ export const BrandBenefits = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-12">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex flex-col gap-5 group">
+                <motion.div 
+                  key={index} 
+                  className="flex flex-col gap-5 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
                   <div className={`w-14 h-14 ${benefit.bg} rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
                     <benefit.icon className={`w-7 h-7 ${benefit.accent}`} />
                   </div>
@@ -64,7 +72,7 @@ export const BrandBenefits = () => {
                     <h4 className="font-bold text-xl mb-2 text-white group-hover:text-orange-400 transition-colors">{benefit.title}</h4>
                     <p className="text-navy-100/70 leading-relaxed text-sm">{benefit.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

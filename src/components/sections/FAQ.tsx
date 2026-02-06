@@ -9,6 +9,7 @@ import { HelpCircle, Search, MessageCircle, Phone, ArrowRight } from "lucide-rea
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface FAQItem {
   question: string
@@ -137,37 +138,50 @@ export const FAQ = ({
           <div className="md:col-span-8">
             <div className="bg-white rounded-[2.5rem] p-3 md:p-6 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-gray-100">
               <Accordion type="single" collapsible className="space-y-4">
-                {filteredItems.length > 0 ? (
-                  filteredItems.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
-                      value={`item-${index}`} 
-                      className="border border-gray-100 rounded-2xl overflow-hidden px-2 hover:border-orange-200 transition-colors"
+                <AnimatePresence mode="popLayout">
+                  {filteredItems.length > 0 ? (
+                    filteredItems.map((faq, index) => (
+                      <motion.div
+                        key={faq.question}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <AccordionItem 
+                          value={`item-${index}`} 
+                          className="border border-gray-100 rounded-2xl overflow-hidden px-2 hover:border-orange-200 transition-colors"
+                        >
+                          <AccordionTrigger className="w-full flex justify-between items-center p-6 text-left focus:outline-none hover:no-underline group">
+                            <div className="flex flex-col gap-1 pr-8">
+                              {faq.category && (
+                                <span className="text-[10px] uppercase tracking-wider font-bold text-orange-500 mb-1">
+                                  {faq.category}
+                                </span>
+                              )}
+                              <span className="font-bold text-navy-900 text-lg md:text-xl group-hover:text-orange-600 transition-colors leading-tight">
+                                {faq.question}
+                              </span>
+                            </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="px-6 pb-6 pt-0 text-gray-600 text-[17px] leading-relaxed">
+                            <div className="pt-4 border-t border-gray-50">
+                              {faq.answer}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </motion.div>
+                    ))
+                  ) : (
+                    <motion.div 
+                      className="text-center py-12"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                     >
-                      <AccordionTrigger className="w-full flex justify-between items-center p-6 text-left focus:outline-none hover:no-underline group">
-                        <div className="flex flex-col gap-1 pr-8">
-                          {faq.category && (
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-orange-500 mb-1">
-                              {faq.category}
-                            </span>
-                          )}
-                          <span className="font-bold text-navy-900 text-lg md:text-xl group-hover:text-orange-600 transition-colors leading-tight">
-                            {faq.question}
-                          </span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 pt-0 text-gray-600 text-[17px] leading-relaxed">
-                        <div className="pt-4 border-t border-gray-50">
-                          {faq.answer}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))
-                ) : (
-                  <div className="text-center py-12">
-                    <p className="text-gray-400 text-lg italic">No questions found matching your search.</p>
-                  </div>
-                )}
+                      <p className="text-gray-400 text-lg italic">No questions found matching your search.</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </Accordion>
             </div>
           </div>

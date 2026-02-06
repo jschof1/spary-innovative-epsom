@@ -91,10 +91,15 @@ const config = {
         from: { height: 'var(--radix-accordion-content-height)' },
         to: { height: '0' }
       },
+      shimmer: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
     },
     animation: {
       'accordion-down': 'accordion-down 0.2s ease-out',
       'accordion-up': 'accordion-up 0.2s ease-out',
+      shimmer: 'shimmer 3s ease-in-out infinite',
     },
   		boxShadow: {
   			form: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'

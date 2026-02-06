@@ -19,6 +19,8 @@ const steps = [
   },
 ]
 
+import { motion } from "framer-motion"
+
 export const Process = () => {
   return (
     <section className="bg-grey-light py-8 md:py-12 overflow-hidden" id="process">
@@ -30,13 +32,20 @@ export const Process = () => {
           <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-200 -z-0"></div>
 
           {steps.map((step, index) => (
-            <div key={index} className="bg-grey-light text-center relative z-10">
+            <motion.div 
+              key={index} 
+              className="bg-grey-light text-center relative z-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+            >
               <div className={`w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-4 ${step.borderColor}`}>
                 <span className="font-header text-4xl font-bold text-navy-900">{step.number}</span>
               </div>
               <h3 className="font-header text-xl font-bold text-navy-900 mb-3">{step.title}</h3>
               <p className="text-gray-600 px-4" dangerouslySetInnerHTML={{ __html: step.description }} />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

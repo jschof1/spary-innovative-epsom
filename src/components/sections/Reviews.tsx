@@ -1,5 +1,6 @@
 import { Star } from "lucide-react"
 import { reviewsData, reviewsStats } from "../../data/reviews"
+import { motion } from "framer-motion"
 
 export const Reviews = () => {
   // Show the first 6 reviews
@@ -10,8 +11,16 @@ export const Reviews = () => {
         <h2 className="font-header text-2xl md:text-3xl font-bold text-navy-900 text-center mb-8">What Your Neighbors Say</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayReviews.map((review) => (
-            <div key={review.id} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col">
+          {displayReviews.map((review, index) => (
+            <motion.div 
+              key={review.id} 
+              className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+            >
               <div className="flex text-yellow-400 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star 
@@ -30,7 +39,7 @@ export const Reviews = () => {
                   <p className="text-xs text-gray-500">{review.location} • {review.service}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

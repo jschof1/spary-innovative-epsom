@@ -5,7 +5,8 @@ import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle, Sparkles } from "lu
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"
-import teamImage from "@/assets/team/gh-electrical-team.webp"
+import vanImage from "@/assets/about/van-branded.webp"
+import expertiseImage from "@/assets/about/expertise-branded.webp"
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -17,7 +18,7 @@ const fadeIn = {
 const stats = [
   { label: "Years Experience", value: "10+" },
   { label: "Surfaces Transformed", value: "500+" },
-  { label: "Specialist Team", value: "1" },
+  { label: "Quality Guarantee", value: "10yr" },
   { label: "Availability", value: "7 Days" },
 ]
 
@@ -25,8 +26,8 @@ export const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Paul Lear | {siteSettings.businessName}</title>
-        <meta name="description" content={`Learn more about ${siteSettings.businessName}. Paul Lear is your local expert spray painting specialist serving Epsom, Ewell, and the surrounding areas.`} />
+        <title>About Us | {siteSettings.businessName}</title>
+        <meta name="description" content={`Learn more about ${siteSettings.businessName}. We are your local expert spray painting specialists serving Epsom, Ewell, and the surrounding areas.`} />
       </Helmet>
 
       <div className="overflow-hidden bg-white">
@@ -52,15 +53,15 @@ export const AboutPage = () => {
                 >
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-bold mb-8 uppercase tracking-[0.2em]">
                     <Sparkles className="w-4 h-4" />
-                    <span>Expert Spraying Specialist</span>
+                    <span>Expert Spraying Specialists</span>
                   </div>
                   <h1 className="text-5xl lg:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
-                    MEET <span className="text-orange-500">PAUL.</span> <br/>
-                    YOUR LOCAL <br/>
-                    <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">SPECIALIST.</span>
+                    INNOVATIVE <span className="text-orange-500">SPRAY.</span> <br/>
+                    EXPERT <br/>
+                    <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">RESULTS.</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed font-medium">
-                    Based in Epsom, I provide expert spray painting services across Ewell, Banstead, and the wider Surrey area. With a decade of experience in professional coatings, I founded Spray Innovative to offer homeowners a high-quality, cost-effective alternative to replacement.
+                    Based in Epsom, Spray Innovative provides professional spray painting services across Surrey. We specialize in high-performance coatings that transform homes and commercial spaces with a factory-quality finish.
                   </p>
                   <div className="flex flex-wrap gap-6">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-black py-8 px-10 rounded-none shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none text-lg uppercase tracking-wider">
@@ -92,13 +93,13 @@ export const AboutPage = () => {
                   <div className="absolute -inset-4 bg-orange-500/20 blur-2xl group-hover:bg-orange-500/30 transition-all rounded-full" />
                   <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5]">
                     <img 
-                      src={teamImage} 
-                      alt="Paul Lear - Spray Innovative" 
+                      src={vanImage} 
+                      alt="Spray Innovative Branded Van" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy-900 to-transparent">
-                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Paul Lear</p>
-                      <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Spraying Specialist</p>
+                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Spray Innovative</p>
+                      <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Local Spraying Experts</p>
                     </div>
                   </div>
                 </div>
@@ -142,19 +143,19 @@ export const AboutPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-20 items-center">
               <motion.div className="lg:w-1/2" {...fadeIn}>
-                <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6">Professional Bio</h2>
+                <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6">Our Expertise</h2>
                 <h3 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                  QUALITY WORK FROM A <span className="text-orange-500 italic">LOCAL</span> SPECIALIST.
+                  QUALITY WORK FROM <span className="text-orange-500 italic">DEDICATED</span> SPECIALISTS.
                 </h3>
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
-                    I founded Spray Innovative with a clear goal: to provide high-quality, professional spray painting services directly to my local community.
+                    Spray Innovative was founded with a clear mission: to provide high-quality, professional spray painting services that offer real value to homeowners and businesses.
                   </p>
                   <p className="text-white border-l-4 border-orange-500 pl-6 py-2 italic">
-                    "I believe in quality, durability, and doing the job right the first time."
+                    "We believe in quality, durability, and a finish that stands the test of time."
                   </p>
                   <p>
-                    With 10 years of experience in the industry, I've developed expertise in complex transformations, particularly kitchen resprays, UPVC window coatings, and commercial spray finishing.
+                    With over a decade of industry experience, our team has mastered the art of professional coatings, specializing in kitchen resprays, UPVC transformations, and commercial finishing.
                   </p>
                 </div>
               </motion.div>
@@ -168,8 +169,8 @@ export const AboutPage = () => {
                   className="relative z-10 rounded-2xl overflow-hidden border-8 border-white/10"
                 >
                   <img 
-                    src={teamImage} 
-                    alt="Spray Innovative Team" 
+                    src={expertiseImage} 
+                    alt="Professional Spraying Expertise" 
                     className="w-full h-auto"
                   />
                 </motion.div>

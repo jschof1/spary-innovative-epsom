@@ -1,6 +1,28 @@
 import { type LucideIcon, ArrowRight, ShieldCheck, Gauge, Settings2 } from "lucide-react"
 import { services as defaultServices } from "@/data/services"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
 
 interface ServicesProps {
   title?: string
@@ -77,11 +99,18 @@ export const Services = ({
         </div>
 
         {/* Services Grid with gap-px for engineered borders */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 shadow-2xl overflow-hidden rounded-sm">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 shadow-2xl overflow-hidden rounded-sm"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {displayedServices.map((service, index) => (
-            <div 
+            <motion.div 
               key={index} 
               className="group bg-white p-8 hover:bg-slate-50 transition-all duration-500 relative flex flex-col h-full"
+              variants={itemVariants}
             >
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none overflow-hidden">
@@ -91,9 +120,12 @@ export const Services = ({
 
                 <div className="flex-grow">
                 <div className="mb-6 inline-flex items-center justify-center">
-                  <div className="w-14 h-14 bg-slate-900 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-600 transition-all duration-500 shadow-lg">
+                  <motion.div 
+                    className="w-14 h-14 bg-slate-900 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-600 transition-all duration-500 shadow-lg"
+                    whileHover={{ rotate: 5 }}
+                  >
                     <service.icon className="w-7 h-7 text-white" />
-                  </div>
+                  </motion.div>
                   <div className="ml-4 h-px w-8 bg-slate-200 group-hover:w-12 group-hover:bg-orange-300 transition-all duration-500" />
                 </div>
                 
@@ -138,9 +170,9 @@ export const Services = ({
                   </div>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Secondary Color Block Footer */}
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 p-8 bg-slate-900 text-white shadow-xl">

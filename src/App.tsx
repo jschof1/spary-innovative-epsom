@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { PromoBanner } from "@/components/layout/PromoBanner"
 import { Header } from "@/components/layout/Header"
+import { PromoCountdown } from "@/components/layout/PromoCountdown"
 import { Footer } from "@/components/layout/Footer"
 import { FloatingCTA } from "@/components/layout/FloatingCTA"
 import { HomePage } from "@/pages/HomePage"
@@ -18,6 +19,7 @@ import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage"
 import { CookiePolicyPage } from "@/pages/CookiePolicyPage"
 import { TermsOfServicePage } from "@/pages/TermsOfServicePage"
 import { QuotePage } from "@/pages/QuotePage"
+import { FAQPage } from "@/pages/FAQPage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
@@ -78,6 +80,7 @@ function App() {
       <div className="relative z-10 flex flex-col min-h-screen">
         {!isQuotePage && <PromoBanner />}
         {!isQuotePage && <Header />}
+        {!isQuotePage && <PromoCountdown />}
         
         <main className={`flex-grow ${isQuotePage ? "flex flex-col" : ""}`}>
           {/* Main content wrapper with subtle side borders on large screens for a "framed" premium layout */}
@@ -96,6 +99,7 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/cookie-policy" element={<CookiePolicyPage />} />
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="/get-quote" element={<QuotePage />} />
             </Routes>
             

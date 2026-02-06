@@ -90,6 +90,16 @@ export const services: Service[] = [
         category: "Kitchen Resprays",
         question: "Can you match any color?",
         answer: "Yes! We can match colors from all major brands including Farrow & Ball, Little Greene, Dulux, and RAL colors."
+      },
+      {
+        category: "Kitchen Resprays",
+        question: "Is there a lot of mess during the process?",
+        answer: "Minimal. We use extensive masking and extraction to ensure your home stays clean. Most of the work is done by removing the doors and spraying them in our controlled environment, while the fixed elements are sprayed on-site with careful protection."
+      },
+      {
+        category: "Kitchen Resprays",
+        question: "Do I need to empty my cupboards?",
+        answer: "You only need to clear your worktops and empty any cupboards where the internals are being sprayed. If we are only spraying the exterior faces and edges, you can usually leave your items inside."
       }
     ]
   },
@@ -156,6 +166,16 @@ export const services: Service[] = [
         category: "Window Spraying",
         question: "How long does it take?",
         answer: "A standard house can usually be completed in 1-2 days, depending on the number of windows."
+      },
+      {
+        category: "Window Spraying",
+        question: "Can you spray the inside of the windows too?",
+        answer: "Yes, we can spray both the internal and external frames. This is a popular choice for homeowners who want to change their interior decor as well as their home's curb appeal."
+      },
+      {
+        category: "Window Spraying",
+        question: "Do I need to remove my blinds or curtains?",
+        answer: "We recommend removing any window treatments to allow us full access to the frames and to prevent any accidental overspray or dust settling on them."
       }
     ]
   },
@@ -217,6 +237,16 @@ export const services: Service[] = [
         category: "Door Spraying",
         question: "Can you spray composite doors?",
         answer: "Yes, we can spray both UPVC and composite doors with excellent results."
+      },
+      {
+        category: "Door Spraying",
+        question: "How soon can I use my door after spraying?",
+        answer: "The coating is touch-dry within an hour, but we recommend leaving it open or ajar for 3-4 hours to ensure the seals don't stick while the paint fully cures."
+      },
+      {
+        category: "Door Spraying",
+        question: "Do you spray the door frame as well?",
+        answer: "Yes, we always include the external door frame in our quotes to ensure a perfectly matched, professional finish."
       }
     ]
   },
@@ -274,6 +304,16 @@ export const services: Service[] = [
         category: "Garage Doors",
         question: "Can you spray metal garage doors?",
         answer: "Yes, we use specialist metal primers and topcoats that provide excellent adhesion and rust protection."
+      },
+      {
+        category: "Garage Doors",
+        question: "Can you spray roller shutter doors?",
+        answer: "Yes, we can spray roller doors. We use flexible coatings designed to move with the slats as they roll up, preventing cracking or peeling."
+      },
+      {
+        category: "Garage Doors",
+        question: "Will the paint scratch easily?",
+        answer: "Our industrial-grade coatings are highly durable and scratch-resistant, designed to withstand the typical bumps and scrapes of a busy driveway."
       }
     ]
   },
@@ -331,6 +371,16 @@ export const services: Service[] = [
         category: "Conservatories",
         question: "Do you spray the inside of the conservatory too?",
         answer: "Yes, we can spray both the internal and external UPVC for a complete transformation."
+      },
+      {
+        category: "Conservatories",
+        question: "Will spraying make my conservatory hotter?",
+        answer: "No. In fact, we offer heat-reflective coatings that can help reduce heat absorption, potentially making your conservatory more comfortable in the summer."
+      },
+      {
+        category: "Conservatories",
+        question: "How do you protect the glass?",
+        answer: "We use professional-grade masking tape and protective film to completely cover all glass panels, ensuring a clean finish with no overspray."
       }
     ]
   },
@@ -388,6 +438,16 @@ export const services: Service[] = [
         category: "Roofline",
         question: "Do you spray gutters as well?",
         answer: "Yes, we can spray the external surfaces of your gutters to match your fascias and soffits."
+      },
+      {
+        category: "Roofline",
+        question: "Do you need scaffolding for roofline spraying?",
+        answer: "In most cases, we can use specialized ladders or towers. If scaffolding is required for safety on particularly high or awkward roofs, we will discuss this during the quote."
+      },
+      {
+        category: "Roofline",
+        question: "Can you spray wooden fascias?",
+        answer: "Yes, provided the wood is in good structural condition. We will sand and prime the wood appropriately before applying the final spray finish."
       }
     ]
   },
@@ -449,6 +509,16 @@ export const services: Service[] = [
         category: "Granite Spraying",
         question: "What surfaces can be granite sprayed?",
         answer: "We can apply granite-effect coatings to wood, metal, plastic, and even existing stone or laminate surfaces."
+      },
+      {
+        category: "Granite Spraying",
+        question: "Is the granite finish heat resistant?",
+        answer: "Our granite coatings are highly durable, but like natural stone, we recommend using trivets for very hot pans to maintain the finish's longevity."
+      },
+      {
+        category: "Granite Spraying",
+        question: "How do I clean a granite-sprayed surface?",
+        answer: "Simply use a soft cloth and mild soapy water. Avoid abrasive cleaners or scouring pads, which can dull the protective clear coat over time."
       }
     ]
   },
@@ -506,6 +576,16 @@ export const services: Service[] = [
         category: "Commercial",
         question: "Can you work outside of business hours?",
         answer: "Yes, we offer 7-day service and can schedule work for evenings or weekends to avoid disrupting your business."
+      },
+      {
+        category: "Commercial",
+        question: "Are your coatings suitable for high-traffic retail environments?",
+        answer: "Absolutely. We use industrial-grade, high-durability coatings designed specifically for commercial use, offering excellent resistance to scuffs and wear."
+      },
+      {
+        category: "Commercial",
+        question: "Can you match our corporate brand colors?",
+        answer: "Yes, we can match any RAL, Pantone, or specific brand color to ensure your property perfectly reflects your corporate identity."
       }
     ]
   }

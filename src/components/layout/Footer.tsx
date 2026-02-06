@@ -85,6 +85,7 @@ export const Footer = () => {
           <p>© {currentYear} {siteSettings.businessName}. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/faq" className="hover:text-white transition-colors">FAQ</Link>
             <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link to="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
