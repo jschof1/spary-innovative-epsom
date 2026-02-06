@@ -20,6 +20,7 @@ import { CookiePolicyPage } from "@/pages/CookiePolicyPage"
 import { TermsOfServicePage } from "@/pages/TermsOfServicePage"
 import { QuotePage } from "@/pages/QuotePage"
 import { FAQPage } from "@/pages/FAQPage"
+import { AddCustomerPage } from "@/pages/AddCustomerPage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement
@@ -54,6 +55,8 @@ const ScrollProgress = () => {
 function App() {
   const location = useLocation()
   const isQuotePage = location.pathname === "/get-quote"
+  const isAddCustomerPage = location.pathname === "/add-customer"
+  const isMinimalPage = isQuotePage || isAddCustomerPage
   
   // Scroll to top or hash on route change
   useEffect(() => {
@@ -78,13 +81,13 @@ function App() {
       <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03] bg-dot-pattern" />
       
       <div className="relative z-10 flex flex-col min-h-screen">
-        {!isQuotePage && <PromoBanner />}
-        {!isQuotePage && <Header />}
-        {!isQuotePage && <PromoCountdown />}
+        {!isMinimalPage && <PromoBanner />}
+        {!isMinimalPage && <Header />}
+        {!isMinimalPage && <PromoCountdown />}
         
-        <main className={`flex-grow ${isQuotePage ? "flex flex-col" : ""}`}>
+        <main className={`flex-grow ${isMinimalPage ? "flex flex-col" : ""}`}>
           {/* Main content wrapper with subtle side borders on large screens for a "framed" premium layout */}
-          <div className={`max-w-[1920px] mx-auto bg-white xl:border-x border-gray-100/80 shadow-sm relative ${isQuotePage ? "flex-grow flex flex-col w-full" : ""}`}>
+          <div className={`max-w-[1920px] mx-auto bg-white xl:border-x border-gray-100/80 shadow-sm relative ${isMinimalPage ? "flex-grow flex flex-col w-full" : ""}`}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -101,15 +104,16 @@ function App() {
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/get-quote" element={<QuotePage />} />
+              <Route path="/add-customer" element={<AddCustomerPage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}
-            {!isQuotePage && <div className="h-px w-full bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />}
+            {!isMinimalPage && <div className="h-px w-full bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />}
           </div>
         </main>
 
-        {!isQuotePage && <Footer />}
-        {!isQuotePage && <FloatingCTA />}
+        {!isMinimalPage && <Footer />}
+        {!isMinimalPage && <FloatingCTA />}
         <Toaster />
       </div>
 

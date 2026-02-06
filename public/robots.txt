@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /add-customer
 Allow: /
 
 # Sitemaps
