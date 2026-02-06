@@ -10,6 +10,7 @@ interface ServicesProps {
     description: string
     slug?: string
     id?: string
+    image?: string
   }[]
   limit?: number
 }

@@ -1,4 +1,4 @@
-import { Check, X, Shield, Clock, Zap, Phone, UserCheck, Heart, Sparkles, PoundSterling } from "lucide-react"
+import { Check, X, Shield, Clock, Phone, Heart, Sparkles, PoundSterling } from "lucide-react"
 import { Link } from "react-router-dom"
 import { siteSettings } from "@/data/siteSettings"
 

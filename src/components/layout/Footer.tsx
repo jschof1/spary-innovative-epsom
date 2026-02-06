@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
-import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
 import logo from "../../assets/logo-landscape.png"
 
 export const Footer = () => {

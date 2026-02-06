@@ -1,4 +1,4 @@
-import { Paintbrush, Home, Building2, DoorOpen, Grid, Warehouse, ChefHat, Layers, ShieldCheck, Award, Heart, Clock, ClipboardCheck, Phone, Zap, Smartphone, type LucideIcon } from "lucide-react"
+import { Paintbrush, Home, Building2, DoorOpen, Grid, Warehouse, ChefHat, Layers, ShieldCheck, Award, Heart, Clock, Zap, type LucideIcon } from "lucide-react"
 
 // Import local assets
 import kitchenResprayImg from "../assets/photos/generated/kitchen-respray-hero.webp"
@@ -9,7 +9,6 @@ import conservatoryImg from "../assets/photos/generated/conservatory-spraying.we
 import fasciasImg from "../assets/photos/generated/fascias-soffits-spraying.webp"
 import graniteImg from "../assets/photos/generated/granite-effect-spraying.webp"
 import commercialImg from "../assets/photos/generated/commercial-shopfront-spraying.webp"
-import emergencyImg from "../assets/photos/van-picture.webp"
 
 export interface Service {
   id: string

@@ -7,7 +7,7 @@ import { TrustBar } from "@/components/sections/TrustBar"
 import { Reviews } from "@/components/sections/Reviews"
 import { FAQ } from "@/components/sections/FAQ"
 import { siteSettings } from "@/data/siteSettings"
-import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Award, Sparkles } from "lucide-react"
+import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react"
 
 export const ServicesPage = () => {
   const allFaqs = services.flatMap(s => s.faqs).slice(0, 6)
