@@ -81,10 +81,11 @@ const stats = [
 
 export const RecentWork = () => {
   return (
-    <section className="py-12 md:py-16 bg-white relative overflow-hidden" id="work">
-      {/* Background accents similar to Comparison.tsx */}
+    <section className="py-12 md:py-16 bg-gradient-to-br from-navy-50/60 via-white to-orange-50/20 relative overflow-hidden" id="work">
+      {/* Background accents */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-navy-100/20 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-10">

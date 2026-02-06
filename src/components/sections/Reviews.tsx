@@ -6,8 +6,12 @@ export const Reviews = () => {
   // Show the first 6 reviews
   const displayReviews = reviewsData.slice(0, 6);
   return (
-    <section className="bg-white py-8 md:py-12 overflow-hidden" id="reviews">
-      <div className="container mx-auto px-4">
+    <section className="bg-gradient-to-b from-white via-orange-50/40 to-white py-8 md:py-12 overflow-hidden relative" id="reviews">
+      {/* Subtle decorative blurs */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-orange-200/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-navy-100/15 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="font-header text-2xl md:text-3xl font-bold text-navy-900 text-center mb-8">What Your Neighbors Say</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -79,7 +79,7 @@ export const FAQ = ({
   }
 
   return (
-    <section className="py-12 md:py-16 bg-white relative overflow-hidden" id="faq">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-navy-50/40 via-white to-orange-50/20 relative overflow-hidden" id="faq">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
@@ -87,8 +87,9 @@ export const FAQ = ({
       </Helmet>
 
       {/* Background decoration */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-navy-900/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-navy-200/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-orange-200/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-50/20 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
