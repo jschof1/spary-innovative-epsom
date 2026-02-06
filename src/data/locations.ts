@@ -9,44 +9,68 @@ export interface Location {
 
 export const locations: Location[] = [
   {
-    id: "rugby",
-    slug: "rugby",
-    name: "Rugby",
-    postcodes: ["CV21", "CV22", "CV23"],
-    description: "Your local Rugby electrician. Based nearby, I provide rapid response for all electrical installations and emergencies across the Rugby area.",
-    nearbyAreas: ["Dunchurch", "Hillmorton", "Bilton"]
+    id: "epsom",
+    slug: "epsom",
+    name: "Epsom",
+    postcodes: ["KT17", "KT18", "KT19"],
+    description: "Professional spray painting services in Epsom. Based locally on Ewell By-Pass, we provide expert kitchen, window, and door respraying across the Epsom area.",
+    nearbyAreas: ["Ewell", "Stoneleigh", "Ashtead"]
   },
   {
-    id: "southam",
-    slug: "southam",
-    name: "Southam",
-    postcodes: ["CV47"],
-    description: "Professional electrical services in Southam. From EV chargers to full rewires, I'm your trusted local electrician for all residential work.",
-    nearbyAreas: ["Long Itchington", "Harbury", "Napton"]
+    id: "ewell",
+    slug: "ewell",
+    name: "Ewell",
+    postcodes: ["KT17", "KT19"],
+    description: "Your local Ewell spray painting specialist. We transform homes in Ewell with durable, eco-friendly coatings for UPVC windows, doors, and kitchens.",
+    nearbyAreas: ["Epsom", "Stoneleigh", "Chessington"]
   },
   {
-    id: "leamington-spa",
-    slug: "leamington-spa",
-    name: "Leamington Spa",
-    postcodes: ["CV31", "CV32"],
-    description: "Expert electrical solutions for Leamington Spa residents. I offer safe, reliable, and certified electrical work for homes and businesses.",
-    nearbyAreas: ["Whitnash", "Lillington", "Cubbington"]
+    id: "banstead",
+    slug: "banstead",
+    name: "Banstead",
+    postcodes: ["SM7"],
+    description: "Expert spraying services for Banstead residents. We offer a cost-effective alternative to replacement for your windows, doors, and kitchen cabinets.",
+    nearbyAreas: ["Nork", "Woodmansterne", "Chipstead"]
   },
   {
-    id: "warwick",
-    slug: "warwick",
-    name: "Warwick",
-    postcodes: ["CV34"],
-    description: "Dedicated local electrician in Warwick. Providing top-tier electrical maintenance, safety checks, and modern installations.",
-    nearbyAreas: ["Barford", "Hampton on the Hill", "Sherbourne"]
+    id: "leatherhead",
+    slug: "leatherhead",
+    name: "Leatherhead",
+    postcodes: ["KT22"],
+    description: "Dedicated spray painting specialist in Leatherhead. Providing top-tier kitchen resprays and UPVC transformations with a factory-standard finish.",
+    nearbyAreas: ["Ashtead", "Fetcham", "Bookham"]
   },
   {
-    id: "coventry",
-    slug: "coventry",
-    name: "Coventry",
-    postcodes: ["CV1", "CV2", "CV3", "CV4", "CV5", "CV6"],
-    description: "Reliable electrical services across Coventry. I handle everything from consumer unit upgrades to security lighting with expert care.",
-    nearbyAreas: ["Kenilworth", "Bedworth", "Allesley"]
+    id: "chessington",
+    slug: "chessington",
+    name: "Chessington",
+    postcodes: ["KT9"],
+    description: "Reliable spraying services across Chessington. We handle everything from conservatory spraying to garage door refreshes with expert care.",
+    nearbyAreas: ["Hook", "Malden Rushett", "Ewell"]
+  },
+  {
+    id: "stoneleigh",
+    slug: "stoneleigh",
+    name: "Stoneleigh",
+    postcodes: ["KT17", "KT19"],
+    description: "Professional home transformations in Stoneleigh. Our expert spraying services provide a durable, modern look for your UPVC and kitchen surfaces.",
+    nearbyAreas: ["Ewell", "Worcester Park", "Epsom"]
+  },
+  {
+    id: "ashtead",
+    slug: "ashtead",
+    name: "Ashtead",
+    postcodes: ["KT21"],
+    description: "Premium spray painting services for Ashtead homes. We specialize in high-quality, eco-friendly coatings that transform your property's appearance.",
+    nearbyAreas: ["Epsom", "Leatherhead", "Headley"]
+  },
+  {
+    id: "sutton",
+    slug: "sutton",
+    name: "Sutton",
+    postcodes: ["SM1", "SM2", "SM3"],
+    description: "Expert spraying solutions for Sutton residents. We provide a wide range of on-site and off-site spraying services to modernize your home.",
+    nearbyAreas: ["Cheam", "Carshalton", "Belmont"]
   }
 ]
 

@@ -3,7 +3,7 @@ import { siteSettings } from "@/data/siteSettings"
 import { motion } from "framer-motion"
 
 export const TermsOfServicePage = () => {
-  const lastUpdated = "January 16, 2026"
+  const lastUpdated = "February 6, 2026"
 
   return (
     <>
@@ -30,14 +30,14 @@ export const TermsOfServicePage = () => {
               <section>
                 <h2 className="text-2xl font-black text-navy-900 mb-4 uppercase tracking-tight">1. Acceptance of Terms</h2>
                 <p>
-                  By accessing our website or using the electrical services provided by {siteSettings.businessName}, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site or our services.
+                  By accessing our website or using the spray painting services provided by {siteSettings.businessName}, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site or our services.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-black text-navy-900 mb-4 uppercase tracking-tight">2. Service Provision</h2>
                 <p>
-                  {siteSettings.businessName} provides professional electrical services. All work is carried out by qualified electricians in accordance with current BS 7671 safety standards. We reserve the right to refuse service to anyone for any reason at any time.
+                  {siteSettings.businessName} provides professional on-site and off-site spray painting services. All work is carried out by experienced specialists using premium materials. We reserve the right to refuse service to anyone for any reason at any time.
                 </p>
               </section>
 

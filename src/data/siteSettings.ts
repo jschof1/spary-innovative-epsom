@@ -1,12 +1,12 @@
 export const siteSettings = {
-  businessName: "DH Electrical Services",
-  phone: "+447882966892",
-  phoneFormatted: "+447882966892",
-  email: "info@dhelectricalservice.co.uk",
-  address: "Avonlea, Marton Road, Birdingbury CV23 8EH",
+  businessName: "Spray Innovative",
+  phone: "+44 7897 024466",
+  phoneFormatted: "+44 7897 024466",
+  email: "paullear64@icloud.com",
+  address: "151 Ewell By-Pass, Epsom, UK, KT17 2PX",
   googleRating: "5.0/5",
   reviewCount: "50+",
-  registrationNumber: "7616886213",
+  registrationNumber: "7616886213", // Keeping existing reg number as placeholder or if it's the same
   // API endpoints (proxied through Cloudflare Functions for security)
   quoteApiEndpoint: "/api/quote",
   feedbackApiEndpoint: "/api/feedback",
@@ -15,19 +15,19 @@ export const siteSettings = {
   feedbackGoogleReviewUrl: "https://g.page/r/CcA32bot6SBbEBM/review",
   standardFaqs: [
     {
-      category: "Pricing",
+      category: "Process",
       question: "Do you provide free quotes?",
-      answer: "Yes, we provide free, no-obligation quotes for all electrical work. We'll visit your property, assess the requirements, and provide a transparent breakdown of costs."
+      answer: "Yes, we provide free, no-obligation quotes for all spray painting projects. We'll visit your property, assess the surfaces, and provide a transparent breakdown of the transformation process and costs."
     },
     {
-      category: "Certification",
-      question: "Are you registered and insured?",
-      answer: "Yes. I am fully qualified, registered, and carry comprehensive public liability insurance. All work is completed to BS 7671 standards."
+      category: "Quality",
+      question: "Are you experienced and insured?",
+      answer: "Yes. Paul Lear has over 10 years of experience in professional spraying. We are fully insured and use premium, eco-friendly water-based coatings for a durable, high-quality finish."
     },
     {
-      category: "Services",
-      question: "Do you handle emergency call-outs?",
-      answer: "Yes, I am contactable 24 hours a day for emergency electrical repairs across Rugby, Southam, and the surrounding areas."
+      category: "Availability",
+      question: "When are you available?",
+      answer: "We are available 7 days a week to suit your schedule, providing professional on-site and off-site spraying services across Epsom, Surrey, and surrounding areas."
     }
   ]
 }

@@ -16,17 +16,20 @@ import {
   Star, 
   ArrowRight,
   Zap,
-  Battery,
-  Hammer,
+  Paintbrush,
+  Grid,
+  Warehouse,
   FileText,
   BadgeCheck,
   Truck,
   MessageCircle,
-  Construction
+  Construction,
+  PoundSterling,
+  Sparkles
 } from "lucide-react";
 
 // Import local assets
-import heroElectrician from "../assets/photos/the-specialist--bio---professional-electrician-in-navy-uniform--standing-in-modern-kitchen--high-end-toolkit-nearby--friendly-atmosphere.webp";
+import heroSpraying from "../assets/photos/generated/kitchen-respray-hero.webp";
 import serviceVan from "../assets/photos/van-picture.webp";
 import localAerial from "../assets/photos/midlands-service-area--aerial-drone-view-of-classic-english-town-square--historic-brick-buildings--soft-sunset-lighting.webp";
 
@@ -39,21 +42,21 @@ const AreaPage = () => {
   }
 
   const localServices = [
-    { icon: Zap, title: "Emergency Repairs", desc: "Fault finding & power restoration" },
-    { icon: Battery, title: "EV Charging", desc: "Expert home & business installations" },
-    { icon: Shield, title: "Fuse Box Upgrades", desc: "Modern RCD & SPD protection" },
-    { icon: Hammer, title: "Full Rewiring", desc: "Complete property electrical overhaul" }
+    { icon: Paintbrush, title: "Kitchen Resprays", desc: "Complete kitchen transformations" },
+    { icon: Grid, title: "UPVC Spraying", desc: "Window and door color changes" },
+    { icon: Sparkles, title: "Granite Effect", desc: "Premium stone-look coatings" },
+    { icon: Warehouse, title: "Garage Doors", desc: "Durable metal and UPVC spraying" }
   ];
 
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "Electrician",
+      "@type": "HomeAndConstructionBusiness",
       "name": `${siteSettings.businessName} - ${area.name}`,
-      "description": area.description || `Fastest emergency electrician in ${area.name}. Average response time ${area.emergencyTime}.`,
-      "url": `https://dhelectricalservice.co.uk/locations/${area.slug}`,
+      "description": area.description || `Professional spray painting specialist in ${area.name}. Transform your home with durable, eco-friendly coatings.`,
+      "url": `https://sprayinnovative.co.uk/locations/${area.slug}`,
       "telephone": siteSettings.phone,
-      "image": heroElectrician,
+      "image": heroSpraying,
       "areaServed": {
         "@type": "Place",
         "name": area.name,
@@ -61,7 +64,7 @@ const AreaPage = () => {
       },
       "address": {
         "@type": "PostalAddress",
-        "addressRegion": "Warwickshire",
+        "addressRegion": "Surrey",
         "addressCountry": "GB"
       }
     },
@@ -69,9 +72,9 @@ const AreaPage = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dhelectricalservice.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://dhelectricalservice.co.uk/locations" },
-        { "@type": "ListItem", "position": 3, "name": area.name, "item": `https://dhelectricalservice.co.uk/locations/${area.slug}` }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sprayinnovative.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://sprayinnovative.co.uk/locations" },
+        { "@type": "ListItem", "position": 3, "name": area.name, "item": `https://sprayinnovative.co.uk/locations/${area.slug}` }
       ]
     }
   ];
@@ -79,12 +82,12 @@ const AreaPage = () => {
   return (
     <div className="bg-white font-sans">
       <Helmet>
-        <title>{area.metaTitle || `Expert Electrician in ${area.name} | 24/7 ${area.name} Electrical Services`}</title>
+        <title>{area.metaTitle || `Professional Spray Painting in ${area.name} | Kitchen & UPVC Resprays`}</title>
         <meta 
           name="description" 
-          content={area.metaDescription || `Expert electrician in ${area.name}. Average response time under ${area.emergencyTime}. No callout fees. Fully qualified & insured. Call now for fast service in ${area.name}.`} 
+          content={area.metaDescription || `Professional spray painting in ${area.name}. Expert kitchen resprays, UPVC window and door spraying. 10-year guarantee. Call for a free quote in ${area.name}.`} 
         />
-        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${area.slug}`} />
+        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${area.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(schemas)}
         </script>
@@ -113,11 +116,11 @@ const AreaPage = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                 </span>
-                Local Electrician Available in {area.name}
+                Spraying Specialist Available in {area.name}
               </div>
 
               <h1 className="font-header font-extrabold text-5xl md:text-7xl text-white leading-tight mb-8 animate-slide-in-left uppercase">
-                24/7 Expert Electrician <br />
+                Professional Spraying <br />
                 <span className="text-orange-500 relative">
                   in {area.name}
                   <span className="absolute bottom-2 left-0 w-full h-3 bg-orange-500/20 -z-10" />
@@ -125,7 +128,7 @@ const AreaPage = () => {
               </h1>
 
               <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl leading-relaxed animate-fade-in delay-200">
-                {area.description || `Professional, certified electrician serving ${area.name} and the surrounding area. Average arrival in under ${area.emergencyTime}.`}
+                {area.description || `Professional spray painting specialist serving ${area.name} and the surrounding area. Transform your home with durable, eco-friendly coatings.`}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
@@ -137,7 +140,7 @@ const AreaPage = () => {
                 </Button>
                 <div className="flex items-center gap-4 px-6 py-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
                   <div className="w-10 h-10 rounded-full border-2 border-orange-500 bg-navy-800 flex items-center justify-center overflow-hidden">
-                    <Zap className="w-6 h-6 text-orange-500" />
+                    <Sparkles className="w-6 h-6 text-orange-500" />
                   </div>
                   <div className="text-sm">
                     <p className="text-white font-bold">Local Expert</p>
@@ -151,7 +154,7 @@ const AreaPage = () => {
           <div className="absolute bottom-0 right-0 w-1/3 h-full hidden lg:block overflow-hidden">
             <div className="relative h-full w-full">
               <img 
-                src={heroElectrician} 
+                src={heroSpraying} 
                 className="absolute bottom-0 right-0 h-[110%] w-auto object-cover object-left opacity-40 mix-blend-overlay grayscale" 
                 alt="" 
               />
@@ -165,8 +168,8 @@ const AreaPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { icon: Clock, label: "Response", value: area.emergencyTime },
-                { icon: Shield, label: "Certified", value: "Fully Insured" },
+                { icon: Clock, label: "Availability", value: "7 Days" },
+                { icon: Shield, label: "Guarantee", value: "10 Years" },
                 { icon: Star, label: "Rating", value: siteSettings.googleRating },
                 { icon: CheckCircle2, label: "Coverage", value: area.postcodes[0] }
               ].map((stat, i) => (
@@ -190,13 +193,13 @@ const AreaPage = () => {
               <div className="lg:col-span-7">
                 <Badge variant="orange" className="mb-6 px-4 py-1.5 font-bold shadow-lg shadow-orange-500/10 uppercase tracking-wider">LOCAL EXPERTISE</Badge>
                 <h2 className="font-header font-extrabold text-4xl md:text-5xl text-white mb-8 leading-tight uppercase">
-                  Solving {area.name}'s <br />
-                  <span className="text-orange-500">Electrical Challenges</span>
+                  Transforming {area.name}'s <br />
+                  <span className="text-orange-500">Properties</span>
                 </h2>
                 
                 <div className="space-y-8">
                   <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-                    {area.localContext || `From the traditional homes in ${area.name} to the latest modern developments, I understand the unique electrical infrastructure of the area.`}
+                    {area.localContext || `From the traditional homes in ${area.name} to the latest modern developments, we understand how to enhance your property's appearance.`}
                   </p>
                   
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -224,7 +227,7 @@ const AreaPage = () => {
                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-orange-500 text-orange-500" />)}
                   </div>
                   <p className="text-sm italic text-gray-600 mb-4 font-medium leading-relaxed">
-                    "Electrical fault in {area.name} late at night. Daniel was here in 30 mins and fixed it fast. Saved the day!"
+                    "Kitchen respray in {area.name}. Paul was professional, tidy, and the finish is factory-standard. Saved us thousands!"
                   </p>
                   <p className="text-xs font-bold text-navy-900 uppercase tracking-wider">— Local {area.name} Resident</p>
                 </div>
@@ -238,9 +241,9 @@ const AreaPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="max-w-2xl">
-                <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-4 uppercase tracking-tight">Where I Operate</h2>
+                <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-4 uppercase tracking-tight">Where We Operate</h2>
                 <p className="text-lg text-gray-600">
-                  I'm based nearby and serve all {area.name} residents, ensuring the fastest possible response times for all {area.postcodes.join(", ")} postcodes.
+                  We're based on Ewell By-Pass and serve all {area.name} residents, ensuring professional service for all {area.postcodes.join(", ")} postcodes.
                 </p>
               </div>
               <Button asChild variant="outline" className="border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white rounded-xl h-12 px-6">
@@ -293,14 +296,14 @@ const AreaPage = () => {
             <div className="text-center mb-16">
               <Badge variant="orange" className="mb-4 px-4 py-1.5 font-bold uppercase tracking-wider">SIMPLE WORKFLOW</Badge>
               <h2 className="font-header font-extrabold text-4xl md:text-5xl text-white mb-4 uppercase">How It Works</h2>
-              <p className="text-white/60 max-w-2xl mx-auto text-lg">Getting an emergency electrician in {area.name} is simple and transparent.</p>
+              <p className="text-white/60 max-w-2xl mx-auto text-lg">Getting a professional spray finish in {area.name} is simple and transparent.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 relative">
               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/10 -translate-y-1/2 z-0" />
               {[
-                { step: "01", title: "Contact Me", desc: "Call or message with your electrical issue and location in {area.name}.", icon: Phone },
-                { step: "02", title: "Rapid Arrival", desc: "I'll be with you as quickly as possible to assess and fix the fault.", icon: Truck },
-                { step: "03", title: "Job Certified", desc: "Work is completed, tested, and certified for your peace of mind.", icon: BadgeCheck }
+                { step: "01", title: "Contact Us", desc: "Call or message with your project details and location in {area.name}.", icon: Phone },
+                { step: "02", title: "Free Quote", desc: "We'll provide a transparent, fixed-price quote for your transformation.", icon: PoundSterling },
+                { step: "03", title: "Professional Spray", desc: "Our expert team delivers a factory-standard finish with zero mess.", icon: Sparkles }
               ].map((item, i) => (
                 <div key={i} className="relative z-10 bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 text-center hover:bg-white/10 transition-all hover:border-orange-500/30 group">
                   <div className="w-20 h-20 bg-orange-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
@@ -324,9 +327,9 @@ const AreaPage = () => {
                 <h2 className="font-header font-extrabold text-4xl text-navy-900 mb-8 uppercase tracking-tight">Frequently Asked <br /><span className="text-orange-500 relative">Questions in {area.name}<span className="absolute bottom-1 left-0 w-full h-2 bg-orange-500/10 -z-10" /></span></h2>
                 <div className="space-y-4">
                   {[
-                    { q: `What is your arrival time in ${area.name}?`, a: `I aim to reach ${area.name} residents as quickly as possible, typically within ${area.emergencyTime}. Since I am based locally, I can often bypass major traffic hubs.` },
-                    { q: "Are you fully certified for all electrical work?", a: "Yes, I am a fully qualified and certified electrician, registered to handle all residential electrical installations and repairs." },
-                    { q: "Do you provide fixed quotes for larger jobs?", a: "Yes, for planned work like rewires or EV installations, I provide a clear, fixed quote with no hidden extras." }
+                    { q: "How long does a kitchen respray take?", a: "Most kitchen resprays are completed within 3-5 days, with minimal disruption to your home." },
+                    { q: "Do you offer a guarantee on your work?", a: "Yes, we provide a 10-year adhesion guarantee on all our specialist spray coatings." },
+                    { q: "Can you spray UPVC windows in any color?", a: "Absolutely! We can match colors from all major brands including Farrow & Ball, Little Greene, and RAL colors." }
                   ].map((faq, i) => (
                     <div key={i} className="p-6 bg-gray-50 rounded-xl border border-transparent hover:border-orange-500/30 hover:bg-white hover:shadow-md transition-all group">
                       <h4 className="font-bold text-navy-900 mb-3 flex items-center gap-3 group-hover:text-orange-500 transition-colors uppercase">
@@ -345,7 +348,7 @@ const AreaPage = () => {
                   </div>
                   <div className="absolute bottom-0 left-0 w-full h-1.5 bg-orange-500" />
                   <h3 className="text-4xl font-header font-bold mb-6 relative z-10 uppercase">Planning a <span className="text-orange-500">Project?</span></h3>
-                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">We don't just do emergencies. If you're planning a home renovation or EV charger installation in {area.name}, I provide free site surveys.</p>
+                  <p className="text-white/70 mb-10 text-xl leading-relaxed relative z-10">We don't just do kitchens. If you're planning a full property transformation or UPVC refresh in {area.name}, we provide free site surveys.</p>
                   <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white w-fit rounded-xl h-14 px-10 text-lg font-bold shadow-xl shadow-orange-500/20 relative z-10 transition-transform hover:scale-105 active:scale-95">
                     <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center gap-3">
                       <FileText className="w-5 h-5" />
@@ -362,11 +365,11 @@ const AreaPage = () => {
         <section className="py-16 bg-navy-900 border-y border-white/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-orange-500/5 opacity-30" />
           <div className="container mx-auto px-4 text-center relative z-10">
-            <p className="text-white/60 uppercase tracking-[0.3em] font-bold text-xs mb-12">Fully Certified & Professional</p>
+            <p className="text-white/60 uppercase tracking-[0.3em] font-bold text-xs mb-12">Fully Insured & Professional</p>
             <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20 opacity-100 grayscale transition-all duration-500 hover:grayscale-0">
               <div className="flex flex-col items-center">
-                <Zap className="h-12 w-auto text-orange-500 mb-2" />
-                <span className="text-white font-bold uppercase tracking-widest text-xs">Certified</span>
+                <Sparkles className="h-12 w-auto text-orange-500 mb-2" />
+                <span className="text-white font-bold uppercase tracking-widest text-xs">Premium</span>
               </div>
               <div className="flex flex-col items-center">
                 <Shield className="h-12 w-auto text-white mb-2" />
@@ -389,10 +392,10 @@ const AreaPage = () => {
           
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-header font-extrabold text-5xl md:text-6xl mb-8 uppercase tracking-tight">
-              Electrical Emergency in {area.name}?
+              Ready to Transform Your Home in {area.name}?
             </h2>
             <p className="text-2xl md:text-3xl mb-12 opacity-90 font-medium max-w-3xl mx-auto leading-relaxed">
-              Call me now for a free quote and <span className="underline decoration-navy-900 decoration-4 underline-offset-8 font-black">rapid local</span> response.
+              Call us now for a free quote and <span className="underline decoration-navy-900 decoration-4 underline-offset-8 font-black">rapid local</span> response.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
@@ -407,10 +410,10 @@ const AreaPage = () => {
               </a>
               <div className="text-left hidden md:block space-y-2">
                 <p className="font-black text-xl flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> No Callout Fees
+                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> 10-Year Guarantee
                 </p>
                 <p className="font-black text-xl flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> Professional Guarantee
+                  <CheckCircle2 className="w-6 h-6 text-navy-900" /> Eco-Friendly Coatings
                 </p>
               </div>
             </div>

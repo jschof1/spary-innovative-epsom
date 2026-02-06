@@ -26,7 +26,7 @@ export const ServiceLocationPage = () => {
   }
 
   const title = `${service.shortTitle} in ${location.name}`
-  const description = `Need ${service.shortTitle.toLowerCase()} in ${location.name}? I offer fast, reliable ${service.title.toLowerCase()} across the ${location.name} area and ${location.postcodes.join(", ")} postcodes.`
+  const description = `Need ${service.shortTitle.toLowerCase()} in ${location.name}? We offer professional, durable ${service.title.toLowerCase()} across the ${location.name} area and ${location.postcodes.join(", ")} postcodes.`
 
   const serviceSchema = getServiceSchema(service, location.name);
   const faqSchema = getFAQSchema(service.faqs.length > 0 ? service.faqs : siteSettings.standardFaqs);
@@ -36,7 +36,7 @@ export const ServiceLocationPage = () => {
       <Helmet>
         <title>{title} | {siteSettings.businessName}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${location.slug}/${service.slug}`} />
+        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${location.slug}/${service.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>
@@ -62,8 +62,8 @@ export const ServiceLocationPage = () => {
               <div className="prose prose-lg text-gray-600 mb-12">
                 <p className="mb-6">
                   If you're looking for a reliable professional for {service.title.toLowerCase()} in {location.name}, 
-                  {siteSettings.businessName} is here to help. Based locally, I am familiar with the {location.name} area 
-                  and can provide rapid response times for all your electrical needs.
+                  {siteSettings.businessName} is here to help. Based locally on Ewell By-Pass, we are familiar with the {location.name} area 
+                  and can provide rapid response times for all your spraying needs.
                 </p>
                 {service.detailedContent && (
                   <p className="mb-6">
@@ -71,9 +71,9 @@ export const ServiceLocationPage = () => {
                   </p>
                 )}
                 <p className="mb-6">
-                  I cover all postcodes in {location.name}, including {location.postcodes.join(" and ")}. 
-                  Whether it's a small repair or a major installation, my work is performed by a fully qualified, insured professional. 
-                  I pride myself on providing {location.name} with transparent pricing and exceptional workmanship.
+                  We cover all postcodes in {location.name}, including {location.postcodes.join(" and ")}. 
+                  Whether it's a kitchen respray or a major UPVC transformation, our work is performed by a fully qualified, insured specialist. 
+                  We pride ourselves on providing {location.name} with transparent pricing and exceptional workmanship.
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export const ServiceLocationPage = () => {
                     Rapid {location.name} Response
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Being local to {location.name} means I can often be with you on the same day for urgent electrical issues.
+                    Being local to {location.name} means we can often be with you on the same day for a consultation or to start your project.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
@@ -94,7 +94,7 @@ export const ServiceLocationPage = () => {
                     Local Expertise
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    I have extensive experience working on properties across {location.name}, from modern developments to historic homes.
+                    We have extensive experience working on properties across {location.name}, from modern developments to historic homes.
                   </p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export const ServiceLocationPage = () => {
 
               {/* Process steps specifically for this service */}
               <div className="mb-16">
-                <h3 className="text-2xl font-bold text-navy-900 mb-8">How I Work in {location.name}</h3>
+                <h3 className="text-2xl font-bold text-navy-900 mb-8">How We Work in {location.name}</h3>
                 <div className="space-y-6">
                   {service.processSteps.map((step, i) => (
                     <div key={i} className="flex gap-6">
@@ -136,7 +136,7 @@ export const ServiceLocationPage = () => {
                 <div className="bg-white border-2 border-navy-900 p-8 rounded-2xl shadow-xl">
                   <h3 className="text-2xl font-black text-navy-900 mb-4">Book in {location.name}</h3>
                   <p className="text-gray-600 mb-8 text-sm">
-                    Get a professional, certified electrician for your {service.shortTitle.toLowerCase()} needs in {location.name}.
+                    Get a professional, high-quality spray finish for your {service.shortTitle.toLowerCase()} needs in {location.name}.
                   </p>
                   
                   <Link 
@@ -159,10 +159,10 @@ export const ServiceLocationPage = () => {
                   <h4 className="font-bold text-navy-900 mb-4">Other Areas near {location.name}</h4>
                   <div className="flex flex-wrap gap-2">
                     {siteSettings.businessName && <span className="sr-only">{siteSettings.businessName}</span>}
-                    <p className="text-sm text-gray-500 mb-4">I also provide {service.shortTitle.toLowerCase()} in these nearby locations:</p>
+                    <p className="text-sm text-gray-500 mb-4">We also provide {service.shortTitle.toLowerCase()} in these nearby locations:</p>
                     {/* Add a few neighboring locations as suggestions */}
                     <div className="grid grid-cols-1 gap-2 w-full">
-                      {["Rugby", "Southam", "Leamington Spa", "Warwick", "Coventry"]
+                      {["Epsom", "Ewell", "Banstead", "Leatherhead", "Sutton"]
                         .filter(l => l !== location.name)
                         .map(l => (
                           <Link 
@@ -190,4 +190,3 @@ export const ServiceLocationPage = () => {
     </>
   )
 }
-

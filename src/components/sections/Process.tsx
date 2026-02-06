@@ -1,20 +1,20 @@
 const steps = [
   {
     number: "1",
-    title: "You Call or Book",
-    description: "Call 07930 937358 or fill out the form. I'll get back to you immediately.",
+    title: "Free Consultation",
+    description: "Call 07897 024466 or fill out our form. We'll discuss your project and provide a free, no-obligation quote.",
     borderColor: "border-orange-500",
   },
   {
     number: "2",
-    title: "Confirm & Dispatch",
-    description: "I'll give you an arrival window and a transparent quote. I'll let you know when I'm en route.",
+    title: "Surface Preparation",
+    description: "We meticulously clean, degrease, and mask the area to ensure a perfect, long-lasting factory finish.",
     borderColor: "border-navy-900",
   },
   {
     number: "3",
-    title: "The Job is Done",
-    description: "I fix the issue, clean up, and provide certified documentation for the work.",
+    title: "Professional Spray",
+    description: "We apply our specialist coatings using advanced spray technology, leaving your surfaces looking brand new.",
     borderColor: "border-navy-900",
   },
 ]
@@ -23,7 +23,7 @@ export const Process = () => {
   return (
     <section className="bg-grey-light py-8 md:py-12 overflow-hidden" id="process">
       <div className="container mx-auto px-4">
-        <h2 className="font-header text-2xl md:text-3xl font-bold text-navy-900 text-center mb-10">How We Fix Your Issue Fast</h2>
+        <h2 className="font-header text-2xl md:text-3xl font-bold text-navy-900 text-center mb-10">Our 3-Step Transformation Process</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Connector Line (Desktop) */}

@@ -21,9 +21,9 @@ export const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>{siteSettings.businessName} | Expert Electrician in Rugby & Southam</title>
-        <meta name="description" content="Professional electrical services across Rugby, Southam and Coventry. 24/7 emergency repairs, EV charger installations, and more. Certified work with free quotes." />
-        <link rel="canonical" href="https://dhelectricalservice.co.uk/" />
+        <title>{siteSettings.businessName} | Professional Spray Painting in Epsom & Surrey</title>
+        <meta name="description" content="Expert on-site & off-site spray painting services in Epsom, Surrey. Specializing in kitchen resprays, UPVC window and door spraying. Eco-friendly, 10-year guarantee." />
+        <link rel="canonical" href="https://sprayinnovative.co.uk/" />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>

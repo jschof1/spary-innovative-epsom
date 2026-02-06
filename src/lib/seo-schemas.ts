@@ -2,23 +2,24 @@ import { siteSettings } from "@/data/siteSettings";
 
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
-  "@type": "Electrician",
+  "@type": "HomeAndConstructionBusiness",
   "name": siteSettings.businessName,
-  "image": "https://dhelectricalservice.co.uk/favicon/apple-touch-icon.png",
-  "@id": "https://dhelectricalservice.co.uk",
-  "url": "https://dhelectricalservice.co.uk",
+  "image": "https://sprayinnovative.co.uk/favicon/apple-touch-icon.png",
+  "@id": "https://sprayinnovative.co.uk",
+  "url": "https://sprayinnovative.co.uk",
   "telephone": siteSettings.phone,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Avonlea, Marton Road, Birdingbury",
-    "addressLocality": "Rugby",
-    "postalCode": "CV23 8EH",
+    "streetAddress": "151 Ewell By-Pass",
+    "addressLocality": "Epsom",
+    "addressRegion": "Surrey",
+    "postalCode": "KT17 2PX",
     "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 52.3244,
-    "longitude": -1.3654
+    "latitude": 51.3425,
+    "longitude": -0.2564
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -31,11 +32,12 @@ export const getLocalBusinessSchema = () => ({
       "Saturday",
       "Sunday"
     ],
-    "opens": "00:00",
-    "closes": "23:59"
+    "opens": "08:00",
+    "closes": "20:00"
   },
   "sameAs": [
-    // Add social links here if available
+    "https://facebook.com/sprayinnovative",
+    "https://instagram.com/sprayinnovative"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -43,26 +45,12 @@ export const getLocalBusinessSchema = () => ({
     "reviewCount": "50"
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Rugby"
-    },
-    {
-      "@type": "City",
-      "name": "Southam"
-    },
-    {
-      "@type": "City",
-      "name": "Coventry"
-    },
-    {
-      "@type": "City",
-      "name": "Leamington Spa"
-    },
-    {
-      "@type": "City",
-      "name": "Warwick"
-    }
+    { "@type": "City", "name": "Epsom" },
+    { "@type": "City", "name": "Ewell" },
+    { "@type": "City", "name": "Banstead" },
+    { "@type": "City", "name": "Leatherhead" },
+    { "@type": "City", "name": "Sutton" },
+    { "@type": "City", "name": "Kingston" }
   ]
 });
 
@@ -81,7 +69,7 @@ export const getServiceSchema = (service: any, locationName?: string) => ({
   } : undefined,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Electrical Services",
+    "name": "Spraying Services",
     "itemListElement": service.features.map((feature: string) => ({
       "@type": "Offer",
       "itemOffered": {

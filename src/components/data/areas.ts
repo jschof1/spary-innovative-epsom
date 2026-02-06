@@ -13,49 +13,49 @@ export interface Area {
 
 export const areas: Area[] = [
   {
-    slug: "rugby",
-    name: "Rugby",
-    description: "Your local Rugby electrician. Based nearby, I provide rapid response for all electrical installations and emergencies across the Rugby area.",
-    emergencyTime: "30 minutes",
-    postcodes: ["CV21", "CV22", "CV23"],
-    landmarks: ["Rugby School", "Rugby Art Gallery", "Caldecott Park", "Elliott's Field"],
-    neighborhoods: ["Dunchurch", "Hillmorton", "Bilton", "Cawston"]
+    slug: "epsom",
+    name: "Epsom",
+    description: "Your local Epsom spray painting specialist. Based on Ewell By-Pass, we provide expert kitchen, window, and door respraying across the Epsom area.",
+    emergencyTime: "Same Day",
+    postcodes: ["KT17", "KT18", "KT19"],
+    landmarks: ["Epsom Downs", "Ewell By-Pass", "Ashley Centre", "Rosebery Park"],
+    neighborhoods: ["Epsom Downs", "Ewell By-Pass", "Ashley Centre", "Rosebery Park"]
   },
   {
-    slug: "southam",
-    name: "Southam",
-    description: "Professional electrical services in Southam. From EV chargers to full rewires, I'm your trusted local electrician for all residential work.",
-    emergencyTime: "25 minutes",
-    postcodes: ["CV47"],
-    landmarks: ["St James Church", "Southam Library", "Grange Hall"],
-    neighborhoods: ["Long Itchington", "Harbury", "Napton", "Ladbroke"]
+    slug: "ewell",
+    name: "Ewell",
+    description: "Professional spraying services in Ewell. From kitchen resprays to UPVC transformations, we're your trusted local specialist for all property refreshes.",
+    emergencyTime: "Same Day",
+    postcodes: ["KT17", "KT19"],
+    landmarks: ["Bourne Hall", "Ewell Village", "Hogsmill River"],
+    neighborhoods: ["Bourne Hall", "Ewell Village", "Hogsmill River"]
   },
   {
-    slug: "leamington-spa",
-    name: "Leamington Spa",
-    description: "Expert electrical solutions for Leamington Spa residents. I offer safe, reliable, and certified electrical work for homes and businesses.",
-    emergencyTime: "35 minutes",
-    postcodes: ["CV31", "CV32"],
-    landmarks: ["Royal Pump Rooms", "Jephson Gardens", "Victoria Park"],
-    neighborhoods: ["Whitnash", "Lillington", "Cubbington", "Radford Semele"]
+    slug: "banstead",
+    name: "Banstead",
+    description: "Expert spraying solutions for Banstead residents. We offer a durable, high-quality alternative to replacement for your home's exterior and interior.",
+    emergencyTime: "Same Day",
+    postcodes: ["SM7"],
+    landmarks: ["Banstead High Street", "All Saints Church", "Nork Park"],
+    neighborhoods: ["Banstead High Street", "All Saints Church", "Nork Park"]
   },
   {
-    slug: "warwick",
-    name: "Warwick",
-    description: "Dedicated local electrician in Warwick. Providing top-tier electrical maintenance, safety checks, and modern installations.",
-    emergencyTime: "30 minutes",
-    postcodes: ["CV34"],
-    landmarks: ["Warwick Castle", "Lord Leycester Hospital", "Market Hall Museum"],
-    neighborhoods: ["Barford", "Hampton on the Hill", "Sherbourne", "Hatton"]
+    slug: "leatherhead",
+    name: "Leatherhead",
+    description: "Dedicated local spray specialist in Leatherhead. Providing top-tier kitchen resprays, window coatings, and modern property transformations.",
+    emergencyTime: "Same Day",
+    postcodes: ["KT22"],
+    landmarks: ["Swan Centre", "River Mole", "Leatherhead Theatre"],
+    neighborhoods: ["Swan Centre", "River Mole", "Leatherhead Theatre"]
   },
   {
-    slug: "coventry",
-    name: "Coventry",
-    description: "Reliable electrical services across Coventry. I handle everything from consumer unit upgrades to security lighting with expert care.",
-    emergencyTime: "40 minutes",
-    postcodes: ["CV1", "CV2", "CV3", "CV4", "CV5", "CV6"],
-    landmarks: ["Coventry Cathedral", "Transport Museum", "War Memorial Park"],
-    neighborhoods: ["Kenilworth", "Bedworth", "Allesley", "Stivichall"]
+    slug: "sutton",
+    name: "Sutton",
+    description: "Reliable spraying services across Sutton. We handle everything from commercial shopfronts to residential UPVC spraying with expert care.",
+    emergencyTime: "Same Day",
+    postcodes: ["SM1", "SM2", "SM3"],
+    landmarks: ["Sutton High Street", "Manor Park", "St Nicholas Church"],
+    neighborhoods: ["Sutton High Street", "Manor Park", "St Nicholas Church"]
   }
 ];
 

@@ -1,65 +1,65 @@
-import { Check, X, Shield, Clock, Zap, UserCheck, Sparkles, PoundSterling } from "lucide-react"
+import { Check, X, Shield, Clock, Zap, Phone, UserCheck, Heart, Sparkles, PoundSterling } from "lucide-react"
 import { Link } from "react-router-dom"
 import { siteSettings } from "@/data/siteSettings"
 
 const features = [
   {
-    name: "Certified Safety Protocol",
-    description: "Fully qualified and registered electrician. I undergo regular technical assessments to ensure all work meets the latest BS 7671 safety standards. We don't just 'follow' regulations; I set the benchmark for local electrical safety.",
-    benefit: "Absolute peace of mind for your family.",
-    icon: Shield,
-    us: "Full Certification",
-    others: "Often Unverified",
+    name: "Factory-Standard Finish",
+    description: "Our specialist spray application provides a smooth, durable finish that is far superior to traditional brush painting. We use premium, eco-friendly water-based coatings specifically designed for high-traffic areas like kitchens and windows.",
+    benefit: "A brand-new look for your home.",
+    icon: Sparkles,
+    us: "Spray Application",
+    others: "Brush & Roller",
     usValid: true,
     othersValid: false,
   },
   {
-    name: "Professional Guarantee",
-    description: "My guarantee is a professional commitment. If my workmanship fails within 365 days, I return as a priority to rectify it at zero cost.",
-    benefit: "Protection against future repair costs.",
-    icon: Clock,
-    us: "Work Guarantee",
-    others: "Verbal Promises",
+    name: "10-Year Adhesion Guarantee",
+    description: "We stand behind our work. Our specialist coatings are designed to bond permanently to UPVC, wood, and metal. If our coating fails to adhere within 10 years, we'll rectify it at zero cost.",
+    benefit: "Long-term peace of mind.",
+    icon: Shield,
+    us: "10-Year Guarantee",
+    others: "1-Year Warranty",
     usValid: true,
     othersValid: false,
   },
   {
     name: "Fixed Pricing Policy",
-    description: "My quoting system ensures the price you're quoted is the price you pay. No 'unexpected' parts, no hourly ticking clocks, and no budget-breaking surprises.",
+    description: "The price we quote is the price you pay. No hidden extras, no 'unexpected' costs, and no budget-breaking surprises. We provide clear, transparent quotes for every project.",
     benefit: "100% financial predictability.",
-    icon: Zap,
+    icon: PoundSterling,
     us: "Fixed Quote",
     others: "Estimate Only",
     usValid: true,
     othersValid: false,
   },
   {
-    name: "Direct Local Logistics",
-    description: "Based in Birdingbury, I've optimized my local service area to eliminate call-out fees. You pay exclusively for expert labor and high-quality parts.",
-    benefit: "Direct value for every pound spent.",
-    icon: PoundSterling,
-    us: "No Call-Out Fee",
-    others: "Hidden Travel Fees",
+    name: "Minimal Disruption",
+    description: "Most projects, including full kitchen resprays, are completed within just a few days. Our on-site spraying is clean, fast, and avoids the mess of a full replacement.",
+    benefit: "Your home back to normal fast.",
+    icon: Clock,
+    us: "3-5 Day Turnaround",
+    others: "Weeks of Work",
     usValid: true,
-    othersValid: true,
+    othersValid: false,
   },
   {
-    name: "Independent Accountability",
-    description: "As a one-man business, my reputation is everything. I am fully insured and take personal responsibility for every wire I install.",
-    benefit: "Direct communication with the expert.",
-    icon: UserCheck,
-    us: "Personal Service",
-    others: "Agency Staff",
+    name: "Eco-Friendly Coatings",
+    description: "We use high-quality water-based paints with low VOCs. They are safe for your family, pets, and the environment, with minimal odor and fast drying times.",
+    benefit: "Safe for your family and home.",
+    icon: Heart,
+    us: "Water-Based Paint",
+    others: "Oil-Based Paint",
     usValid: true,
     othersValid: false,
   },
   {
     name: "Property Care Standards",
-    description: "I treat your property with respect. My protocol includes floor protection, shoe covers, and a post-job clean to ensure your home is left as I found it.",
+    description: "We treat your property with respect. Our protocol includes meticulous masking of all surrounding areas, floor protection, and a thorough post-job clean.",
     benefit: "Zero mess, zero cleanup required.",
-    icon: Sparkles,
-    us: "Clean Exit",
-    others: "Minimal Cleanup",
+    icon: Heart,
+    us: "Precision Masking",
+    others: "Basic Protection",
     usValid: true,
     othersValid: false,
   },
@@ -80,10 +80,10 @@ export const Comparison = () => {
             </div>
             <h2 className="font-header text-4xl md:text-6xl font-bold text-navy-900 mb-8 leading-[0.9] tracking-tighter">
               Engineered for <br/>
-              <span className="text-orange-500 italic">Total Reliability.</span>
+              <span className="text-orange-500 italic">Premium Results.</span>
             </h2>
             <p className="text-navy-900/60 text-lg md:text-xl max-w-2xl leading-tight font-medium">
-              Don't gamble with your home's infrastructure. We've systematized quality to ensure every repair is permanent.
+              Don't gamble with your home's appearance. We've systematized our spraying process to ensure every transformation is permanent and flawless.
             </p>
           </div>
           <div className="hidden lg:block">
@@ -106,7 +106,7 @@ export const Comparison = () => {
               </div>
               <div className="col-span-3 p-8 bg-navy-900 text-center border-x border-navy-900/10">
                 <span className="text-[10px] font-bold text-orange-400 uppercase tracking-[0.3em] mb-4 block">Professional Standard</span>
-                <h3 className="text-white font-bold text-2xl tracking-tight">DH Electrical Services</h3>
+                <h3 className="text-white font-bold text-2xl tracking-tight">Spray Innovative</h3>
               </div>
               <div className="col-span-3 p-8 bg-slate-50 text-center flex flex-col items-center justify-center">
                 <span className="text-[10px] font-bold text-navy-900/30 uppercase tracking-[0.2em] mb-4 block">Market Average</span>
@@ -164,21 +164,21 @@ export const Comparison = () => {
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="p-6 bg-navy-900 text-white flex flex-col justify-between group hover:bg-navy-800 transition-colors">
               <div>
-                <h4 className="text-2xl font-bold mb-4 tracking-tight">Need an emergency repair?</h4>
-                <p className="text-navy-100/60 text-sm leading-relaxed mb-8">Available 24/7 for electrical emergencies in Rugby and surrounding areas.</p>
+                <h4 className="text-2xl font-bold mb-4 tracking-tight">Ready to transform your home?</h4>
+                <p className="text-navy-100/60 text-sm leading-relaxed mb-8">Available 7 days a week for professional spraying services in Epsom and surrounding areas.</p>
               </div>
               <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center justify-between group/btn">
-                <span className="text-orange-400 font-bold uppercase tracking-widest text-xs">Call 24/7 Helpline</span>
+                <span className="text-orange-400 font-bold uppercase tracking-widest text-xs">Call Our Team</span>
                 <div className="w-10 h-10 bg-orange-500 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
-                  <Zap className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </div>
               </a>
             </div>
             
             <div className="p-6 border border-navy-900/10 flex flex-col justify-between group hover:border-orange-500 transition-colors">
               <div>
-                <h4 className="text-2xl font-bold text-navy-900 mb-4 tracking-tight">Request Fixed Quote</h4>
-                <p className="text-navy-900/40 text-sm leading-relaxed mb-8">Upload photos of your issue for a guaranteed digital quote within 15 minutes. No call-out fee.</p>
+                <h4 className="text-2xl font-bold text-navy-900 mb-4 tracking-tight">Request Free Quote</h4>
+                <p className="text-navy-900/40 text-sm leading-relaxed mb-8">Upload photos of your kitchen or windows for a guaranteed digital quote within 24 hours.</p>
               </div>
               <Link to="/contact#booking-form" className="flex items-center justify-between group/btn">
                 <span className="text-navy-900 font-bold uppercase tracking-widest text-xs">Start Digital Quote</span>
@@ -203,7 +203,7 @@ export const Comparison = () => {
               </div>
               <div className="mt-8 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-navy-900 flex items-center justify-center text-white text-[10px] font-bold">MS</div>
-                <span className="text-[11px] font-bold uppercase text-navy-900 tracking-wider">Mark S., Rugby</span>
+                <span className="text-[11px] font-bold uppercase text-navy-900 tracking-wider">James M., Epsom</span>
               </div>
             </div>
           </div>

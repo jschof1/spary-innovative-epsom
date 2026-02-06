@@ -2,81 +2,81 @@ import { MapPin, CheckCircle2, ArrowRight, Gauge, Clock, ShieldCheck, Activity }
 import { Link } from "react-router-dom";
 
 // Import local assets
-import evProjectImg from "../../assets/photos/ev-charger-installation--sleek-wall-mounted-smart-ev-charger-on-brick-wall--electric-car-plugged-in--cinematic-lighting--professional-photography.webp";
-import cuProjectImg from "../../assets/photos/consumer-unit-upgrade--close-up-of-modern-metal-fuse-box--neat-circuit-breakers--glowing-led-indicators--ultra-clean-installation.webp";
-import lightProjectImg from "../../assets/photos/outside-lighting--residential-garden-at-dusk--warm-led-architectural-uplighting--security-floodlights--luxury-home-exterior.webp";
-import smartHomeProjectImg from "../../assets/photos/smart-home-setup--close-up-of-hand-using-smartphone-app-to-dim-recessed-kitchen-lights--tech-focused-aesthetic.webp";
-import commercialProjectImg from "../../assets/photos/industrial-maintenance--clean-electrical-sub-panel-in-commercial-workshop--heavy-duty-conduit-pipes--industrial-aesthetic--bright-lighting.webp";
-import emergencyProjectImg from "../../assets/photos/van-picture.webp";
+import kitchenResprayProject from "../../assets/photos/generated/kitchen-respray-hero.webp";
+import windowSprayingProject from "../../assets/photos/generated/window-spraying-hero.webp";
+import doorSprayingProject from "../../assets/photos/generated/door-spraying-service.webp";
+import commercialProjectImg from "../../assets/photos/generated/commercial-shopfront-spraying.webp";
+import garageDoorProject from "../../assets/photos/generated/garage-door-spraying.webp";
+import conservatoryProject from "../../assets/photos/generated/conservatory-spraying.webp";
 
 const projects = [
   {
-    title: "EV Charger Home Installation",
-    location: "Rugby CV21, Rugby",
-    category: "EV Charging",
-    description: "Installation of Ohme ePod smart charger. Full integration with home Wi-Fi and setup of dynamic tariff charging for maximum cost efficiency.",
-    specs: ["Ohme ePod Charger", "Surge Protection", "Smart Integration"],
-    impact: "60% Fuel Savings",
-    status: "Certified",
-    image: evProjectImg
-  },
-  {
-    title: "Consumer Unit Upgrade",
-    location: "Southam CV47",
-    category: "Safety",
-    description: "Replacement of outdated fuse box with a modern 18th Edition RCD-protected consumer unit. Full testing and certification of all domestic circuits.",
-    specs: ["Dual RCD Board", "Surge Protection", "Circuit Testing"],
-    impact: "Enhanced Safety",
-    status: "Secured",
-    image: cuProjectImg
-  },
-  {
-    title: "Smart Security Lighting",
-    location: "Leamington Spa CV32",
-    category: "Lighting",
-    description: "Design and installation of high-efficiency LED security lighting with PIR sensors and remote override for improved property security and curb appeal.",
-    specs: ["LED Floodlights", "PIR Sensors", "Remote Access"],
-    impact: "Improved Security",
+    title: "Modern Kitchen Transformation",
+    location: "Epsom KT17, Epsom",
+    category: "Kitchen Respray",
+    description: "Full kitchen respray from dated wood to modern Anthracite Grey. Factory-standard finish with high-durability coatings.",
+    specs: ["Water-Based Paint", "Precision Masking", "10-Year Guarantee"],
+    impact: "80% Cost Saving",
     status: "Completed",
-    image: lightProjectImg
+    image: kitchenResprayProject
   },
   {
-    title: "Smart Home Integration",
-    location: "Warwick CV34",
-    category: "Smart Home",
-    description: "Full residential smart home transformation. Installation of Hive smart heating, Philips Hue adaptive lighting, and Ring security infrastructure with central app control.",
-    specs: ["Smart Heating", "Adaptive Lighting", "Security Hub"],
-    impact: "25% Energy Reduction",
+    title: "UPVC Window Refresh",
+    location: "Ewell KT19",
+    category: "Window Spraying",
+    description: "Complete exterior window transformation for a modern look. UV-resistant coatings that bond permanently to UPVC.",
+    specs: ["Anthracite Grey", "UV Protection", "Seamless Finish"],
+    impact: "Modernized Exterior",
+    status: "Guaranteed",
+    image: windowSprayingProject
+  },
+  {
+    title: "Front Door Makeover",
+    location: "Stoneleigh KT17",
+    category: "Door Spraying",
+    description: "Composite door respray with a high-durability finish. Same-day transformation with a wide range of color options.",
+    specs: ["Composite Specialist", "Fade Resistant", "Hardware Masking"],
+    impact: "Instant Curb Appeal",
     status: "Verified",
-    image: smartHomeProjectImg
+    image: doorSprayingProject
   },
   {
-    title: "Residential Lighting Upgrade",
-    location: "Coventry CV1",
-    category: "Residential",
-    description: "Complete LED lighting overhaul for a modern residential space. Implementation of automated motion sensors and daylight harvesting to reduce energy costs by 40%.",
-    specs: ["LED Panel Lighting", "Motion Sensors", "Daylight Sensors"],
-    impact: "40% Energy Savings", 
+    title: "Retail Shopfront Spray",
+    location: "Sutton SM1",
+    category: "Commercial",
+    description: "Professional commercial spray finish for a local business. Industrial-grade coatings applied with minimal downtime.",
+    specs: ["Industrial Coatings", "7-Day Service", "Professional Image"],
+    impact: "Brand Refresh",
     status: "Certified",
     image: commercialProjectImg
   },
   {
-    title: "Emergency Power Restoration",
-    location: "Rugby CV22",
-    category: "Emergency",
-    description: "Rapid response to a major power failure in a residential property. Identified a faulty main isolator, replaced components, and restored full power within 90 minutes.",
-    specs: ["Fault Diagnosis", "Isolator Replacement", "Safety Certification"],
-    impact: "Power Restored",
+    title: "Garage Door Spraying",
+    location: "Banstead SM7",
+    category: "Garage Doors",
+    description: "Metal garage door respray to match property windows. Flexible, non-cracking coatings with rust protection.",
+    specs: ["Metal Specialist", "Rust Protection", "Color Match"],
+    impact: "Cohesive Look", 
+    status: "Completed",
+    image: garageDoorProject
+  },
+  {
+    title: "Conservatory Transformation",
+    location: "Epsom KT18",
+    category: "Conservatory Spraying",
+    description: "Full UPVC conservatory respray in a contemporary color. Heat-reflective coatings for a complete property refresh.",
+    specs: ["Heat Reflective", "Full Masking", "UV Stable"],
+    impact: "Modern Living Space",
     status: "Verified",
-    image: emergencyProjectImg
+    image: conservatoryProject
   }
 ]
 
 const stats = [
-  { label: "Rapid Response", value: "24/7", icon: Clock },
+  { label: "7 Day Service", value: "7 Days", icon: Clock },
   { label: "Total Projects", value: "500+", icon: Gauge },
   { label: "Google Rating", value: "5.0/5", icon: Activity },
-  { label: "Work Guarantee", value: "12 Mo", icon: ShieldCheck },
+  { label: "Work Guarantee", value: "10 Yrs", icon: ShieldCheck },
 ];
 
 export const RecentWork = () => {
@@ -94,10 +94,10 @@ export const RecentWork = () => {
               Live Project Log
             </div>
             <h2 className="font-header text-3xl md:text-5xl font-bold text-navy-900 mb-8 tracking-tight">
-              Electrical <span className="text-orange-500">Excellence</span> Across the Midlands
+              Spraying <span className="text-orange-500">Excellence</span> Across Surrey
             </h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
-              We don't just install wires; I engineer long-term safety and reliability. Every project is executed to strict technical standards with verifiable performance outcomes.
+              We don't just apply paint; we engineer long-term property transformations. Every project is executed to strict technical standards with a factory-standard finish.
             </p>
           </div>
           
@@ -179,14 +179,14 @@ export const RecentWork = () => {
         <div className="mt-12 p-1 bg-white rounded-[2.5rem] border border-gray-200 shadow-xl max-w-4xl mx-auto overflow-hidden">
           <div className="bg-slate-50 rounded-[2.25rem] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 border border-white">
             <div className="text-center md:text-left">
-              <h3 className="text-navy-900 font-header text-3xl font-bold mb-3 tracking-tight">Need a similar solution?</h3>
-              <p className="text-gray-500 font-medium">Get a technical assessment and fixed quote for your project.</p>
+              <h3 className="text-navy-900 font-header text-3xl font-bold mb-3 tracking-tight">Need a similar transformation?</h3>
+              <p className="text-gray-500 font-medium">Get a professional assessment and fixed quote for your project.</p>
             </div>
             <Link 
               to="/contact#booking-form" 
               className="whitespace-nowrap bg-navy-900 text-white font-bold py-4 px-10 rounded-2xl hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-500/20 active:scale-95"
             >
-              REQUEST TECHNICAL QUOTE
+              REQUEST FREE QUOTE
             </Link>
           </div>
         </div>

@@ -36,7 +36,7 @@ export const ServiceAreas = () => {
             </h2>
             
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
-              Based in Birdingbury, I am strategically positioned to provide <span className="text-navy-900 font-bold">fast electrical support</span> across Rugby, Southam, and Leamington Spa. I pride myself on reliability and punctuality for every local appointment.
+              Based in Epsom, we are strategically positioned to provide <span className="text-navy-900 font-bold">fast spraying support</span> across Epsom, Ewell, and Banstead. We pride ourselves on reliability and punctuality for every local appointment.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 max-w-xl">
@@ -55,7 +55,7 @@ export const ServiceAreas = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy-900 text-sm mb-1">Emergency Dispatch</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Call 24/7 for urgent electrical repairs. Fast response for all CV postcodes.</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">Call 7 days a week for professional spraying services. Fast response for all Surrey postcodes.</p>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ export const ServiceAreas = () => {
             <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-orange-500 transition-colors" />
             <input 
               type="text" 
-              placeholder="Enter town or postcode (e.g. CV21, Rugby, Southam)..."
+              placeholder="Enter town or postcode (e.g. KT17, Epsom, Ewell)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-200 focus:border-orange-500 focus:bg-white rounded-xl outline-none transition-all font-medium text-navy-900"
@@ -129,7 +129,7 @@ export const ServiceAreas = () => {
               <div className="p-6 flex flex-grow flex-col">
                 <h3 className="text-2xl font-bold text-navy-900 mb-3 group-hover:text-orange-600 transition-colors">{location.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                  Providing professional electrical installations and repairs. Full coverage for {location.name} and surrounding areas.
+                  Providing professional spray painting services. Full coverage for {location.name} and surrounding areas.
                 </p>
                 
                 <div className="mt-auto space-y-4">
@@ -178,14 +178,14 @@ export const ServiceAreas = () => {
                     <span className="text-orange-500">Service Zones?</span>
                   </h3>
                   <p className="text-lg text-white mb-10 max-w-lg leading-relaxed">
-                    I cover most of Warwickshire and surrounding areas for major projects and scheduled electrical work. If your area isn't listed, feel free to get in touch.
+                    We cover most of Surrey and surrounding areas for major projects and scheduled spraying work. If your area isn't listed, feel free to get in touch.
                   </p>
                   
                   <div className="space-y-4">
                     {[
                       "Priority response for CV postcodes",
                       "Full public liability insurance cover",
-                      "Qualified and certified electrical work",
+                      "10-Year Adhesion Guarantee",
                       "Free, no-obligation consultations"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-center gap-3">

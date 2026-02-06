@@ -3,11 +3,7 @@ import { siteSettings } from "@/data/siteSettings"
 import { services } from "@/data/services"
 import { locations } from "@/data/locations"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
-import logo from "../../assets/sl-logo.png"
-// import visaLogo from "../../assets/payment/visa-202311.svg";
-// import mastercardLogo from "../../assets/payment/mastercard-202311.svg";
-// import amexLogo from "../../assets/payment/amex-202311.svg";
-// import maestroLogo from "../../assets/payment/maestro-202311.svg";
+import logo from "../../assets/logo-landscape.png"
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -19,10 +15,10 @@ export const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="DH Electrical Services" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
+              <img src={logo} alt="Spray Innovative" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
             </Link>
             <p className="text-gray-400 mb-6">
-              Expert electrical services for Rugby, Southam, and the Midlands. Fully qualified, insured, and available 24/7 for emergencies.
+              Professional on-site and off-site spray painting specialist. Transform your home with durable, eco-friendly coatings for kitchens, windows, and doors.
             </p>
             <div className="flex flex-col gap-2">
               <a href={`tel:${siteSettings.phoneFormatted}`} className="text-xl font-bold hover:text-orange-500 transition-colors">
@@ -35,10 +31,10 @@ export const Footer = () => {
                 Customer Reviews
               </Link>
               <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                About Daniel Hollands
+                About Paul Lear
               </Link>
               <Link to="/contact#booking-form" className="text-orange-500 font-bold hover:underline mt-2">
-                Book Online Now
+                Get a Free Quote
               </Link>
             </div>
           </div>
@@ -59,55 +55,29 @@ export const Footer = () => {
 
           {/* Areas Column */}
           <div>
-            <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Areas I Cover</h4>
+            <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Areas We Cover</h4>
             <ul className="space-y-3">
               {locations.map(location => (
                 <li key={location.id}>
                   <Link to={`/locations/${location.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
-                    Electrician in {location.name}
+                    Spraying in {location.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Accreditation & Payment Column */}
+          {/* Accreditation Column */}
           <div>
             <div className="mb-10">
-              <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Accreditations</h4>
+              <h4 className="font-header font-bold text-lg mb-6 uppercase tracking-wider">Our Commitment</h4>
               <div className="grid grid-cols-1">
-                {/* <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
-                  <img 
-                    src={NAPITLogo} 
-                    alt="NICEIC Certified" 
-                    className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
-                  />
-                </div> */}
-                <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
-                  <img 
-                    src={cityAndGuildsLogo} 
-                    alt="City & Guilds" 
-                    className="max-h-12 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
-                  />
+                <div className="bg-white/10 p-6 rounded-xl border border-white/10">
+                  <p className="text-sm font-bold text-orange-500 uppercase tracking-widest mb-2">10-Year Guarantee</p>
+                  <p className="text-xs text-gray-400 leading-relaxed">We provide a 10-year adhesion guarantee on all our specialist spray coatings.</p>
                 </div>
-                {/* <div className="bg-white/10 p-4 rounded flex items-center justify-center group hover:bg-white/20 transition-all duration-300 col-span-2">
-                  <div className="text-center">
-                    <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Registration No.</span>
-                    <p className="text-sm font-bold text-white/80">{siteSettings.registrationNumber}</p>
-                  </div>
-                </div> */}
               </div>
             </div>
-
-            {/* <div>
-              <h4 className="font-header font-bold text-lg mb-4 uppercase tracking-wider">Accepted Payments</h4>
-              <div className="flex flex-wrap gap-3">
-                <img src={visaLogo} alt="Visa" className="h-6 w-auto opacity-80" />
-                <img src={mastercardLogo} alt="Mastercard" className="h-6 w-auto opacity-80" />
-                <img src={amexLogo} alt="American Express" className="h-6 w-auto opacity-80" />
-                <img src={maestroLogo} alt="Maestro" className="h-6 w-auto opacity-80" />
-              </div>
-            </div> */}
           </div>
         </div>
 

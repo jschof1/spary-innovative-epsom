@@ -7,7 +7,7 @@ import { TrustBar } from "@/components/sections/TrustBar"
 import { Reviews } from "@/components/sections/Reviews"
 import { FAQ } from "@/components/sections/FAQ"
 import { siteSettings } from "@/data/siteSettings"
-import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react"
+import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Award, Sparkles } from "lucide-react"
 
 export const ServicesPage = () => {
   const allFaqs = services.flatMap(s => s.faqs).slice(0, 6)
@@ -15,36 +15,36 @@ export const ServicesPage = () => {
   const benefits = [
     {
       icon: Clock,
-      title: "Rapid Response",
-      description: "Available 24/7 for all electrical emergencies across Rugby and the Midlands."
+      title: "Fast Turnaround",
+      description: "Most transformations, including kitchens, are completed within 3-5 days."
     },
     {
       icon: ShieldCheck,
       title: "Fully Insured",
-      description: "Your property is in safe hands. I carry full public liability insurance for all work."
+      description: "Your property is in safe hands. We carry full public liability insurance for all work."
     },
     {
       icon: Award,
-      title: "Professional Guarantee",
-      description: "All my repairs and installations come with a comprehensive workmanship guarantee."
+      title: "10-Year Guarantee",
+      description: "All our specialist spray coatings come with a comprehensive 10-year adhesion guarantee."
     },
     {
       icon: CheckCircle2,
-      title: "Certified Professional",
-      description: "Fully qualified and registered to handle all residential electrical work."
+      title: "Eco-Friendly",
+      description: "We use premium water-based coatings that are safe for your family and the environment."
     }
   ]
 
   return (
     <>
       <Helmet>
-        <title>Our Electrical Services | {siteSettings.businessName}</title>
-        <meta name="description" content="Expert electrical services across Rugby and the Midlands. 24/7 emergency support, EV charger installations, and consumer unit upgrades." />
+        <title>Our Spraying Services | {siteSettings.businessName}</title>
+        <meta name="description" content="Professional spray painting services across Epsom and Surrey. Kitchen resprays, UPVC window and door spraying, and more. Eco-friendly finishes with a 10-year guarantee." />
       </Helmet>
 
       <Hero 
-        title={<>Professional <br/><span className="text-orange-500">Electrical Services</span> in Rugby.</>}
-        subtitle="From emergency repairs to EV charger installations, I provide reliable, high-quality electrical solutions with transparent pricing."
+        title={<>Professional <br/><span className="text-orange-500">Spraying Services</span> in Epsom.</>}
+        subtitle="From kitchen resprays to UPVC window transformations, we provide high-quality spray painting solutions with transparent pricing."
         showForm={true}
       />
 
@@ -54,14 +54,14 @@ export const ServicesPage = () => {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mb-20">
-            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">What I Do</h2>
+            <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">What We Do</h2>
             <h3 className="text-4xl md:text-6xl font-black text-navy-900 mb-8 leading-tight">
-              Comprehensive Electrical <br/>
+              Comprehensive Spraying <br/>
               <span className="text-orange-500">Solutions for Every Need.</span>
             </h3>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              I specialize in providing top-tier electrical services tailored to the unique needs of homeowners and businesses in the Midlands. 
-              From emergency repairs to complex smart home integrations, I bring technical excellence to every project.
+              We specialize in providing top-tier spray painting services tailored to the unique needs of homeowners and businesses in Surrey. 
+              From kitchen resprays to commercial shopfronts, we bring technical excellence to every project.
             </p>
           </div>
 
@@ -127,14 +127,14 @@ export const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Me / Benefits */}
+      {/* Why Choose Us / Benefits */}
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.2em] mb-4">My Commitment</h2>
-            <h3 className="text-4xl md:text-5xl font-black mb-6">Why Local Residents Trust My Work</h3>
+            <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.2em] mb-4">Our Commitment</h2>
+            <h3 className="text-4xl md:text-5xl font-black mb-6">Why Local Residents Trust Our Work</h3>
             <p className="text-xl text-gray-300">
-              I pride myself on delivering excellence through every installation and repair I undertake.
+              We pride ourselves on delivering excellence through every transformation we undertake.
             </p>
           </div>
 
@@ -158,15 +158,15 @@ export const ServicesPage = () => {
       
       <FAQ 
         title="Frequently Asked Questions" 
-        subtitle="Common questions about my electrical services."
+        subtitle="Common questions about our professional spraying services."
         items={allFaqs.length > 0 ? allFaqs : [
           {
-            question: "Do you offer emergency services?",
-            answer: "Yes, I provide 24/7 emergency electrical repairs across Rugby and the surrounding areas."
+            question: "Do you offer a guarantee?",
+            answer: "Yes, we provide a 10-year adhesion guarantee on all our specialist spray coatings for UPVC, wood, and metal."
           },
           {
-            question: "Are you qualified?",
-            answer: "I am a fully qualified and certified electrician, registered for all types of residential electrical work."
+            question: "How long does a kitchen respray take?",
+            answer: "Most kitchen resprays are completed within 3-5 days, providing a massive transformation with minimal disruption."
           }
         ]} 
       />
@@ -176,7 +176,7 @@ export const ServicesPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-navy-900 mb-8">Ready to get started?</h2>
           <p className="text-xl md:text-2xl text-navy-900/80 mb-12 max-w-2xl mx-auto font-medium">
-            Contact me today for a free, no-obligation quote or emergency assistance.
+            Contact us today for a free, no-obligation quote or consultation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link 
@@ -197,4 +197,3 @@ export const ServicesPage = () => {
     </>
   )
 }
-

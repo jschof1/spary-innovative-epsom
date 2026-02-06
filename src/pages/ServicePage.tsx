@@ -32,7 +32,7 @@ export const ServicePage = () => {
       <Helmet>
         <title>{service.title} | {siteSettings.businessName}</title>
         <meta name="description" content={service.description} />
-        <link rel="canonical" href={`https://dhelectricalservice.co.uk/services/${service.slug}`} />
+        <link rel="canonical" href={`https://sprayinnovative.co.uk/services/${service.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>
@@ -55,8 +55,8 @@ export const ServicePage = () => {
             <div className="lg:w-2/3">
               <div className="mb-12">
                 <h2 className="text-4xl font-black text-navy-900 mb-8 leading-tight">
-                  Expert {service.title} <br/>
-                  <span className="text-orange-500 text-3xl">Professional Service in the Midlands</span>
+                  Professional {service.title} <br/>
+                  <span className="text-orange-500 text-3xl">Expert Transformation in Surrey</span>
                 </h2>
                 <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
                   <p className="text-xl leading-relaxed text-navy-900 font-medium italic border-l-4 border-orange-500 pl-6">
@@ -68,9 +68,9 @@ export const ServicePage = () => {
                     </p>
                   )}
                   <p>
-                    At {siteSettings.businessName}, I understand that electrical installations and repairs require precision, safety, and reliability. 
-                    I provide a comprehensive {service.shortTitle.toLowerCase()} service tailored to your specific needs, ensuring all work 
-                    meets the highest industry standards (BS 7671).
+                    At {siteSettings.businessName}, we understand that property transformations require precision, quality, and durability. 
+                    We provide a comprehensive {service.shortTitle.toLowerCase()} service tailored to your specific needs, ensuring all work 
+                    meets the highest industry standards.
                   </p>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export const ServicePage = () => {
               <div className="bg-navy-900 rounded-3xl p-8 md:p-12 mb-16 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full -mr-32 -mt-32 blur-3xl" />
                 <div className="relative z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-8">What's Included in My {service.shortTitle} Service</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-8">What's Included in Our {service.shortTitle} Service</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-4">
@@ -131,7 +131,7 @@ export const ServicePage = () => {
               <div className="bg-orange-50 p-8 md:p-12 rounded-3xl border border-orange-100 mb-16">
                 <h3 className="text-2xl font-bold text-navy-900 mb-6">Service Areas for {service.shortTitle}</h3>
                 <p className="text-gray-700 mb-8">
-                  I provide professional {service.shortTitle.toLowerCase()} services to homeowners and businesses throughout the following locations:
+                  We provide professional {service.shortTitle.toLowerCase()} services to homeowners and businesses throughout the following locations:
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {locations.map(location => (
@@ -156,7 +156,7 @@ export const ServicePage = () => {
                   <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/5 rounded-bl-full" />
                   <h3 className="text-2xl font-black text-navy-900 mb-6">Get a Fast Quote</h3>
                   <p className="text-gray-600 mb-8">
-                    Need {service.shortTitle.toLowerCase()} advice? Fill out the form or call me directly for a transparent, no-obligation estimate.
+                    Need {service.shortTitle.toLowerCase()} advice? Fill out the form or call us directly for a transparent, no-obligation estimate.
                   </p>
                   
                   <div className="space-y-6 mb-8">
@@ -165,7 +165,7 @@ export const ServicePage = () => {
                         <Phone className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">Call Me Directly</p>
+                        <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">Call Us Directly</p>
                         <p className="text-lg font-black text-navy-900">{siteSettings.phone}</p>
                       </div>
                     </a>
@@ -174,7 +174,7 @@ export const ServicePage = () => {
                         <Mail className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">Email Me</p>
+                        <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">Email Us</p>
                         <p className="text-sm font-bold text-navy-900 break-all">{siteSettings.email}</p>
                       </div>
                     </a>
@@ -192,7 +192,7 @@ export const ServicePage = () => {
                 <div className="bg-gray-50 border border-gray-200 p-8 rounded-2xl">
                   <h4 className="font-bold text-navy-900 mb-6 flex items-center gap-2">
                     <ShieldCheck className="w-5 h-5 text-orange-500" />
-                    Why Choose Me?
+                    Why Choose Us?
                   </h4>
                   <ul className="space-y-4">
                     {[
@@ -239,4 +239,3 @@ export const ServicePage = () => {
     </>
   )
 }
-

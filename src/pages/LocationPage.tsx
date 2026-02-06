@@ -10,7 +10,6 @@ import { FAQ } from "@/components/sections/FAQ"
 import { getLocationBySlug } from "@/data/locations"
 import { services } from "@/data/services"
 import { siteSettings } from "@/data/siteSettings"
-import { getServiceSchema } from "@/lib/seo-schemas"
 
 export const LocationPage = () => {
   const { locationSlug } = useParams<{ locationSlug: string }>()
@@ -27,13 +26,14 @@ export const LocationPage = () => {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Electrician",
+    "@type": "HomeAndConstructionBusiness",
     "name": `${siteSettings.businessName} - ${location.name}`,
-    "description": `Expert electrical services in ${location.name}. ${location.description}`,
-    "url": `https://dhelectricalservice.co.uk/locations/${location.slug}`,
+    "description": `Professional spray painting services in ${location.name}. ${location.description}`,
+    "url": `https://sprayinnovative.co.uk/locations/${location.slug}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": location.name,
+      "addressRegion": "Surrey",
       "addressCountry": "GB"
     }
   };
@@ -41,28 +41,28 @@ export const LocationPage = () => {
   return (
     <>
       <Helmet>
-        <title>Electrician in {location.name} | {siteSettings.businessName}</title>
-        <meta name="description" content={`Expert electrical services in ${location.name}. ${location.description}`} />
-        <link rel="canonical" href={`https://dhelectricalservice.co.uk/locations/${location.slug}`} />
+        <title>{location.name} Spray Painting Services | {siteSettings.businessName}</title>
+        <meta name="description" content={`Professional spray painting services in ${location.name}. ${location.description}`} />
+        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${location.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
       </Helmet>
 
       <Hero 
-        title={<>Expert Electrician in <br/><span className="text-orange-500">{location.name}</span></>}
+        title={<>Professional Spray Painting in <br/><span className="text-orange-500">{location.name}</span></>}
         subtitle={location.description}
       />
       <TrustBar />
       
       <Services 
-        title={`Electrical Services in ${location.name}`}
+        title={`Spraying Services in ${location.name}`}
         services={services.map(s => ({ ...s, slug: `../locations/${location.slug}/${s.slug}` }))}
       />
 
       <section className="py-16 bg-navy-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Nearby Areas I Serve</h2>
+          <h2 className="text-3xl font-bold mb-6">Nearby Areas We Serve</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {location.nearbyAreas.map(area => (
               <span key={area} className="bg-white/10 px-6 py-2 rounded-full border border-white/20">
@@ -80,4 +80,3 @@ export const LocationPage = () => {
     </>
   )
 }
-

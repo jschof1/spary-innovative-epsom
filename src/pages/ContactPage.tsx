@@ -135,7 +135,7 @@ export const ContactPage = () => {
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-3">Service Areas</h3>
               <p className="text-gray-600 mb-4">I am based in Birdingbury and serve:</p>
-              <p className="font-semibold text-navy-900">Rugby, Southam, Leamington Spa, Warwick, Coventry & more.</p>
+              <p className="font-semibold text-navy-900">Epsom, Ewell, Banstead, Leatherhead, Sutton & more.</p>
             </div>
 
             <div>

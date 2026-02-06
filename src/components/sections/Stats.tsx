@@ -4,26 +4,26 @@ const stats = [
   {
     icon: Users,
     value: "500+",
-    label: "Satisfied Clients",
-    description: "Reliable service across the Midlands"
+    label: "Surfaces Transformed",
+    description: "Expert spraying across Epsom and Surrey"
   },
   {
     icon: Clock,
-    value: "24/7",
-    label: "Emergency Cover",
-    description: "Always available for urgent electrical repairs"
+    value: "7 Days",
+    label: "Availability",
+    description: "Working around your schedule, 7 days a week"
   },
   {
     icon: Award,
-    value: "100%",
-    label: "Quality Guaranteed",
-    description: "Certified work to BS 7671 standards"
+    value: "10 Years",
+    label: "Experience",
+    description: "Professional on-site & off-site spray specialist"
   },
   {
     icon: ShieldCheck,
-    value: "Certified",
-    label: "Fully Insured",
-    description: "Comprehensive public liability protection"
+    value: "Guaranteed",
+    label: "Durable Finish",
+    description: "Premium eco-friendly water-based coatings"
   }
 ]
 

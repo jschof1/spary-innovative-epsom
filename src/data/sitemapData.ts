@@ -1,7 +1,7 @@
 import { services } from './services';
 import { locations } from './locations';
 
-const BASE_URL = 'https://dhelectricalservice.co.uk';
+const BASE_URL = 'https://sprayinnovative.co.uk';
 
 export const generateSitemap = () => {
   const staticPages = [

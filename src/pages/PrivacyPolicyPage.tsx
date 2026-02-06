@@ -3,7 +3,7 @@ import { siteSettings } from "@/data/siteSettings"
 import { motion } from "framer-motion"
 
 export const PrivacyPolicyPage = () => {
-  const lastUpdated = "January 16, 2026"
+  const lastUpdated = "February 6, 2026"
 
   return (
     <>
@@ -30,7 +30,7 @@ export const PrivacyPolicyPage = () => {
               <section>
                 <h2 className="text-2xl font-black text-navy-900 mb-4 uppercase tracking-tight">1. Introduction</h2>
                 <p>
-                  At {siteSettings.businessName}, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website or use our electrical services.
+                  At {siteSettings.businessName}, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website or use our spray painting services.
                 </p>
               </section>
 
@@ -39,7 +39,7 @@ export const PrivacyPolicyPage = () => {
                 <p>We may collect personal information that you provide directly to us, including:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Name and contact information (email address, phone number, physical address).</li>
-                  <li>Details of your property or electrical requirements.</li>
+                  <li>Details of your property or spraying requirements.</li>
                   <li>Payment information (processed securely through our payment partners).</li>
                   <li>Communication history between you and {siteSettings.businessName}.</li>
                 </ul>
@@ -49,10 +49,9 @@ export const PrivacyPolicyPage = () => {
                 <h2 className="text-2xl font-black text-navy-900 mb-4 uppercase tracking-tight">3. How We Use Your Information</h2>
                 <p>We use the collected information for the following purposes:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>To provide and manage our electrical services.</li>
+                  <li>To provide and manage our spray painting services.</li>
                   <li>To communicate with you regarding quotes, appointments, and service updates.</li>
                   <li>To process payments and maintain financial records.</li>
-                  <li>To comply with legal and regulatory requirements (such as NICEIC certifications).</li>
                   <li>To improve our website and customer service experience.</li>
                 </ul>
               </section>
@@ -63,7 +62,6 @@ export const PrivacyPolicyPage = () => {
                   We do not sell or rent your personal information to third parties. We may share your data with:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Regulatory bodies (like NICEIC) for certification and safety reporting.</li>
                   <li>Service providers who assist in our business operations (e.g., payment processors).</li>
                   <li>Legal authorities if required by law or to protect our rights.</li>
                 </ul>

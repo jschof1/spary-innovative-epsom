@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { 
-  Zap, 
-  Car, 
-  Home, 
-  Wrench, 
-  Lightbulb, 
+  ChefHat, 
+  Grid, 
+  DoorOpen, 
+  Warehouse, 
+  Building2, 
   MoreHorizontal, 
   ArrowRight, 
   ArrowLeft, 
@@ -32,11 +32,11 @@ const steps = [
 ]
 
 const services = [
-  { id: "ev", label: "EV Charger", icon: Car },
-  { id: "fusebox", label: "Fuse Box", icon: Zap },
-  { id: "rewire", label: "Rewiring", icon: Home },
-  { id: "maintenance", label: "Maintenance", icon: Wrench },
-  { id: "lighting", label: "Lighting", icon: Lightbulb },
+  { id: "kitchen", label: "Kitchen", icon: ChefHat },
+  { id: "windows", label: "Windows", icon: Grid },
+  { id: "doors", label: "Doors", icon: DoorOpen },
+  { id: "garage", label: "Garage", icon: Warehouse },
+  { id: "conservatory", label: "Conservatory", icon: Building2 },
   { id: "other", label: "Other", icon: MoreHorizontal },
 ]
 
@@ -132,7 +132,7 @@ export const MultiStepQuoteForm = () => {
         </div>
         <h3 className="text-3xl font-header font-bold text-navy-900 mb-4">Request Received!</h3>
         <p className="text-gray-600 text-lg max-w-md mx-auto mb-8">
-          Thank you for choosing DH Electrical. Alex will review your details and contact you shortly with a personalized quote.
+          Thank you for choosing Spray Innovative. Paul will review your details and contact you shortly with a personalized quote.
         </p>
         <Button 
           onClick={() => window.location.href = "/"}
@@ -304,7 +304,7 @@ export const MultiStepQuoteForm = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="py-5 rounded-lg border-2 border-gray-100 focus:border-orange-500 bg-gray-50/50 text-sm"
-                      placeholder="07123 456789"
+                      placeholder="07897 024466"
                     />
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export const MultiStepQuoteForm = () => {
                       value={formData.postcode}
                       onChange={(e) => setFormData({ ...formData, postcode: e.target.value })}
                       className="py-5 rounded-lg border-2 border-gray-100 focus:border-orange-500 bg-gray-50/50 text-sm"
-                      placeholder="CV23 8EH"
+                      placeholder="KT17 2PX"
                     />
                   </div>
                 </div>

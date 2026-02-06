@@ -2,7 +2,7 @@ import { QuoteForm } from "@/components/forms/QuoteForm"
 import { Star } from "lucide-react"
 import { motion } from "framer-motion"
 import cityAndGuildsLogo from "../../assets/logos/city-guilds.webp";
-import heroBg from "../../assets/photos/main-hero-background--wide-angle-modern-living-room--smart-lighting--blurred-background-for-text-overlay--navy-and-orange-accents.webp";
+import heroBg from "../../assets/photos/generated/kitchen-respray-hero.webp";
 
 interface HeroProps {
   title?: string | React.ReactNode
@@ -12,8 +12,8 @@ interface HeroProps {
 }
 
 export const Hero = ({ 
-  title = <>Expert Electrician & <br/><span className="text-orange-500">EV Charger</span> Installation in Rugby.</>,
-  subtitle = "Professional electrical services across Rugby, Southam & Coventry. Specialising in EV charging, rewires, and fuse box upgrades.",
+  title = <>Professional <br/><span className="text-orange-500">Spray Painting</span> in Epsom & Surrey.</>,
+  subtitle = "Expert on-site & off-site spray coatings for kitchens, windows, doors and more. Eco-friendly, durable finishes with 10 years experience.",
   backgroundImage = heroBg,
   showForm = true
 }: HeroProps) => {
@@ -54,7 +54,7 @@ export const Hero = ({
                   </motion.div>
                 ))}
               </div>
-              <span className="text-sm text-white/80 font-medium">Trusted Local Electrician</span>
+              <span className="text-sm text-white/80 font-medium">Trusted Spraying Specialist</span>
             </motion.div>
             <h1 className="font-header font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-4 lg:mb-8">
               {title}
@@ -65,9 +65,9 @@ export const Hero = ({
 
             {/* Hidden image for SEO if backgroundImage is provided */}
             {backgroundImage && (
-              <img 
+                <img 
                 src={backgroundImage} 
-                alt="DH Electrical Services - Professional Electrician" 
+                alt="Spray Innovative - Professional Spray Painting Services" 
                 className="hidden" 
                 aria-hidden="true"
               />
@@ -96,8 +96,8 @@ export const Hero = ({
                  <img src={cityAndGuildsLogo} alt="City & Guilds" className="w-full h-auto object-contain p-1" />
                 </div>
                 <div className="flex flex-col justify-center min-w-0">
-                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">City & Guilds</p>
-                  <p className="text-[8px] lg:text-[9px] font-medium uppercase tracking-widest text-white/60 truncate">Qualified</p>
+                  <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">Expert Spraying</p>
+                  <p className="text-[8px] lg:text-[9px] font-medium uppercase tracking-widest text-white/60 truncate">10 Years Experience</p>
                 </div>
               </div>
             </div>

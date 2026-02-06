@@ -92,7 +92,7 @@ export const QuoteForm = () => {
       <div className="relative z-10">
         <div className="text-center mb-8 md:mb-10">
           <h3 className="font-header text-2xl md:text-3xl font-bold text-navy-900 mb-2">Get Your Free Quote</h3>
-          <p className="text-sm text-gray-600 px-4">Local professional serving Rugby & the Midlands</p>
+          <p className="text-sm text-gray-600 px-4">Local professional serving Epsom & Surrey</p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">

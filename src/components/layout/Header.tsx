@@ -6,7 +6,7 @@ import { services } from "@/data/services"
 import { locations } from "@/data/locations"
 import { Menu, X, ChevronDown, Phone, Clock, MapPin } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
-import logo from "../../assets/sl-logo.png"
+import logo from "../../assets/logo-landscape.png"
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,7 +34,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-1">
           <Link to="/" className="flex items-center gap-2 group relative z-50 w-fit">
-            <img src={logo} alt="DH Electrical Services" className="h-10 md:h-14 w-auto object-contain" />
+            <img src={logo} alt="Spray Innovative" className="h-10 md:h-14 w-auto object-contain" />
           </Link>
         </div>
 

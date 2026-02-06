@@ -11,8 +11,8 @@ export const CallToAction = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-white">
           <div className="text-center lg:text-left">
-            <h2 className="font-header text-2xl md:text-4xl font-bold mb-4">Need an Emergency Electrician?</h2>
-            <p className="text-lg text-white/90">I am based in Birdingbury and available 24/7 for urgent electrical repairs.</p>
+            <h2 className="font-header text-2xl md:text-4xl font-bold mb-4">Ready to Transform Your Home?</h2>
+            <p className="text-lg text-white/90">We are based in Epsom and available 7 days a week for all your spraying needs.</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -20,7 +20,7 @@ export const CallToAction = () => {
               href={`tel:${siteSettings.phoneFormatted}`} 
               className="inline-flex items-center justify-center gap-3 bg-navy-900 text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-navy-800 transition-all shadow-xl hover:scale-105 active:scale-95"
             >
-              <Phone className="w-6 h-6 animate-bounce" />
+              <Phone className="w-6 h-6" />
               {siteSettings.phone}
             </a>
             <Link 
@@ -35,13 +35,13 @@ export const CallToAction = () => {
         <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-white/80 text-sm font-semibold">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            LIVE: Available for CV Postcodes
+            LIVE: Serving Epsom & Surrey
           </div>
           <div className="flex items-center gap-2">
-            <span>✓ No Call-out Fee</span>
+            <span>✓ 10-Year Guarantee</span>
           </div>
           <div className="flex items-center gap-2">
-            <span>✓ Rapid Local Response</span>
+            <span>✓ Eco-Friendly Coatings</span>
           </div>
         </div>
       </div>

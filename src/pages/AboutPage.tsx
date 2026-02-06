@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async"
 import { motion } from "framer-motion"
 import { siteSettings } from "@/data/siteSettings"
-import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle } from "lucide-react"
+import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"
@@ -15,18 +15,18 @@ const fadeIn = {
 }
 
 const stats = [
-  { label: "Years in the Trade", value: "8+" },
-  { label: "Jobs Completed", value: "500+" },
-  { label: "One-Man Team", value: "1" },
-  { label: "Response Time", value: "24/7" },
+  { label: "Years Experience", value: "10+" },
+  { label: "Surfaces Transformed", value: "500+" },
+  { label: "Specialist Team", value: "1" },
+  { label: "Availability", value: "7 Days" },
 ]
 
 export const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Daniel Hollands | {siteSettings.businessName}</title>
-        <meta name="description" content={`Learn more about ${siteSettings.businessName}. Daniel Hollands is your local expert electrician serving Rugby, Southam, and the surrounding areas.`} />
+        <title>About Paul Lear | {siteSettings.businessName}</title>
+        <meta name="description" content={`Learn more about ${siteSettings.businessName}. Paul Lear is your local expert spray painting specialist serving Epsom, Ewell, and the surrounding areas.`} />
       </Helmet>
 
       <div className="overflow-hidden bg-white">
@@ -51,16 +51,16 @@ export const AboutPage = () => {
                   transition={{ duration: 0.8 }}
                 >
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-bold mb-8 uppercase tracking-[0.2em]">
-                    <Zap className="w-4 h-4" />
-                    <span>Expert Local Electrician</span>
+                    <Sparkles className="w-4 h-4" />
+                    <span>Expert Spraying Specialist</span>
                   </div>
                   <h1 className="text-5xl lg:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
-                    MEET <span className="text-orange-500">DANIEL.</span> <br/>
+                    MEET <span className="text-orange-500">PAUL.</span> <br/>
                     YOUR LOCAL <br/>
                     <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">SPECIALIST.</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed font-medium">
-                    Based in Birdingbury, I provide expert electrical services across Rugby, Southam, and Leamington Spa. After years with a major firm, I've brought my skills to my own independent business.
+                    Based in Epsom, I provide expert spray painting services across Ewell, Banstead, and the wider Surrey area. With a decade of experience in professional coatings, I founded Spray Innovative to offer homeowners a high-quality, cost-effective alternative to replacement.
                   </p>
                   <div className="flex flex-wrap gap-6">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-black py-8 px-10 rounded-none shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none text-lg uppercase tracking-wider">
@@ -74,7 +74,7 @@ export const AboutPage = () => {
                         <Phone className="w-6 h-6 text-white group-hover:text-orange-500" />
                       </div>
                       <div>
-                        <div className="text-xs text-gray-400 font-bold uppercase tracking-widest">Available 24/7</div>
+                        <div className="text-xs text-gray-400 font-bold uppercase tracking-widest">Available 7 Days</div>
                         <div className="text-xl font-black text-white">{siteSettings.phone}</div>
                       </div>
                     </a>
@@ -93,12 +93,12 @@ export const AboutPage = () => {
                   <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5]">
                     <img 
                       src={teamImage} 
-                      alt="Daniel Hollands - DH Electrical Services" 
+                      alt="Paul Lear - Spray Innovative" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy-900 to-transparent">
-                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Daniel Hollands</p>
-                      <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Certified Electrician</p>
+                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Paul Lear</p>
+                      <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Spraying Specialist</p>
                     </div>
                   </div>
                 </div>
@@ -144,17 +144,17 @@ export const AboutPage = () => {
               <motion.div className="lg:w-1/2" {...fadeIn}>
                 <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-6">Professional Bio</h2>
                 <h3 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                  QUALITY WORK FROM A <span className="text-orange-500 italic">LOCAL</span> TRADESMAN.
+                  QUALITY WORK FROM A <span className="text-orange-500 italic">LOCAL</span> SPECIALIST.
                 </h3>
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
-                    I founded DH Electrical Services 12 months ago with a clear goal: to provide high-quality, professional electrical services directly to my local community.
+                    I founded Spray Innovative with a clear goal: to provide high-quality, professional spray painting services directly to my local community.
                   </p>
                   <p className="text-white border-l-4 border-orange-500 pl-6 py-2 italic">
-                    "I believe in transparency, safety, and doing the job right the first time."
+                    "I believe in quality, durability, and doing the job right the first time."
                   </p>
                   <p>
-                    With several years of experience at a large electrical company, I've developed expertise in complex installations, particularly EV chargers, consumer unit upgrades, and full property rewires.
+                    With 10 years of experience in the industry, I've developed expertise in complex transformations, particularly kitchen resprays, UPVC window coatings, and commercial spray finishing.
                   </p>
                 </div>
               </motion.div>
@@ -169,7 +169,7 @@ export const AboutPage = () => {
                 >
                   <img 
                     src={teamImage} 
-                    alt="DH Electrical Services Team" 
+                    alt="Spray Innovative Team" 
                     className="w-full h-auto"
                   />
                 </motion.div>
@@ -179,7 +179,7 @@ export const AboutPage = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -top-10 -right-10 bg-orange-500 text-navy-900 w-32 h-32 rounded-full flex items-center justify-center text-center p-4 z-20 shadow-2xl"
                 >
-                  <span className="text-sm font-black uppercase leading-tight">Licensed & Insured</span>
+                  <span className="text-sm font-black uppercase leading-tight">Fully Insured & Guaranteed</span>
                 </motion.div>
               </div>
             </div>
@@ -190,10 +190,10 @@ export const AboutPage = () => {
         <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">My Core Promise</h2>
+              <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em] mb-4">Our Core Promise</h2>
               <h3 className="text-4xl md:text-5xl font-black text-navy-900 leading-tight">
                 THE PRINCIPLES THAT <br/>
-                <span className="text-orange-500">DRIVE ME.</span>
+                <span className="text-orange-500">DRIVE US.</span>
               </h3>
             </div>
 
@@ -201,19 +201,19 @@ export const AboutPage = () => {
               {[
                 {
                   title: "RADICAL HONESTY",
-                  desc: "I provide upfront fixed quotes. No 'estimates', no hidden surcharges, and no 'extras' added at the end.",
+                  desc: "We provide upfront fixed quotes. No 'estimates', no hidden surcharges, and no 'extras' added at the end.",
                   icon: Shield,
                   color: "bg-orange-500"
                 },
                 {
-                  title: "RAPID DEPLOYMENT",
-                  desc: "Available 24/7 for electrical emergencies. I'm based locally in Birdingbury for fast response in Rugby and Southam.",
+                  title: "LOCAL & RELIABLE",
+                  desc: "We are based locally on Ewell By-Pass for fast response in Epsom, Ewell, and surrounding areas.",
                   icon: Clock,
                   color: "bg-navy-900"
                 },
                 {
                   title: "LIFETIME QUALITY",
-                  desc: "We don't do 'quick fixes'. I use premium parts and provide certified work that lasts.",
+                  desc: "We don't do 'quick fixes'. We use premium coatings and provide a 10-year adhesion guarantee.",
                   icon: Award,
                   color: "bg-orange-500"
                 },
@@ -224,14 +224,14 @@ export const AboutPage = () => {
                   color: "bg-navy-900"
                 },
                 {
-                  title: "TECH-FOCUSED",
-                  desc: "Specialist in modern electrical tech, from EV chargers to smart home consumer unit upgrades.",
+                  title: "PREMIUM QUALITY",
+                  desc: "Specialist in modern spray technology, from kitchen resprays to UV-resistant UPVC coatings.",
                   icon: Zap,
                   color: "bg-orange-500"
                 },
                 {
                   title: "CERTIFIED SAFETY",
-                  desc: "Every job is tested and certified to current BS 7671 safety standards for your peace of mind.",
+                  desc: "We use premium water-based coatings with low VOCs, safe for your family and the environment.",
                   icon: CheckCircle,
                   color: "bg-navy-900"
                 }
@@ -263,11 +263,11 @@ export const AboutPage = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-12 border-t-8 border-navy-900 pt-24">
               <div className="max-w-2xl">
                 <h2 className="text-5xl md:text-7xl font-black text-navy-900 leading-[0.9] tracking-tighter mb-8">
-                  READY TO UPGRADE <br/>
-                  <span className="text-orange-500 uppercase italic">YOUR ELECTRICS?</span>
+                  READY TO TRANSFORM <br/>
+                  <span className="text-orange-500 uppercase italic">YOUR HOME?</span>
                 </h2>
                 <p className="text-xl text-gray-600 font-bold max-w-lg">
-                  Contact me today for a free, no-obligation quote for any electrical project or repair.
+                  Contact us today for a free, no-obligation quote for any spraying project.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
@@ -279,7 +279,7 @@ export const AboutPage = () => {
                   className="bg-orange-500 text-white font-black py-10 px-12 rounded-none text-xl uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-orange-600 transition-all w-full sm:w-auto"
                 >
                   <Phone className="w-6 h-6" />
-                  Call Me
+                  Call Us
                 </a>
               </div>
             </div>

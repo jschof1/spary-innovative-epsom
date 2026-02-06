@@ -24,28 +24,28 @@ interface FAQProps {
 
 export const FAQ = ({ 
   title = "Frequently Asked Questions",
-  subtitle = "Everything you need to know about our professional electrical services.",
+  subtitle = "Everything you need to know about our professional spray painting services.",
   items = [
     ...siteSettings.standardFaqs,
     {
-      category: "Emergency",
-      question: "What should I do in an electrical emergency?",
-      answer: "If you smell burning, see smoke, or have a complete power failure that isn't a local blackout, turn off your main power at the consumer unit (fuse box) if safe to do so and call me immediately at 07930 937358. I'm available 24/7 for urgent repairs."
+      category: "Process",
+      question: "How long does a kitchen respray take?",
+      answer: "Most kitchen resprays are completed within 3-5 days. We work efficiently to ensure minimal disruption to your home while delivering a factory-standard finish."
     },
     {
-      category: "EV Charging",
-      question: "Do you install EV chargers at homes and businesses?",
-      answer: "Yes, I am a specialist in EV charger installations. I can install a variety of leading brands and ensure the work is fully certified and compliant with current safety regulations."
+      category: "Quality",
+      question: "Is the spray finish durable?",
+      answer: "Yes, absolutely. We use specialist industrial-grade coatings that are specifically formulated for high-traffic areas. We provide a 10-year adhesion guarantee on all our work."
     },
     {
-      category: "Pricing",
-      question: "How do you charge for your services?",
-      answer: "For larger projects like rewires or EV charger installations, I provide a fixed, no-obligation quote. For smaller repairs or maintenance, I have a transparent hourly rate. I never charge hidden call-out fees."
+      category: "Color",
+      question: "Can you match any color?",
+      answer: "We can match colors from all major brands including Farrow & Ball, Little Greene, Dulux, and RAL colors. You can choose any color and sheen level you desire."
     },
     {
       category: "Safety",
-      question: "Will I receive a certificate for the electrical work?",
-      answer: "Absolutely. All major electrical work is tested and I provide the relevant certification (EIC or MEIWC) upon completion. I also notify local building control where required by Part P regulations."
+      question: "Is the paint safe for my family?",
+      answer: "We use premium water-based coatings with low VOCs. They are safe for families, pets, and the environment, with minimal odor and fast drying times."
     }
   ]
 }: FAQProps) => {
@@ -108,7 +108,7 @@ export const FAQ = ({
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Search for a question (e.g. 'EV', 'quote', 'fuse box')..."
+              placeholder="Search for a question (e.g. 'kitchen', 'quote', 'UPVC')..."
               className="w-full pl-14 pr-6 py-5 bg-white border border-gray-100 rounded-2xl shadow-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-lg"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -180,7 +180,7 @@ export const FAQ = ({
               </div>
               <h3 className="text-2xl font-bold mb-4 relative z-10">Still have questions?</h3>
               <p className="text-navy-100 mb-8 relative z-10 leading-relaxed">
-                I am available 24/7 to provide expert advice and emergency support across the Midlands.
+                We are available 7 days a week to provide expert advice and consultations across Surrey.
               </p>
               <div className="space-y-4 relative z-10">
                 <a 
@@ -201,12 +201,12 @@ export const FAQ = ({
             </div>
 
             <div className="bg-orange-50 p-6 rounded-[2.5rem] border border-orange-100">
-              <h4 className="font-bold text-navy-900 mb-4">Why DH Electrical?</h4>
+              <h4 className="font-bold text-navy-900 mb-4">Why Spray Innovative?</h4>
               <ul className="space-y-4">
                 {[
-                  "24/7 Emergency Support",
-                  "Fully Qualified & Certified",
-                  "No Hidden Call-Out Fees",
+                  "7-Day Availability",
+                  "10-Year Adhesion Guarantee",
+                  "Eco-Friendly Coatings",
                   "Professional & Reliable"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-700 text-sm">
@@ -223,7 +223,7 @@ export const FAQ = ({
 
         <div className="mt-10 text-center">
           <p className="text-gray-500 text-sm max-w-2xl mx-auto">
-            My FAQ is regularly updated to provide the most accurate information on electrical safety, modern installations, and emergency procedures.
+            Our FAQ is regularly updated to provide the most accurate information on our specialist coatings, drying times, and the transformation process.
           </p>
         </div>
       </div>

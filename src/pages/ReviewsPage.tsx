@@ -10,15 +10,16 @@ export const ReviewsPage = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": siteSettings.businessName,
-    "image": "https://dhelectricalservice.co.uk/logo.png", // Replace with actual logo URL
-    "@id": "https://dhelectricalservice.co.uk",
-    "url": "https://dhelectricalservice.co.uk",
+    "image": "https://sprayinnovative.co.uk/logo.png", // Replace with actual logo URL
+    "@id": "https://sprayinnovative.co.uk",
+    "url": "https://sprayinnovative.co.uk",
     "telephone": siteSettings.phone,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": siteSettings.address,
-      "addressLocality": "Birdingbury",
-      "addressRegion": "Warwickshire",
+      "streetAddress": "151 Ewell By-Pass",
+      "addressLocality": "Epsom",
+      "addressRegion": "Surrey",
+      "postalCode": "KT17 2PX",
       "addressCountry": "GB"
     },
     "aggregateRating": {
@@ -49,7 +50,7 @@ export const ReviewsPage = () => {
     <>
       <Helmet>
         <title>Customer Reviews & Testimonials | {siteSettings.businessName}</title>
-        <meta name="description" content={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from customers across Rugby and the Midlands.`} />
+        <meta name="description" content={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from customers across Epsom and Surrey.`} />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
         </script>
@@ -70,11 +71,11 @@ export const ReviewsPage = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h1 className="font-header text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  What My <span className="text-orange-500">Customers</span> Say
+                  What Our <span className="text-orange-500">Customers</span> Say
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  I take pride in delivering exceptional electrical services across the Midlands. 
-                  Read why local homeowners trust me with their repairs and installations.
+                  We take pride in delivering exceptional spray painting services across Surrey. 
+                  Read why local homeowners trust us with their property transformations.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-none font-bold">
@@ -271,4 +272,3 @@ export const ReviewsPage = () => {
     </>
   );
 };
-

@@ -1,31 +1,31 @@
-import { Shield, Zap, HeartHandshake, Banknote, Star } from "lucide-react"
+import { Shield, HeartHandshake, Banknote, Star, Award } from "lucide-react"
 
 const benefits = [
   {
-    title: "24/7 Emergency Support",
-    description: "Electrical fault at 3 AM? No problem. I am on standby for emergency repairs whenever you need them.",
-    icon: Zap,
-    accent: "text-blue-400",
-    bg: "bg-blue-500/10"
-  },
-  {
-    title: "No Hidden Costs",
-    description: "The price I quote is the price you pay. I provide clear, transparent pricing for every electrical job.",
-    icon: Banknote,
+    title: "Eco-Friendly Coatings",
+    description: "We use premium water-based paints that are safe for your family and the environment, with low VOCs and minimal odor.",
+    icon: HeartHandshake,
     accent: "text-green-400",
     bg: "bg-green-500/10"
   },
   {
-    title: "Licensed & Insured",
-    description: "Fully qualified and insured professional. I carry comprehensive public liability insurance for your peace of mind.",
-    icon: Shield,
+    title: "Cost-Effective",
+    description: "Save up to 80% compared to the cost of replacement. Transform your kitchen or windows for a fraction of the price.",
+    icon: Banknote,
     accent: "text-orange-400",
     bg: "bg-orange-500/10"
   },
   {
-    title: "Local & Reliable",
-    description: "I'm a local Midlands business. I take pride in providing reliable, professional service to my community.",
-    icon: HeartHandshake,
+    title: "Durable Factory Finish",
+    description: "Our specialist spray application provides a smooth, hard-wearing finish that is far superior to traditional brush painting.",
+    icon: Shield,
+    accent: "text-blue-400",
+    bg: "bg-blue-500/10"
+  },
+  {
+    title: "10 Years Experience",
+    description: "Paul Lear is a local specialist with a decade of experience in professional on-site and off-site spray painting.",
+    icon: Award,
     accent: "text-purple-400",
     bg: "bg-purple-500/10"
   }
@@ -44,14 +44,14 @@ export const BrandBenefits = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-400 uppercase bg-orange-400/10 rounded-full border border-orange-400/20">
-              Why Choose DH Electrical Services
+              Why Choose Spray Innovative
             </div>
             <h2 className="font-header text-2xl md:text-4xl font-bold mb-8 leading-tight">
-              Rugby's Most Professional <br/>
-              <span className="text-orange-500">Electrical Specialist</span>
+              Surrey's Leading <br/>
+              <span className="text-orange-500">Spraying Specialist</span>
             </h2>
             <p className="text-lg text-navy-100 mb-8 leading-relaxed max-w-xl">
-              I've built my reputation on safe work, reliability, and technical expertise. Whether it's an EV charger installation or a full property rewire, I handle every job with absolute professionalism.
+              We specialize in transforming residential properties by providing a durable, cost-effective alternative to replacement. Whether it's a kitchen respray or UPVC window coating, we deliver a factory-standard finish every time.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-12">
@@ -88,13 +88,13 @@ export const BrandBenefits = () => {
                   <span className="text-sm font-bold tracking-wider uppercase">Verified 5-Star Reviews</span>
                 </div>
                 <blockquote className="font-header italic text-xl mb-4 leading-relaxed">
-                  "Daniel was incredibly professional, prompt, and his work was exceptional. Highly recommend for any electrical needs."
+                  "Paul was incredibly professional, prompt, and the transformation of our kitchen was exceptional. Highly recommend for any spraying needs."
                 </blockquote>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold text-white shadow-lg">M</div>
+                  <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold text-white shadow-lg">J</div>
                   <div>
-                    <p className="font-bold text-white">Mark Stevens</p>
-                    <p className="text-sm text-orange-400">Rugby, CV21</p>
+                    <p className="font-bold text-white">James Miller</p>
+                    <p className="text-sm text-orange-400">Epsom, KT17</p>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export const BrandBenefits = () => {
             {/* Floating Achievement Badge */}
             <div className="absolute -top-10 -right-10 z-20 bg-white p-6 rounded-2xl shadow-2xl hidden md:block animate-bounce-slow">
               <div className="text-center">
-                <p className="text-navy-900 font-extrabold text-3xl mb-1">8+</p>
+                <p className="text-navy-900 font-extrabold text-3xl mb-1">10+</p>
                 <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Years Experience</p>
               </div>
             </div>

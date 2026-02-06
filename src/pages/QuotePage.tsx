@@ -9,7 +9,7 @@ export const QuotePage = () => {
     <>
       <Helmet>
         <title>Get Your Free Quote | {siteSettings.businessName}</title>
-        <meta name="description" content="Get a fast, free, no-obligation electrical quote in minutes. Local NICEIC certified electrician serving Rugby and the Midlands." />
+        <meta name="description" content="Get a fast, free, no-obligation spray painting quote in minutes. Local spraying specialist serving Epsom and Surrey." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
