@@ -36,6 +36,8 @@ export const Guarantee = () => {
                   src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Electrician shaking hands with customer" 
                   className="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 flex items-center gap-4">

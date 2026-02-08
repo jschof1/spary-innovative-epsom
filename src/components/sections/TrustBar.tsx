@@ -28,6 +28,8 @@ export const TrustBar = () => {
               src={googleLogo} 
               alt="Google Reviews" 
               className="h-8 w-auto object-contain"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -36,6 +38,8 @@ export const TrustBar = () => {
               src={trustpilotLogo} 
               alt="Trustpilot" 
               className="h-8 w-auto object-contain"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </motion.div>

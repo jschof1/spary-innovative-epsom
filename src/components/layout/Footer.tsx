@@ -14,7 +14,13 @@ export const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="Spray Innovative" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
+              <img
+                src={logo}
+                alt="Spray Innovative"
+                className="h-12 md:h-16 w-auto object-contain brightness-0 invert"
+                loading="lazy"
+                decoding="async"
+              />
             </Link>
             <p className="text-gray-400 mb-6">
               Professional on-site and off-site spray painting specialist. Transform your home with durable, eco-friendly coatings for kitchens, windows, and doors.

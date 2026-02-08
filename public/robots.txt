@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /add-customer
+Disallow: /api/
 Allow: /
 
 # Sitemaps
-Sitemap: https://dhelectricalservice.co.uk/sitemap.xml
+Sitemap: https://sprayinnovative.com/sitemap.xml

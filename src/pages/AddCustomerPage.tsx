@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { useEffect } from "react"
 
 export const AddCustomerPage = () => {
@@ -17,10 +17,12 @@ export const AddCustomerPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Add Customer | Internal</title>
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      <SEO
+        title="Add Customer | Internal"
+        description="Internal customer intake form."
+        pathname="/add-customer"
+        robots="noindex, nofollow"
+      />
       
       <div className="min-h-screen flex flex-col items-center justify-start bg-white">
         <div className="w-full max-w-4xl min-h-screen">

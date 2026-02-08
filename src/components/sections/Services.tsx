@@ -76,11 +76,11 @@ export const Services = ({
             </div>
             <h2 className="font-header text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-[0.95] tracking-tight">
               Professional <br/>
-              <span className="text-orange-600">Electrical Services.</span>
+              <span className="text-orange-600">Spray Services.</span>
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed max-w-2xl font-medium">
-              We don't just install wires; I optimize your home's critical systems. Using advanced diagnostics 
-              and precision components to ensure long-term safety and reliability.
+              We do more than apply paint. We restore and protect your home's surfaces using thorough preparation,
+              precision spraying, and premium coatings for long-term durability.
             </p>
           </div>
           
@@ -140,9 +140,10 @@ export const Services = ({
                 {service.image && (
                   <img 
                     src={service.image} 
-                    alt={`${service.title} - Professional Electrical Service`}
+                    alt={`${service.title} - Professional Spray Service`}
                     className="hidden" // Hidden from view but available for SEO and crawlers
                     loading="lazy"
+                    decoding="async"
                   />
                 )}
 

@@ -2,12 +2,25 @@ import { QuoteForm } from "@/components/forms/QuoteForm"
 import { FAQ } from "@/components/sections/FAQ"
 import { Reviews } from "@/components/sections/Reviews"
 import { TrustBar } from "@/components/sections/TrustBar"
+import { SEO } from "@/components/SEO"
 import { siteSettings } from "@/data/siteSettings"
 import { Phone, Mail, Clock, MapPin, CheckCircle2, ShieldCheck, Trophy, Zap } from "lucide-react"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const ContactPage = () => {
   return (
-    <div className="bg-white">
+    <>
+      <SEO
+        title={`Contact ${siteSettings.businessName} | Free Spray Painting Quote`}
+        description={`Contact ${siteSettings.businessName} for professional spray painting in Epsom and Surrey. Call or request a free quote for kitchens, UPVC, and commercial spraying.`}
+        pathname="/contact"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "Contact", item: `${siteSettings.baseUrl}/contact` }
+        ])}
+      />
+
+      <div className="bg-white">
       {/* Hero Section with Form */}
       <section className="relative pt-8 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-slate-50">
         {/* Background elements */}
@@ -164,7 +177,8 @@ export const ContactPage = () => {
 
       <Reviews />
       <FAQ />
-    </div>
+      </div>
+    </>
   )
 }
 

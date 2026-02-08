@@ -57,7 +57,7 @@ copper pipes neatly connected, clear labels visible.
 Clean, technical, professional. 4:3 aspect ratio.
 ```
 
-**Electrical - Lighting**:
+**Interior - Lighting**:
 ```
 Modern kitchen with elegant pendant lights,
 warm glow illuminating timber island bench.

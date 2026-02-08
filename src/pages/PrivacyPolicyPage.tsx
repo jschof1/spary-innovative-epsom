@@ -1,16 +1,22 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { siteSettings } from "@/data/siteSettings"
 import { motion } from "framer-motion"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const PrivacyPolicyPage = () => {
   const lastUpdated = "February 6, 2026"
 
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | {siteSettings.businessName}</title>
-        <meta name="description" content={`Privacy Policy for ${siteSettings.businessName}. Learn how we collect and protect your data.`} />
-      </Helmet>
+      <SEO
+        title={`Privacy Policy | ${siteSettings.businessName}`}
+        description={`Privacy Policy for ${siteSettings.businessName}. Learn how we collect and protect your data.`}
+        pathname="/privacy-policy"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "Privacy Policy", item: `${siteSettings.baseUrl}/privacy-policy` }
+        ])}
+      />
 
       <div className="bg-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">

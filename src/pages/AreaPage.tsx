@@ -1,10 +1,11 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { getAreaBySlug } from "@/components/data/areas";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteSettings } from "@/data/siteSettings";
+import { getBreadcrumbSchema } from "@/lib/seo-schemas";
 
 import { 
   MapPin, 
@@ -52,7 +53,7 @@ const AreaPage = () => {
       "@type": "HomeAndConstructionBusiness",
       "name": `${siteSettings.businessName} - ${area.name}`,
       "description": area.description || `Professional spray painting specialist in ${area.name}. Transform your home with durable, eco-friendly coatings.`,
-      "url": `https://sprayinnovative.co.uk/locations/${area.slug}`,
+      "url": `${siteSettings.baseUrl}/locations/${area.slug}`,
       "telephone": siteSettings.phone,
       "image": heroSpraying,
       "areaServed": {
@@ -66,36 +67,32 @@ const AreaPage = () => {
         "addressCountry": "GB"
       }
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sprayinnovative.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://sprayinnovative.co.uk/locations" },
-        { "@type": "ListItem", "position": 3, "name": area.name, "item": `https://sprayinnovative.co.uk/locations/${area.slug}` }
-      ]
-    }
+    getBreadcrumbSchema([
+      { name: "Home", item: siteSettings.baseUrl },
+      { name: area.name, item: `${siteSettings.baseUrl}/locations/${area.slug}` }
+    ])
   ];
 
   return (
     <div className="bg-white font-sans">
-      <Helmet>
-        <title>{area.metaTitle || `Professional Spray Painting in ${area.name} | Kitchen & UPVC Resprays`}</title>
-        <meta 
-          name="description" 
-          content={area.metaDescription || `Professional spray painting in ${area.name}. Expert kitchen resprays, UPVC window and door spraying. 10-year guarantee. Call for a free quote in ${area.name}.`} 
-        />
-        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${area.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(schemas)}
-        </script>
-      </Helmet>
+      <SEO
+        title={area.metaTitle || `Professional Spray Painting in ${area.name} | Kitchen & UPVC Resprays`}
+        description={area.metaDescription || `Professional spray painting in ${area.name}. Expert kitchen resprays, UPVC window and door spraying. 10-year guarantee. Call for a free quote in ${area.name}.`}
+        pathname={`/locations/${area.slug}`}
+        jsonLd={schemas}
+      />
       
       <main>
         {/* SECTION 1: NAVY - Hero */}
         <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden bg-navy-900">
           <div className="absolute inset-0 z-0 opacity-10">
-            <img src={localAerial} className="w-full h-full object-cover" alt="" />
+            <img
+              src={localAerial}
+              className="w-full h-full object-cover"
+              alt={`${area.name} aerial view`}
+              loading="lazy"
+              decoding="async"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-900/80 to-navy-900" />
           </div>
           
@@ -154,7 +151,9 @@ const AreaPage = () => {
               <img 
                 src={heroSpraying} 
                 className="absolute bottom-0 right-0 h-[110%] w-auto object-cover object-left opacity-40 mix-blend-overlay grayscale" 
-                alt="" 
+                alt={`Spray painting service in ${area.name}`} 
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-navy-900 via-transparent to-transparent" />
             </div>
@@ -216,7 +215,13 @@ const AreaPage = () => {
 
               <div className="lg:col-span-5 relative">
                 <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-2 border-4 border-white/10 group">
-                  <img src={serviceVan} className="w-full h-auto transition-transform duration-700 group-hover:scale-105" alt="" />
+                  <img
+                    src={serviceVan}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                    alt="Spray Innovative service van"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="absolute inset-0 bg-orange-500 rounded-[2rem] -rotate-2 z-0 opacity-20" />
                 

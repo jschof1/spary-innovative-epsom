@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { motion } from "framer-motion"
 import { siteSettings } from "@/data/siteSettings"
 import { Shield, Clock, Award, Zap, Phone, Map, CheckCircle, Sparkles } from "lucide-react"
@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 import { TrustBar } from "@/components/sections/TrustBar"
 import vanImage from "@/assets/about/van-branded.webp"
 import expertiseImage from "@/assets/about/expertise-branded.webp"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -25,10 +26,15 @@ const stats = [
 export const AboutPage = () => {
   return (
     <>
-      <Helmet>
-        <title>About Us | {siteSettings.businessName}</title>
-        <meta name="description" content={`Learn more about ${siteSettings.businessName}. We are your local expert spray painting specialists serving Epsom, Ewell, and the surrounding areas.`} />
-      </Helmet>
+      <SEO
+        title={`About Us | ${siteSettings.businessName}`}
+        description={`Learn more about ${siteSettings.businessName}. We are your local expert spray painting specialists serving Epsom, Ewell, and the surrounding areas.`}
+        pathname="/about"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "About", item: `${siteSettings.baseUrl}/about` }
+        ])}
+      />
 
       <div className="overflow-hidden bg-white">
         {/* Bolder, More "Vibe" Hero */}
@@ -96,6 +102,8 @@ export const AboutPage = () => {
                       src={vanImage} 
                       alt="Spray Innovative Branded Van" 
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy-900 to-transparent">
                       <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Spray Innovative</p>
@@ -172,6 +180,8 @@ export const AboutPage = () => {
                     src={expertiseImage} 
                     alt="Professional Spraying Expertise" 
                     className="w-full h-auto"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </motion.div>
                 {/* Floating Badge */}

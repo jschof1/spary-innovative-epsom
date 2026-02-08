@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { Hero } from "@/components/sections/Hero"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { Services } from "@/components/sections/Services"
@@ -13,21 +13,26 @@ import { ServiceAreas } from "@/components/sections/ServiceAreas"
 import { BrandBenefits } from "@/components/sections/BrandBenefits"
 import { RecentWork } from "@/components/sections/RecentWork"
 import { siteSettings } from "@/data/siteSettings"
-import { getLocalBusinessSchema } from "@/lib/seo-schemas"
+import { getLocalBusinessSchema, getOrganizationSchema, getWebsiteSchema, getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const HomePage = () => {
-  const schema = getLocalBusinessSchema();
+  const schema = [
+    getLocalBusinessSchema(),
+    getOrganizationSchema(),
+    getWebsiteSchema(),
+    getBreadcrumbSchema([
+      { name: "Home", item: siteSettings.baseUrl }
+    ])
+  ]
 
   return (
     <>
-      <Helmet>
-        <title>{siteSettings.businessName} | Professional Spray Painting in Epsom & Surrey</title>
-        <meta name="description" content="Expert on-site & off-site spray painting services in Epsom, Surrey. Specializing in kitchen resprays, UPVC window and door spraying. Eco-friendly, 10-year guarantee." />
-        <link rel="canonical" href="https://sprayinnovative.co.uk/" />
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      </Helmet>
+      <SEO
+        title={`${siteSettings.businessName} | Professional Spray Painting in Epsom & Surrey`}
+        description="Expert on-site & off-site spray painting services in Epsom, Surrey. Specializing in kitchen resprays, UPVC window and door spraying. Eco-friendly, 10-year guarantee."
+        pathname="/"
+        jsonLd={schema}
+      />
       
       <Hero />
       <TrustBar />

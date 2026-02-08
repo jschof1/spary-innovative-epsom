@@ -41,6 +41,8 @@ export const Hero = ({
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
                 alt="Google Reviews" 
                 className="w-5 h-5"
+                loading="eager"
+                decoding="async"
               />
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -80,6 +82,8 @@ export const Hero = ({
                 alt="Spray Innovative - Professional Spray Painting Services" 
                 className="hidden" 
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
               />
             )}
             
@@ -108,7 +112,13 @@ export const Hero = ({
 
               <div className="flex items-center gap-2 lg:gap-3 bg-white/10 backdrop-blur-sm p-2 lg:p-3 rounded-lg border border-white/20 w-[calc(50%-6px)] sm:w-56 h-16 lg:h-20 hover:bg-white/20 transition-colors cursor-default">
                 <div className="flex-shrink-0 bg-white rounded shadow-lg w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center text-center overflow-hidden">
-                  <img src={cityAndGuildsLogo} alt="City & Guilds" className="w-full h-auto object-contain p-1" />
+                  <img
+                    src={cityAndGuildsLogo}
+                    alt="City & Guilds"
+                    className="w-full h-auto object-contain p-1"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="flex flex-col justify-center min-w-0">
                   <p className="text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-white leading-tight">Expert Spraying</p>

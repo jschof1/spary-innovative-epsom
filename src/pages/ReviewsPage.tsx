@@ -1,27 +1,14 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Star, CheckCircle, Quote, MapPin, Calendar, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { reviewsData, reviewsStats } from "@/data/reviews";
 import { siteSettings } from "@/data/siteSettings";
 import { Button } from "@/components/ui/button";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/seo-schemas";
 
 export const ReviewsPage = () => {
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": siteSettings.businessName,
-    "image": "https://sprayinnovative.co.uk/logo.png", // Replace with actual logo URL
-    "@id": "https://sprayinnovative.co.uk",
-    "url": "https://sprayinnovative.co.uk",
-    "telephone": siteSettings.phone,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "151 Ewell By-Pass",
-      "addressLocality": "Epsom",
-      "addressRegion": "Surrey",
-      "postalCode": "KT17 2PX",
-      "addressCountry": "GB"
-    },
+    ...getLocalBusinessSchema(),
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": reviewsStats.averageRating,
@@ -48,13 +35,18 @@ export const ReviewsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Customer Reviews & Testimonials | {siteSettings.businessName}</title>
-        <meta name="description" content={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from customers across Epsom and Surrey.`} />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </script>
-      </Helmet>
+      <SEO
+        title={`Customer Reviews & Testimonials | ${siteSettings.businessName}`}
+        description={`Read real customer reviews for ${siteSettings.businessName}. With a ${reviewsStats.averageRating}/5 rating from customers across Epsom and Surrey.`}
+        pathname="/reviews"
+        jsonLd={[
+          schemaMarkup,
+          getBreadcrumbSchema([
+            { name: "Home", item: siteSettings.baseUrl },
+            { name: "Reviews", item: `${siteSettings.baseUrl}/reviews` }
+          ])
+        ]}
+      />
 
       <div className="bg-white">
         {/* Hero Section */}

@@ -125,6 +125,8 @@ export const RecentWork = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
                   <span className="bg-navy-900 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-lg">

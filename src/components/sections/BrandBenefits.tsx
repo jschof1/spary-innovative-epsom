@@ -1,5 +1,6 @@
 import { Shield, HeartHandshake, Banknote, Star, Award } from "lucide-react"
 import { motion } from "framer-motion"
+import kitchenResprayImg from "@/assets/photos/generated/kitchen-respray-hero.webp"
 
 const benefits = [
   {
@@ -80,9 +81,11 @@ export const BrandBenefits = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white/5 group">
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Electrical installation work" 
+                src={kitchenResprayImg}
+                alt="Professional spray finishing work" 
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/20 to-transparent" />
               

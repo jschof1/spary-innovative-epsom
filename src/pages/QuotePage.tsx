@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { MultiStepQuoteForm } from "@/components/forms/MultiStepQuoteForm"
 import { siteSettings } from "@/data/siteSettings"
 import { ShieldCheck, Star } from "lucide-react"
@@ -7,11 +7,12 @@ import { motion } from "framer-motion"
 export const QuotePage = () => {
   return (
     <>
-      <Helmet>
-        <title>Get Your Free Quote | {siteSettings.businessName}</title>
-        <meta name="description" content="Get a fast, free, no-obligation spray painting quote in minutes. Local spraying specialist serving Epsom and Surrey." />
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <SEO
+        title={`Get Your Free Quote | ${siteSettings.businessName}`}
+        description="Get a fast, free, no-obligation spray painting quote in minutes. Local spraying specialist serving Epsom and Surrey."
+        pathname="/get-quote"
+        robots="noindex, follow"
+      />
 
       <div className="min-h-screen bg-navy-900 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 relative overflow-hidden">
         {/* Background Decorative Elements */}

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { motion } from "framer-motion"
 import { services } from "@/data/services"
 import { Link } from "react-router-dom"
@@ -8,6 +8,7 @@ import { Reviews } from "@/components/sections/Reviews"
 import { FAQ } from "@/components/sections/FAQ"
 import { siteSettings } from "@/data/siteSettings"
 import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const ServicesPage = () => {
   const allFaqs = services.flatMap(s => s.faqs).slice(0, 6)
@@ -37,10 +38,15 @@ export const ServicesPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Our Spraying Services | {siteSettings.businessName}</title>
-        <meta name="description" content="Professional spray painting services across Epsom and Surrey. Kitchen resprays, UPVC window and door spraying, and more. Eco-friendly finishes with a 10-year guarantee." />
-      </Helmet>
+      <SEO
+        title={`Our Spraying Services | ${siteSettings.businessName}`}
+        description="Professional spray painting services across Epsom and Surrey. Kitchen resprays, UPVC window and door spraying, and more. Eco-friendly finishes with a 10-year guarantee."
+        pathname="/services"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "Services", item: `${siteSettings.baseUrl}/services` }
+        ])}
+      />
 
       <Hero 
         title={<>Professional <br/><span className="text-orange-500">Spraying Services</span> in Epsom.</>}
@@ -81,6 +87,8 @@ export const ServicesPage = () => {
                     src={service.image} 
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-6 left-6">
                     <div className="w-12 h-12 bg-orange-600 flex items-center justify-center shadow-xl">

@@ -133,12 +133,14 @@ export const QuoteForm = () => {
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="ev">EV Charger Install</SelectItem>
-                <SelectItem value="fusebox">Fuse Box Upgrade</SelectItem>
-                <SelectItem value="rewire">Property Rewire</SelectItem>
-                <SelectItem value="maintenance">Electrical Maintenance</SelectItem>
-                <SelectItem value="lighting">Outside Lighting</SelectItem>
-                <SelectItem value="other">Other Electrical Issue</SelectItem>
+                <SelectItem value="kitchen-respray">Kitchen Respray</SelectItem>
+                <SelectItem value="upvc-windows">UPVC Window Spraying</SelectItem>
+                <SelectItem value="upvc-doors">UPVC Door Spraying</SelectItem>
+                <SelectItem value="garage-doors">Garage Door Spraying</SelectItem>
+                <SelectItem value="conservatory">Conservatory Spraying</SelectItem>
+                <SelectItem value="fascias-soffits">Fascias & Soffits Spraying</SelectItem>
+                <SelectItem value="commercial">Commercial Spray Finishing</SelectItem>
+                <SelectItem value="other">Other Spray Project</SelectItem>
               </SelectContent>
             </Select>
           </div>

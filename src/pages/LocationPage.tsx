@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom"
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { Hero } from "@/components/sections/Hero"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { Services } from "@/components/sections/Services"
@@ -10,6 +10,7 @@ import { FAQ } from "@/components/sections/FAQ"
 import { getLocationBySlug } from "@/data/locations"
 import { services } from "@/data/services"
 import { siteSettings } from "@/data/siteSettings"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const LocationPage = () => {
   const { locationSlug } = useParams<{ locationSlug: string }>()
@@ -29,7 +30,7 @@ export const LocationPage = () => {
     "@type": "HomeAndConstructionBusiness",
     "name": `${siteSettings.businessName} - ${location.name}`,
     "description": `Professional spray painting services in ${location.name}. ${location.description}`,
-    "url": `https://sprayinnovative.co.uk/locations/${location.slug}`,
+    "url": `${siteSettings.baseUrl}/locations/${location.slug}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": location.name,
@@ -37,17 +38,19 @@ export const LocationPage = () => {
       "addressCountry": "GB"
     }
   };
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", item: siteSettings.baseUrl },
+    { name: location.name, item: `${siteSettings.baseUrl}/locations/${location.slug}` }
+  ])
 
   return (
     <>
-      <Helmet>
-        <title>{location.name} Spray Painting Services | {siteSettings.businessName}</title>
-        <meta name="description" content={`Professional spray painting services in ${location.name}. ${location.description}`} />
-        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${location.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      </Helmet>
+      <SEO
+        title={`${location.name} Spray Painting Services | ${siteSettings.businessName}`}
+        description={`Professional spray painting services in ${location.name}. ${location.description}`}
+        pathname={`/locations/${location.slug}`}
+        jsonLd={[schema, breadcrumbSchema]}
+      />
 
       <Hero 
         title={<>Professional Spray Painting in <br/><span className="text-orange-500">{location.name}</span></>}

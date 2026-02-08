@@ -1,8 +1,9 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { FAQ } from "@/components/sections/FAQ"
 import { CallToAction } from "@/components/sections/CallToAction"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { siteSettings } from "@/data/siteSettings"
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/seo-schemas"
 import { services } from "@/data/services"
 import { motion } from "framer-motion"
 import { MessageCircle, Phone, ArrowRight, HelpCircle, ShieldCheck, Clock, Sparkles } from "lucide-react"
@@ -24,11 +25,18 @@ export const FAQPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Frequently Asked Questions | {siteSettings.businessName}</title>
-        <meta name="description" content="Find answers to common questions about our professional spray painting services in Epsom and Surrey. Learn about our process, 10-year guarantee, and more." />
-        <link rel="canonical" href="https://sprayinnovative.co.uk/faq" />
-      </Helmet>
+      <SEO
+        title={`Frequently Asked Questions | ${siteSettings.businessName}`}
+        description="Find answers to common questions about our professional spray painting services in Epsom and Surrey. Learn about our process, 10-year guarantee, and more."
+        pathname="/faq"
+        jsonLd={[
+          getFAQSchema(allFaqs),
+          getBreadcrumbSchema([
+            { name: "Home", item: siteSettings.baseUrl },
+            { name: "FAQ", item: `${siteSettings.baseUrl}/faq` }
+          ])
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 bg-navy-900 overflow-hidden">

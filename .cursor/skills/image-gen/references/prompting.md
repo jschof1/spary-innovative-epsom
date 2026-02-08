@@ -21,9 +21,9 @@ Use photography terminology:
 ```
 A photorealistic close-up portrait of an Australian tradeswoman
 with safety glasses pushed up on her forehead and a confident smile.
-She's inspecting electrical wiring in a residential switchboard.
-The setting is a modern Australian home's meter box area.
-Soft natural light from nearby window, highlighting copper wiring.
+She's inspecting spray equipment in a residential workshop setup.
+The setting is a modern Australian home's prep area.
+Soft natural light from nearby window, highlighting the spray gun.
 Shot with 85mm portrait lens, shallow depth of field.
 Professional, competent atmosphere.
 ```

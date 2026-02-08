@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -85,10 +85,12 @@ export const DiscountPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Special Offer | {siteSettings.businessName}</title>
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      <SEO
+        title={`Special Offer | ${siteSettings.businessName}`}
+        description={`Claim a special offer from ${siteSettings.businessName}. Submit your details for a discounted spray painting quote.`}
+        pathname="/discount"
+        robots="noindex, nofollow"
+      />
 
       <div className="min-h-screen bg-gray-50/50 flex items-center justify-center p-4 py-12">
         <div className="w-full max-w-md">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -92,10 +92,12 @@ const FeedbackPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Feedback | {siteSettings.businessName}</title>
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      <SEO
+        title={`Feedback | ${siteSettings.businessName}`}
+        description={`Share feedback about your experience with ${siteSettings.businessName}.`}
+        pathname="/feedback"
+        robots="noindex, nofollow"
+      />
 
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="w-full max-w-md">

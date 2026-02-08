@@ -1,16 +1,22 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { siteSettings } from "@/data/siteSettings"
 import { motion } from "framer-motion"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const TermsOfServicePage = () => {
   const lastUpdated = "February 6, 2026"
 
   return (
     <>
-      <Helmet>
-        <title>Terms of Service | {siteSettings.businessName}</title>
-        <meta name="description" content={`Terms of Service for ${siteSettings.businessName}. Please read our terms and conditions carefully.`} />
-      </Helmet>
+      <SEO
+        title={`Terms of Service | ${siteSettings.businessName}`}
+        description={`Terms of Service for ${siteSettings.businessName}. Please read our terms and conditions carefully.`}
+        pathname="/terms-of-service"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "Terms of Service", item: `${siteSettings.baseUrl}/terms-of-service` }
+        ])}
+      />
 
       <div className="bg-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">

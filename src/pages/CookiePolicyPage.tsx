@@ -1,16 +1,22 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { siteSettings } from "@/data/siteSettings"
 import { motion } from "framer-motion"
+import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const CookiePolicyPage = () => {
   const lastUpdated = "January 16, 2026"
 
   return (
     <>
-      <Helmet>
-        <title>Cookie Policy | {siteSettings.businessName}</title>
-        <meta name="description" content={`Cookie Policy for ${siteSettings.businessName}. Learn how we use cookies on our website.`} />
-      </Helmet>
+      <SEO
+        title={`Cookie Policy | ${siteSettings.businessName}`}
+        description={`Cookie Policy for ${siteSettings.businessName}. Learn how we use cookies on our website.`}
+        pathname="/cookie-policy"
+        jsonLd={getBreadcrumbSchema([
+          { name: "Home", item: siteSettings.baseUrl },
+          { name: "Cookie Policy", item: `${siteSettings.baseUrl}/cookie-policy` }
+        ])}
+      />
 
       <div className="bg-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">

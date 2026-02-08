@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom"
-import { Helmet } from "react-helmet-async"
+import { SEO } from "@/components/SEO"
 import { Hero } from "@/components/sections/Hero"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { Guarantee } from "@/components/sections/Guarantee"
@@ -9,7 +9,7 @@ import { getServiceBySlug } from "@/data/services"
 import { getLocationBySlug } from "@/data/locations"
 import { siteSettings } from "@/data/siteSettings"
 import { CheckCircle2, Phone, ArrowRight, ShieldCheck, Clock } from "lucide-react"
-import { getServiceSchema, getFAQSchema } from "@/lib/seo-schemas"
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const ServiceLocationPage = () => {
   const { locationSlug, serviceSlug } = useParams<{ locationSlug: string; serviceSlug: string }>()
@@ -30,20 +30,21 @@ export const ServiceLocationPage = () => {
 
   const serviceSchema = getServiceSchema(service, location.name);
   const faqSchema = getFAQSchema(service.faqs.length > 0 ? service.faqs : siteSettings.standardFaqs);
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", item: siteSettings.baseUrl },
+    { name: "Services", item: `${siteSettings.baseUrl}/services` },
+    { name: service.title, item: `${siteSettings.baseUrl}/services/${service.slug}` },
+    { name: location.name, item: `${siteSettings.baseUrl}/locations/${location.slug}/${service.slug}` }
+  ])
 
   return (
     <>
-      <Helmet>
-        <title>{title} | {siteSettings.businessName}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`https://sprayinnovative.co.uk/locations/${location.slug}/${service.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+      <SEO
+        title={`${title} | ${siteSettings.businessName}`}
+        description={description}
+        pathname={`/locations/${location.slug}/${service.slug}`}
+        jsonLd={[serviceSchema, faqSchema, breadcrumbSchema]}
+      />
 
       <Hero 
         title={<>{service.shortTitle} in <br/><span className="text-orange-500">{location.name}</span></>}
