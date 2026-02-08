@@ -39,11 +39,11 @@ export const ContactPage = () => {
               </div>
               
               <h1 className="font-header text-3xl md:text-6xl font-extrabold text-navy-900 mb-6 leading-[1.1]">
-                Book Your Expert <span className="text-orange-500">Local Electrician</span> Today
+                Book Your Expert <span className="text-orange-500">Local Spray Specialist</span> Today
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl">
-                Need a repair, installation, or emergency service? Fill out the form or call me 24/7. I'm local, fully qualified, and ready to help.
+                Need a kitchen respray, UPVC refresh, or commercial finish? Fill out the form or call me anytime. I'm local, fully insured, and ready to help.
               </p>
 
               {/* Contact Cards */}
@@ -100,7 +100,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="font-bold text-navy-900 text-sm md:text-base">Fully Certified</p>
-                    <p className="text-gray-500 text-xs md:text-sm">Qualified professional for your safety and peace of mind.</p>
+                    <p className="text-gray-500 text-xs md:text-sm">Experienced specialist for your peace of mind.</p>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export const ContactPage = () => {
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
-                  <span>Emergency: 30 - 60 Mins</span>
+                  <span>Urgent Enquiries: 30 - 60 Mins</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-orange-500 rounded-full" />

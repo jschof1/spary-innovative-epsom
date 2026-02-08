@@ -34,7 +34,7 @@ export const Guarantee = () => {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <img 
                   src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Electrician shaking hands with customer" 
+                  alt="Spray specialist shaking hands with customer" 
                   className="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
