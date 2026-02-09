@@ -7,21 +7,9 @@ interface Env {
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
-
-  // CORS headers
-  const corsHeaders = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
-
-  // Check if webhook URL is configured
-  if (!env.QUOTE_WEBHOOK_URL) {
-    return new Response(
-      JSON.stringify({ error: "Webhook not configured" }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
-  }
+  
+  // Use env variable if available, otherwise fallback to hardcoded (for transition)
+  const webhookUrl = env.QUOTE_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/r16arqH6hLxCbb5bn3BN";
 
   try {
     const body = await request.json();
@@ -45,7 +33,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     // Forward to the actual webhook
-    const webhookResponse = await fetch(env.QUOTE_WEBHOOK_URL, {
+    const webhookResponse = await fetch(webhookUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
