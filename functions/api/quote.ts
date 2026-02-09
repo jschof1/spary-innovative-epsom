@@ -8,6 +8,13 @@ interface Env {
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
   
+  // CORS headers
+  const corsHeaders = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+
   // Use env variable if available, otherwise fallback to hardcoded (for transition)
   const webhookUrl = env.QUOTE_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/r16arqH6hLxCbb5bn3BN";
 
