@@ -89,7 +89,8 @@ export const BrandBenefits = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/20 to-transparent" />
               
-              <div className="absolute bottom-0 left-0 right-0 p-5 bg-navy-900/50 backdrop-blur-md border-t border-orange-500">
+              {/* Testimonial overlay - hidden on mobile, shown on md+ */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-navy-900/50 backdrop-blur-md border-t border-orange-500 hidden md:block">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex text-orange-500">
                     {[...Array(5)].map((_, i) => (
@@ -107,6 +108,28 @@ export const BrandBenefits = () => {
                     <p className="font-bold text-white">James Miller</p>
                     <p className="text-sm text-orange-400">Epsom, KT17</p>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial below image on mobile - always visible */}
+            <div className="mt-4 md:mt-0 p-5 bg-navy-900/80 backdrop-blur-md border border-orange-500/50 rounded-2xl md:hidden">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex text-orange-500">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold tracking-wider uppercase">Verified 5-Star Reviews</span>
+              </div>
+              <blockquote className="font-header italic text-lg mb-4 leading-relaxed">
+                "Paul was incredibly professional, prompt, and the transformation of our kitchen was exceptional. Highly recommend for any spraying needs."
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold text-white shadow-lg">J</div>
+                <div>
+                  <p className="font-bold text-white">James Miller</p>
+                  <p className="text-sm text-orange-400">Epsom, KT17</p>
                 </div>
               </div>
             </div>
