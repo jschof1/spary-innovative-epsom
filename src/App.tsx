@@ -4,7 +4,6 @@ import { PromoBanner } from "@/components/layout/PromoBanner"
 import { Header } from "@/components/layout/Header"
 import { PromoCountdown } from "@/components/layout/PromoCountdown"
 import { Footer } from "@/components/layout/Footer"
-import { FloatingCTA } from "@/components/layout/FloatingCTA"
 import { HomePage } from "@/pages/HomePage"
 import { ServicesPage } from "@/pages/ServicesPage"
 import { ServicePage } from "@/pages/ServicePage"
@@ -113,7 +112,6 @@ function App() {
         </main>
 
         {!isMinimalPage && <Footer />}
-        {!isMinimalPage && <FloatingCTA />}
         <Toaster />
       </div>
 
