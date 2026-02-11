@@ -79,7 +79,7 @@ export const Hero = ({
             {backgroundImage && (
               <img 
                 src={backgroundImage} 
-                alt="Spray Innovative - Professional Spray Painting Services" 
+                alt="Spray Innovations - Professional Spray Painting Services" 
                 className="hidden" 
                 aria-hidden="true"
                 loading="lazy"

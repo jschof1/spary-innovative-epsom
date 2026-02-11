@@ -218,7 +218,7 @@ const AreaPage = () => {
                   <img
                     src={serviceVan}
                     className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
-                    alt="Spray Innovative service van"
+                    alt="Spray Innovations service van"
                     loading="lazy"
                     decoding="async"
                   />

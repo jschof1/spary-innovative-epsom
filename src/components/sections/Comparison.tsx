@@ -106,7 +106,7 @@ export const Comparison = () => {
               </div>
               <div className="col-span-3 p-8 bg-navy-900 text-center border-x border-navy-900/10">
                 <span className="text-[10px] font-bold text-orange-400 uppercase tracking-[0.3em] mb-4 block">Professional Standard</span>
-                <h3 className="text-white font-bold text-2xl tracking-tight">Spray Innovative</h3>
+                <h3 className="text-white font-bold text-2xl tracking-tight">Spray Innovations</h3>
               </div>
               <div className="col-span-3 p-8 bg-slate-50 text-center flex flex-col items-center justify-center">
                 <span className="text-[10px] font-bold text-navy-900/30 uppercase tracking-[0.2em] mb-4 block">Market Average</span>

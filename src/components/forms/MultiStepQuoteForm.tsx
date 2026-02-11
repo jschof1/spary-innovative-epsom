@@ -132,7 +132,7 @@ export const MultiStepQuoteForm = () => {
         </div>
         <h3 className="text-3xl font-header font-bold text-navy-900 mb-4">Request Received!</h3>
         <p className="text-gray-600 text-lg max-w-md mx-auto mb-8">
-          Thank you for choosing Spray Innovative. Paul will review your details and contact you shortly with a personalized quote.
+          Thank you for choosing Spray Innovations. Paul will review your details and contact you shortly with a personalized quote.
         </p>
         <Button 
           onClick={() => window.location.href = "/"}

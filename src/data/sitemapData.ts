@@ -1,7 +1,7 @@
 import { services } from './services';
 import { locations } from './locations';
 
-const BASE_URL = 'https://sprayinnovative.com';
+const BASE_URL = 'https://sprayinnovations.co.uk';
 
 export const generateSitemap = () => {
   const staticPages = [

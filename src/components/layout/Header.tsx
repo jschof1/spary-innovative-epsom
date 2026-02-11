@@ -36,7 +36,7 @@ export const Header = () => {
           <Link to="/" className="flex items-center gap-2 group relative z-50 w-fit">
             <img
               src={logo}
-              alt="Spray Innovative"
+              alt="Spray Innovations"
               className="h-10 md:h-14 w-auto object-contain"
               loading="eager"
               decoding="async"

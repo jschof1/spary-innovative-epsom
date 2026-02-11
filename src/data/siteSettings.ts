@@ -1,11 +1,11 @@
 export const siteSettings = {
-  baseUrl: "https://sprayinnovative.com",
-  businessName: "Spray Innovative",
-  defaultOgImage: "https://sprayinnovative.com/favicon/apple-touch-icon.png",
-  logoUrl: "https://sprayinnovative.com/favicon/apple-touch-icon.png",
+  baseUrl: "https://sprayinnovations.co.uk",
+  businessName: "Spray Innovations",
+  defaultOgImage: "https://sprayinnovations.co.uk/favicon/apple-touch-icon.png",
+  logoUrl: "https://sprayinnovations.co.uk/favicon/apple-touch-icon.png",
   socialProfiles: [
-    "https://facebook.com/sprayinnovative",
-    "https://instagram.com/sprayinnovative"
+    "https://facebook.com/sprayinnovations",
+    "https://instagram.com/sprayinnovations"
   ],
   phone: "+44 7897 024466",
   phoneFormatted: "+44 7897 024466",

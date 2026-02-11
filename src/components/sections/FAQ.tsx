@@ -216,7 +216,7 @@ export const FAQ = ({
             </div>
 
             <div className="bg-orange-50 p-6 rounded-[2.5rem] border border-orange-100">
-              <h4 className="font-bold text-navy-900 mb-4">Why Spray Innovative?</h4>
+              <h4 className="font-bold text-navy-900 mb-4">Why Spray Innovations?</h4>
               <ul className="space-y-4">
                 {[
                   "7-Day Availability",

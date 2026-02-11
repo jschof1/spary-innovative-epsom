@@ -17,7 +17,7 @@ export const reviewsData: Review[] = [
     location: "Epsom",
     rating: 5,
     date: "2026-01-15",
-    text: "Absolutely thrilled with our kitchen respray! Paul was professional, tidy, and the finish is factory-standard. It looks like a brand new kitchen for a fraction of the cost. Highly recommend Spray Innovative.",
+    text: "Absolutely thrilled with our kitchen respray! Paul was professional, tidy, and the finish is factory-standard. It looks like a brand new kitchen for a fraction of the cost. Highly recommend Spray Innovations.",
     service: "Kitchen Respray",
     initial: "J",
     platform: "Google"
@@ -83,7 +83,7 @@ export const reviewsData: Review[] = [
     location: "Ashtead",
     rating: 5,
     date: "2025-08-30",
-    text: "Highly recommend Spray Innovative for UPVC spraying. They were punctual, professional, and the quality of the finish is outstanding. Our windows look brand new.",
+    text: "Highly recommend Spray Innovations for UPVC spraying. They were punctual, professional, and the quality of the finish is outstanding. Our windows look brand new.",
     service: "UPVC Spraying",
     initial: "R",
     platform: "Trustpilot"

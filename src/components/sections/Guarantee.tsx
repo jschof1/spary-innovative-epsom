@@ -62,7 +62,7 @@ export const Guarantee = () => {
               <span className="text-orange-500">Every Transformation</span>
             </h2>
             <p className="text-lg text-navy-100 mb-8 leading-relaxed max-w-xl">
-              We know hiring a specialist can be a big decision. That’s why we’ve removed all the risk. When you hire Spray Innovative, you’re hiring a decade of expertise and a factory-standard finish.
+              We know hiring a specialist can be a big decision. That’s why we’ve removed all the risk. When you hire Spray Innovations, you’re hiring a decade of expertise and a factory-standard finish.
             </p>
             
             <div className="space-y-8">

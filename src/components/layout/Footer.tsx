@@ -16,7 +16,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center gap-2 mb-6">
               <img
                 src={logo}
-                alt="Spray Innovative"
+                alt="Spray Innovations"
                 className="h-12 md:h-16 w-auto object-contain brightness-0 invert"
                 loading="lazy"
                 decoding="async"

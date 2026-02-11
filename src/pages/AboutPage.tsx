@@ -62,12 +62,12 @@ export const AboutPage = () => {
                     <span>Expert Spraying Specialists</span>
                   </div>
                   <h1 className="text-5xl lg:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
-                    INNOVATIVE <span className="text-orange-500">SPRAY.</span> <br/>
+                    SPRAY <span className="text-orange-500">INNOVATIONS.</span> <br/>
                     EXPERT <br/>
                     <span className="text-white underline decoration-orange-500 decoration-8 underline-offset-8">RESULTS.</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed font-medium">
-                    Based in Epsom, Spray Innovative provides professional spray painting services across Surrey. We specialize in high-performance coatings that transform homes and commercial spaces with a factory-quality finish.
+                    Based in Epsom, Spray Innovations provides professional spray painting services across Surrey. We specialize in high-performance coatings that transform homes and commercial spaces with a factory-quality finish.
                   </p>
                   <div className="flex flex-wrap gap-6">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-black py-8 px-10 rounded-none shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none text-lg uppercase tracking-wider">
@@ -100,13 +100,13 @@ export const AboutPage = () => {
                   <div className="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-navy-800 aspect-[4/5]">
                     <img 
                       src={vanImage} 
-                      alt="Spray Innovative Branded Van" 
+                      alt="Spray Innovations Branded Van" 
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy-900 to-transparent">
-                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Spray Innovative</p>
+                      <p className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">Spray Innovations</p>
                       <p className="text-orange-500 font-bold uppercase tracking-[0.2em] mt-2">Local Spraying Experts</p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export const AboutPage = () => {
                 </h3>
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed font-medium">
                   <p>
-                    Spray Innovative was founded with a clear mission: to provide high-quality, professional spray painting services that offer real value to homeowners and businesses.
+                    Spray Innovations was founded with a clear mission: to provide high-quality, professional spray painting services that offer real value to homeowners and businesses.
                   </p>
                   <p className="text-white border-l-4 border-orange-500 pl-6 py-2 italic">
                     "We believe in quality, durability, and a finish that stands the test of time."

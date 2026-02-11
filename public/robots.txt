@@ -4,4 +4,4 @@ Disallow: /api/
 Allow: /
 
 # Sitemaps
-Sitemap: https://sprayinnovative.com/sitemap.xml
+Sitemap: https://sprayinnovations.co.uk/sitemap.xml

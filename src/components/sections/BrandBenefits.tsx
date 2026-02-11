@@ -46,7 +46,7 @@ export const BrandBenefits = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-400 uppercase bg-orange-400/10 rounded-full border border-orange-400/20">
-              Why Choose Spray Innovative
+              Why Choose Spray Innovations
             </div>
             <h2 className="font-header text-2xl md:text-4xl font-bold mb-8 leading-tight">
               Surrey's Leading <br/>
