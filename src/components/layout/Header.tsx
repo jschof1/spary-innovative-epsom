@@ -30,14 +30,14 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="main-header">
-      <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 lg:py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex-1">
-          <Link to="/" className="flex items-center gap-2 group relative z-50 w-fit">
+          <Link to="/" className="flex items-center group relative z-50 w-fit">
             <img
               src={logo}
               alt="Spray Innovations"
-              className="h-10 md:h-14 w-auto object-contain"
+              className="h-12 md:h-16 w-auto object-contain"
               loading="eager"
               decoding="async"
             />

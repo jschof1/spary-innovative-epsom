@@ -32,11 +32,11 @@ export const ServiceAreas = () => {
             
             <h2 className="font-header text-3xl md:text-5xl font-black text-navy-900 mb-8 leading-[1.1] tracking-tight">
               Rapid <span className="text-orange-500">Local Response</span> <br />
-              Across the Midlands.
+              Across Surrey & London.
             </h2>
             
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
-              Based in Epsom, we are strategically positioned to provide <span className="text-navy-900 font-bold">fast spraying support</span> across Epsom, Ewell, and Banstead. We pride ourselves on reliability and punctuality for every local appointment.
+              Based in Epsom, we are strategically positioned to provide <span className="text-navy-900 font-bold">fast spraying support</span> across Surrey, Kingston, Wimbledon, Richmond, and London border areas. We pride ourselves on reliability and punctuality for every local appointment.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 max-w-xl">
@@ -71,7 +71,7 @@ export const ServiceAreas = () => {
                 </div>
                 <div className="space-y-6">
                   <div className="pb-6 border-b border-white/10">
-                    <div className="text-4xl font-black text-white mb-1">15+</div>
+                    <div className="text-4xl font-black text-white mb-1">25+</div>
                     <div className="text-xs font-medium text-navy-200 uppercase tracking-wider">Towns & Villages Covered</div>
                   </div>
                   <div className="pb-6 border-b border-white/10">

@@ -29,8 +29,8 @@ import {
 
 // Import local assets
 import heroSpraying from "../assets/photos/generated/kitchen-respray-hero.webp";
-import serviceVan from "../assets/photos/van-picture.webp";
-import localAerial from "../assets/photos/midlands-service-area--aerial-drone-view-of-classic-english-town-square--historic-brick-buildings--soft-sunset-lighting.webp";
+import serviceVan from "../assets/about/van-branded.webp";
+import localAerial from "../assets/photos/generated/main-hero-background.webp";
 
 const AreaPage = () => {
   const { areaSlug } = useParams<{ areaSlug: string }>();
