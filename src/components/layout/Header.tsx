@@ -64,10 +64,22 @@ export const Header = () => {
             <button type="button" className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
               Areas <ChevronDown className="w-4 h-4" />
             </button>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl rounded-lg p-4 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 translate-y-2 group-hover:translate-y-0">
-              {locations.map(loc => (
-                <Link key={loc.id} to={`/locations/${loc.slug}`} className="block py-2 hover:text-orange-500 transition-colors">{loc.name}</Link>
-              ))}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl rounded-xl p-6 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 translate-y-2 group-hover:translate-y-0">
+              <div className="grid grid-cols-3 gap-x-8 gap-y-2">
+                {locations.map(loc => (
+                  <Link 
+                    key={loc.id} 
+                    to={`/locations/${loc.slug}`} 
+                    className="block py-1.5 text-sm text-gray-600 hover:text-orange-500 transition-colors font-medium"
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
+                <p className="text-xs text-gray-400 italic">Serving all of Surrey & South West London</p>
+                <Link to="/contact" className="text-xs font-bold text-orange-500 hover:underline">View All Areas</Link>
+              </div>
             </div>
           </div>
           <Link to="/reviews" className="hover:text-orange-500 transition-colors">Reviews</Link>
@@ -165,7 +177,7 @@ export const Header = () => {
                   {/* Mobile Areas Accordion */}
                   <div className="flex flex-col gap-2">
                     <button 
-                      type="button"
+                      type="button" 
                       onClick={() => setIsAreasOpen(!isAreasOpen)}
                       className="text-xl font-bold text-navy-900 hover:text-orange-500 flex items-center justify-between w-full text-left group"
                     >
@@ -180,11 +192,20 @@ export const Header = () => {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="flex flex-col gap-3 pl-4 border-l-2 border-orange-500 mt-2 overflow-hidden"
+                          className="mt-2 overflow-hidden"
                         >
-                          {locations.map(loc => (
-                            <Link key={loc.id} to={`/locations/${loc.slug}`} className="text-lg text-gray-600 hover:text-orange-500">{loc.name}</Link>
-                          ))}
+                          <div className="grid grid-cols-2 gap-x-4 gap-y-3 pl-4 border-l-2 border-orange-500">
+                            {locations.map(loc => (
+                              <Link 
+                                key={loc.id} 
+                                to={`/locations/${loc.slug}`} 
+                                className="text-base text-gray-600 hover:text-orange-500"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {loc.name}
+                              </Link>
+                            ))}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
