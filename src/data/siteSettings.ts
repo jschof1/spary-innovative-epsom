@@ -9,7 +9,7 @@ export const siteSettings = {
   ],
   phone: "+44 7897 024466",
   phoneFormatted: "+44 7897 024466",
-  email: "paullear64@icloud.com",
+  email: "contact@sprayinnovations.co.uk",
   address: "151 Ewell By-Pass, Epsom, UK, KT17 2PX",
   googleRating: "5.0/5",
   reviewCount: "50+",
