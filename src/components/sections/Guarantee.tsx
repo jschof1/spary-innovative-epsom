@@ -21,7 +21,7 @@ const promises = [
 
 export const Guarantee = () => {
   return (
-    <section className="py-12 md:py-16 bg-navy-900 text-white relative overflow-hidden" id="guarantee">
+    <section className="py-12 md:py-16 bg-navy-900 text-white relative overflow-hidden min-h-[500px]" id="guarantee">
       {/* Decorative patterns */}
       <div className="absolute inset-0 opacity-10 bg-dot-pattern pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/20 to-transparent" />
@@ -35,6 +35,8 @@ export const Guarantee = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Spray specialist shaking hands with customer" 
+                  width="1000"
+                  height="500"
                   className="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"

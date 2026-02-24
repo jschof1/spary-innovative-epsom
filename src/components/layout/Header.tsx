@@ -37,6 +37,8 @@ export const Header = () => {
             <img
               src={logo}
               alt="Spray Innovations"
+              width="160"
+              height="64"
               className="h-12 md:h-16 w-auto object-contain"
               loading="eager"
               decoding="async"

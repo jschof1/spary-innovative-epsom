@@ -79,7 +79,7 @@ export const FAQ = ({
   }
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-navy-50/40 via-white to-orange-50/20 relative overflow-hidden" id="faq">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-navy-50/40 via-white to-orange-50/20 relative overflow-hidden min-h-[600px]" id="faq">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}

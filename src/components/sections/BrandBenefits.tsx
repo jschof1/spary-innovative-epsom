@@ -35,7 +35,7 @@ const benefits = [
 
 export const BrandBenefits = () => {
   return (
-    <section className="py-12 md:py-16 bg-navy-900 text-white overflow-hidden relative">
+    <section className="py-12 md:py-16 bg-navy-900 text-white overflow-hidden relative min-h-[500px]" id="benefits">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-orange-500 rounded-full blur-[120px]" />
@@ -83,6 +83,8 @@ export const BrandBenefits = () => {
               <img 
                 src={kitchenResprayImg}
                 alt="Professional spray finishing work" 
+                width="800"
+                height="600"
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"

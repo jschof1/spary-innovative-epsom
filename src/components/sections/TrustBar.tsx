@@ -27,6 +27,8 @@ export const TrustBar = () => {
             <img 
               src={googleLogo} 
               alt="Google Reviews" 
+              width="120"
+              height="32"
               className="h-8 w-auto object-contain"
               loading="lazy"
               decoding="async"
@@ -37,6 +39,8 @@ export const TrustBar = () => {
             <img 
               src={trustpilotLogo} 
               alt="Trustpilot" 
+              width="120"
+              height="32"
               className="h-8 w-auto object-contain"
               loading="lazy"
               decoding="async"

@@ -23,7 +23,7 @@ import { motion } from "framer-motion"
 
 export const Process = () => {
   return (
-    <section className="bg-grey-light py-8 md:py-12 overflow-hidden" id="process">
+    <section className="bg-grey-light py-8 md:py-12 overflow-hidden min-h-[400px]" id="process">
       <div className="container mx-auto px-4">
         <h2 className="font-header text-2xl md:text-3xl font-bold text-navy-900 text-center mb-10">Our 3-Step Transformation Process</h2>
         

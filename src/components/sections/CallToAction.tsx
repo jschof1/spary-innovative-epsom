@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export const CallToAction = () => {
   return (
-    <section className="relative py-8 md:py-12 overflow-hidden">
+    <section className="relative py-8 md:py-12 overflow-hidden min-h-[200px]" id="cta">
       <div className="absolute inset-0 z-0 bg-orange-500" />
       <div className="absolute top-0 right-0 w-1/3 h-full bg-white opacity-10 skew-x-[-20deg] translate-x-1/2" />
       

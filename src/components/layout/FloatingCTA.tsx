@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export const FloatingCTA = () => {
   return (
-    <div className="fixed bottom-6 left-0 right-0 z-50 px-4 md:hidden pointer-events-none">
+    <div className="fixed bottom-6 left-0 right-0 z-50 px-4 md:hidden pointer-events-none min-h-[60px]">
       <div className="flex gap-3 pointer-events-auto">
         <a 
           href={`tel:${siteSettings.phoneFormatted}`}

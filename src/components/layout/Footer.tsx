@@ -17,6 +17,8 @@ export const Footer = () => {
               <img
                 src={logo}
                 alt="Spray Innovations"
+                width="160"
+                height="64"
                 className="h-12 md:h-16 w-auto object-contain brightness-0 invert"
                 loading="lazy"
                 decoding="async"

@@ -59,7 +59,7 @@ export const Services = ({
   const displayedServices = limit ? services.slice(0, limit) : services
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden" id="services">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden min-h-[600px]" id="services">
       {/* Background Engineering Accents */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '32px 32px' }} />

@@ -71,7 +71,7 @@ export const PromoCountdown = () => {
   }
 
   return (
-    <div className="relative z-40 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-white overflow-hidden">
+    <div className="relative z-40 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-white overflow-hidden min-h-[50px] flex items-center">
       {/* Subtle animated shimmer */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.04] to-transparent animate-[shimmer_3s_ease-in-out_infinite] pointer-events-none" />
 

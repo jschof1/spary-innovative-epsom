@@ -13,7 +13,7 @@ export const ServiceAreas = () => {
   )
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden" id="areas">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden min-h-[600px]" id="areas">
       {/* Structural Grid Background */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

@@ -81,7 +81,7 @@ const stats = [
 
 export const RecentWork = () => {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-navy-50/60 via-white to-orange-50/20 relative overflow-hidden" id="work">
+    <section className="bg-gradient-to-br from-navy-50/60 via-white to-orange-50/20 relative overflow-hidden min-h-[600px]" id="work">
       {/* Background accents */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-navy-900/10 to-transparent" />
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
@@ -124,6 +124,8 @@ export const RecentWork = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
+                  width="600"
+                  height="400"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"

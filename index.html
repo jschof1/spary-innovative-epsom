@@ -24,7 +24,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="/src/assets/photos/generated/kitchen-respray-hero.webp" fetchpriority="high">
     
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -36,11 +42,17 @@
 <body class="font-sans antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- LeadConnector chat widget -->
-    <script
-      src="https://widgets.leadconnectorhq.com/loader.js"
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="69863f052ad2f70d6190767c"
-    ></script>
+    <!-- LeadConnector chat widget - Deferred for performance -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.src = "https://widgets.leadconnectorhq.com/loader.js";
+          script.dataset.resourcesUrl = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
+          script.dataset.widgetId = "69863f052ad2f70d6190767c";
+          document.body.appendChild(script);
+        }, 3000); // 3 second delay after load
+      });
+    </script>
 </body>
 </html>

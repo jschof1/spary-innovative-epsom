@@ -30,7 +30,7 @@ const stats = [
 
 export const Stats = () => {
   return (
-    <section className="bg-navy-900 py-12 md:py-20 text-white overflow-hidden">
+    <section className="bg-navy-900 py-12 md:py-20 text-white overflow-hidden min-h-[300px]" id="stats">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
