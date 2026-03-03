@@ -24,7 +24,7 @@ export const siteSettings = {
   mainFormWebhookUrl: import.meta.env.VITE_MAIN_FORM_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/tDvkMXozWUXI08Mmjnoe",
   negativeReviewWebhookUrl: import.meta.env.VITE_NEGATIVE_REVIEW_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/tnakPfMKikQKg4OrLOEX",
   discountFormWebhookUrl: import.meta.env.VITE_DISCOUNT_FORM_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/cbMc9GToGvVEelqEPECY",
-  feedbackGoogleReviewUrl: "https://g.page/r/CQEnLxKnZlC_EBM/review",
+  feedbackGoogleReviewUrl: "https://g.page/r/CSHEx0H2jqYCEBM/review",
   standardFaqs: [
     {
       category: "Process",
