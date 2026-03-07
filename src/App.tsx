@@ -22,11 +22,12 @@ import { FAQPage } from "@/pages/FAQPage"
 import { AddCustomerPage } from "@/pages/AddCustomerPage"
 import { Toaster } from "@/components/ui/toaster"
 
-// Progress bar component for engagement
+// Progress bar component for engagement (no-op during SSR)
 const ScrollProgress = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
     const updateScrollProgress = () => {
       const currentScrollY = window.scrollY
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight
@@ -40,6 +41,10 @@ const ScrollProgress = () => {
     window.addEventListener("scroll", updateScrollProgress)
     return () => window.removeEventListener("scroll", updateScrollProgress)
   }, [])
+
+  if (typeof window === "undefined") {
+    return null
+  }
 
   return (
     <div className="fixed top-0 left-0 w-full h-1 z-[100] pointer-events-none">

@@ -88,14 +88,10 @@ npm run lint
 
 1. Generate `public/sitemap.xml` from `src/seo/routes.ts`
 2. Run the standard TypeScript + Vite production build
-3. Launch a local preview server against `dist`
-4. Visit each indexable route in a headless browser
-5. Save rendered HTML into `dist/.../index.html`
-6. Verify HTML files, titles, descriptions, canonicals, and sitemap coverage
+3. Run Vite SSR prerender: load `src/ssr.tsx`, render each indexable route to HTML, inject into the built `dist/index.html` template, and write `dist/.../index.html`
+4. Verify HTML files, titles, descriptions, canonicals, and sitemap coverage
 
 ## Notes
 
-- The prerender step uses `puppeteer-core`.
-- Browser lookup order is: `PUPPETEER_EXECUTABLE_PATH`, common macOS app paths, then common Linux Chrome/Chromium paths.
-- In CI, set `PUPPETEER_EXECUTABLE_PATH` explicitly if Chrome is installed somewhere non-standard.
+- The prerender step uses **Vite SSR** (`vite.ssrLoadModule` + `renderToString`). No Puppeteer or browser is required.
 - If you add a new SEO route type, update `src/seo/routes.ts` instead of adding route lists to individual scripts.

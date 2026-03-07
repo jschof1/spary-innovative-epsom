@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import { existsSync, readFileSync } from "node:fs"
 import { dirname, join } from "node:path"
-import { fileURLToPath } from "node:url"
-
-import { withSeoModules } from "./load-seo-modules.ts"
+import { fileURLToPath, pathToFileURL } from "node:url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const rootDir = join(__dirname, "..")
 const distDir = join(rootDir, "dist")
+const distSsrDir = join(rootDir, "dist-ssr")
+const ssrEntryPath = join(distSsrDir, "ssr.js")
 const sitemapPath = join(distDir, "sitemap.xml")
 
 if (!existsSync(sitemapPath)) {
@@ -15,30 +15,33 @@ if (!existsSync(sitemapPath)) {
   process.exit(1)
 }
 
+if (!existsSync(ssrEntryPath)) {
+  console.error(
+    "Missing dist-ssr/ssr.js. Run the full build (including build:ssr) first.",
+  )
+  process.exit(1)
+}
+
 const sitemapXml = readFileSync(sitemapPath, "utf8")
 
-await withSeoModules(
-  async ({ routesModule, verificationModule }) => {
-    const { indexableSeoRoutes } = routesModule as typeof import("../src/seo/routes.ts")
-    const { collectVerificationErrors } =
-      verificationModule as typeof import("../src/seo/verification.ts")
-    const errors = collectVerificationErrors({
-      distDir,
-      routes: indexableSeoRoutes,
-      sitemapXml,
-    })
-
-    if (errors.length > 0) {
-      console.error("SEO verification failed:")
-      for (const error of errors) {
-        console.error(`- ${error}`)
-      }
-      process.exit(1)
-    }
-
-    console.log(`Verified ${indexableSeoRoutes.length} indexable SEO routes.`)
-    console.log("Verified sitemap alignment.")
-    console.log("Verified prerendered HTML output.")
-  },
-  { loadVerificationModule: true },
+const { indexableSeoRoutes, collectVerificationErrors } = await import(
+  pathToFileURL(ssrEntryPath).href
 )
+
+const errors = collectVerificationErrors({
+  distDir,
+  routes: indexableSeoRoutes,
+  sitemapXml,
+})
+
+if (errors.length > 0) {
+  console.error("SEO verification failed:")
+  for (const error of errors) {
+    console.error(`- ${error}`)
+  }
+  process.exit(1)
+}
+
+console.log(`Verified ${indexableSeoRoutes.length} indexable SEO routes.`)
+console.log("Verified sitemap alignment.")
+console.log("Verified prerendered HTML output.")
