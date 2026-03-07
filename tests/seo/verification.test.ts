@@ -24,6 +24,26 @@ afterEach(() => {
 })
 
 describe("seo verification helpers", () => {
+  it("matches escaped apostrophes in prerendered descriptions", () => {
+    const route = getSeoRouteByPath("/services/upvc-window-spraying")
+
+    expect(route).toBeDefined()
+    expect(
+      htmlIncludesExpectedMetadata(
+        `
+        <html>
+          <head>
+            <title>${route?.title}</title>
+            <meta name="description" content="Modernize your home&#x27;s exterior with professional UPVC window coatings." />
+            <link rel="canonical" href="https://sprayinnovations.co.uk/services/upvc-window-spraying" />
+          </head>
+        </html>
+        `,
+        route!,
+      ),
+    ).toBe(true)
+  })
+
   it("detects expected metadata in prerendered HTML", () => {
     const route = getSeoRouteByPath("/services/kitchen-resprays")
 

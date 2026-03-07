@@ -13,6 +13,7 @@ type VerificationInput = {
 const escapeHtml = (value: string) =>
   value
     .replaceAll("&", "&amp;")
+    .replaceAll("'", "&#x27;")
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
