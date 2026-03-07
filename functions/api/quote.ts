@@ -15,8 +15,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     "Access-Control-Allow-Headers": "Content-Type",
   };
 
-  // Use env variable if available, otherwise fallback to hardcoded (for transition)
-  const webhookUrl = env.QUOTE_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/r16arqH6hLxCbb5bn3BN";
+  const webhookUrl = env.QUOTE_WEBHOOK_URL;
+  if (!webhookUrl) {
+    console.error("QUOTE_WEBHOOK_URL not configured");
+    return new Response(
+      JSON.stringify({ error: "Server configuration error" }),
+      { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
+  }
 
   try {
     const body = await request.json();

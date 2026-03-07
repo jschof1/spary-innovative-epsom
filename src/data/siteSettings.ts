@@ -19,11 +19,7 @@ export const siteSettings = {
   feedbackApiEndpoint: "/api/feedback",
   formApiEndpoint: "/api/form",
   discountApiEndpoint: "/api/discount",
-  // Webhook URLs (for local development, Cloudflare uses environment variables)
-  quoteWebhookUrl: import.meta.env.VITE_QUOTE_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/r16arqH6hLxCbb5bn3BN",
-  mainFormWebhookUrl: import.meta.env.VITE_MAIN_FORM_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/tDvkMXozWUXI08Mmjnoe",
-  negativeReviewWebhookUrl: import.meta.env.VITE_NEGATIVE_REVIEW_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/tnakPfMKikQKg4OrLOEX",
-  discountFormWebhookUrl: import.meta.env.VITE_DISCOUNT_FORM_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/cbMc9GToGvVEelqEPECY",
+  // Webhook URLs are configured via env only (Cloudflare: QUOTE_WEBHOOK_URL, etc.; see .env.example for local)
   feedbackGoogleReviewUrl: "https://g.page/r/CSHEx0H2jqYCEBM/review",
   standardFaqs: [
     {

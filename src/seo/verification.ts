@@ -10,24 +10,56 @@ type VerificationInput = {
   sitemapXml: string
 }
 
-const escapeHtml = (value: string) =>
+const decodeHtmlEntities = (value: string) =>
   value
-    .replaceAll("&", "&amp;")
-    .replaceAll("'", "&#x27;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#x27;", "'")
+    .replaceAll("&#39;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&amp;", "&")
 
-const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+const extractAttribute = (tag: string, attributeName: string) => {
+  const attributePattern = new RegExp(
+    `${attributeName}=(["'])(.*?)\\1`,
+    "i",
+  )
 
-export const htmlIncludesExpectedMetadata = (html: string, route: SeoRoute) =>
-  html.includes(`<title>${escapeHtml(route.title)}</title>`) &&
-  new RegExp(
-    `<meta[^>]+name="description"[^>]+content="${escapeRegExp(escapeHtml(route.description))}"`,
-  ).test(html) &&
-  new RegExp(
-    `<link[^>]+rel="canonical"[^>]+href="${escapeRegExp(getCanonicalUrl(route.path))}"`,
-  ).test(html)
+  return tag.match(attributePattern)?.[2]
+}
+
+const extractTitle = (html: string) => {
+  const titleMatch = html.match(/<title>(.*?)<\/title>/i)
+  return titleMatch ? decodeHtmlEntities(titleMatch[1]) : undefined
+}
+
+const extractMetaDescription = (html: string) => {
+  const metaMatch = html.match(
+    /<meta\b[^>]*\bname=(["'])description\1[^>]*>|<meta\b[^>]*\bcontent=(["']).*?\2[^>]*\bname=(["'])description\3[^>]*>/i,
+  )
+
+  return metaMatch ? decodeHtmlEntities(extractAttribute(metaMatch[0], "content") ?? "") : undefined
+}
+
+const extractCanonicalHref = (html: string) => {
+  const canonicalMatch = html.match(
+    /<link\b[^>]*\brel=(["'])canonical\1[^>]*>|<link\b[^>]*\bhref=(["']).*?\2[^>]*\brel=(["'])canonical\3[^>]*>/i,
+  )
+
+  return canonicalMatch?.[0] ? extractAttribute(canonicalMatch[0], "href") : undefined
+}
+
+const getMetadataMismatches = (html: string, route: SeoRoute) => ({
+  missingTitle: extractTitle(html) !== route.title,
+  missingDescription: extractMetaDescription(html) !== route.description,
+  missingCanonical: extractCanonicalHref(html) !== getCanonicalUrl(route.path),
+})
+
+export const htmlIncludesExpectedMetadata = (html: string, route: SeoRoute) => {
+  const mismatches = getMetadataMismatches(html, route)
+
+  return !mismatches.missingTitle && !mismatches.missingDescription && !mismatches.missingCanonical
+}
 
 export const collectVerificationErrors = ({
   distDir,
@@ -54,23 +86,17 @@ export const collectVerificationErrors = ({
 
     const html = readFileSync(htmlPath, "utf8")
 
-    if (!html.includes(`<title>${escapeHtml(route.title)}</title>`)) {
+    const mismatches = getMetadataMismatches(html, route)
+
+    if (mismatches.missingTitle) {
       errors.push(`Missing expected title in prerendered HTML for route: ${route.path}`)
     }
 
-    if (
-      !new RegExp(
-        `<meta[^>]+name="description"[^>]+content="${escapeRegExp(escapeHtml(route.description))}"`,
-      ).test(html)
-    ) {
+    if (mismatches.missingDescription) {
       errors.push(`Missing expected description in prerendered HTML for route: ${route.path}`)
     }
 
-    if (
-      !new RegExp(
-        `<link[^>]+rel="canonical"[^>]+href="${escapeRegExp(getCanonicalUrl(route.path))}"`,
-      ).test(html)
-    ) {
+    if (mismatches.missingCanonical) {
       errors.push(`Missing expected canonical in prerendered HTML for route: ${route.path}`)
     }
 

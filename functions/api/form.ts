@@ -8,8 +8,14 @@ interface Env {
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
   
-  // Use env variable if available, otherwise fallback to hardcoded (for transition)
-  const webhookUrl = env.FORM_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/GDy3wBuzt9lhvXoDTcIb/webhook-trigger/tDvkMXozWUXI08Mmjnoe";
+  const webhookUrl = env.FORM_WEBHOOK_URL;
+  if (!webhookUrl) {
+    console.error("FORM_WEBHOOK_URL not configured");
+    return new Response(
+      JSON.stringify({ error: "Server configuration error" }),
+      { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
+  }
 
   const corsHeaders = {
     "Access-Control-Allow-Origin": "*",
