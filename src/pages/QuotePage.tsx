@@ -11,7 +11,7 @@ export const QuotePage = () => {
         title={`Get Your Free Quote | ${siteSettings.businessName}`}
         description="Get a fast, free, no-obligation spray painting quote in minutes. Local spraying specialist serving Epsom and Surrey."
         pathname="/get-quote"
-        robots="noindex, follow"
+        robots="noindex, nofollow"
       />
 
       <div className="min-h-screen bg-navy-900 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 relative overflow-hidden">

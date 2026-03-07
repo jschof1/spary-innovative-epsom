@@ -12,6 +12,7 @@ export const CookiePolicyPage = () => {
         title={`Cookie Policy | ${siteSettings.businessName}`}
         description={`Cookie Policy for ${siteSettings.businessName}. Learn how we use cookies on our website.`}
         pathname="/cookie-policy"
+        robots="noindex, nofollow"
         jsonLd={getBreadcrumbSchema([
           { name: "Home", item: siteSettings.baseUrl },
           { name: "Cookie Policy", item: `${siteSettings.baseUrl}/cookie-policy` }

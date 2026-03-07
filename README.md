@@ -1,73 +1,101 @@
-# React + TypeScript + Vite
+# Spray Innovations Epsom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing site for Spray Innovations, built with Vite, React, and route-level SEO metadata. The production build now uses a manifest-driven prerender flow so Cloudflare Pages receives real HTML files for important service and location routes.
 
-Currently, two official plugins are available:
+## SEO Prerender Standard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repo follows the `vite-react-seo-prerender-standard`.
 
-## React Compiler
+Source of truth:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- route manifest: `src/seo/routes.ts`
+- sitemap builder: `src/seo/sitemap.ts`
+- sitemap script: `scripts/generate-sitemap.ts`
+- prerender script: `scripts/prerender.ts`
+- SEO verification script: `scripts/verify-seo-build.ts`
 
-## Expanding the ESLint configuration
+Project docs:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- rollout design: `docs/plans/2026-03-05-spary-seo-prerender-design.md`
+- rollout plan: `docs/plans/2026-03-05-spary-seo-prerender.md`
+- SEO standard guide: `docs/seo-prerender-standard.md`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Route Policy
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Indexable routes:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `/`
+- `/about`
+- `/services`
+- `/contact`
+- `/reviews`
+- `/faq`
+- `/services/:serviceSlug`
+- `/locations/:locationSlug`
+- `/locations/:locationSlug/:serviceSlug`
+
+Noindex routes:
+
+- `/feedback`
+- `/discount`
+- `/get-quote`
+- `/add-customer`
+- `/privacy-policy`
+- `/cookie-policy`
+- `/terms-of-service`
+
+## Commands
+
+Development:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run tests:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run test -- --run
 ```
+
+Generate the sitemap only:
+
+```bash
+npm run generate-sitemap
+```
+
+Run the full production build:
+
+```bash
+npm run build
+```
+
+Run SEO verification against the built output:
+
+```bash
+npm run verify:seo
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Build Flow
+
+`npm run build` performs these steps:
+
+1. Generate `public/sitemap.xml` from `src/seo/routes.ts`
+2. Run the standard TypeScript + Vite production build
+3. Launch a local preview server against `dist`
+4. Visit each indexable route in a headless browser
+5. Save rendered HTML into `dist/.../index.html`
+6. Verify HTML files, titles, descriptions, canonicals, and sitemap coverage
+
+## Notes
+
+- The prerender step uses `puppeteer-core`.
+- Browser lookup order is: `PUPPETEER_EXECUTABLE_PATH`, common macOS app paths, then common Linux Chrome/Chromium paths.
+- In CI, set `PUPPETEER_EXECUTABLE_PATH` explicitly if Chrome is installed somewhere non-standard.
+- If you add a new SEO route type, update `src/seo/routes.ts` instead of adding route lists to individual scripts.

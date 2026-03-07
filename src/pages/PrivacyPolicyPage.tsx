@@ -12,6 +12,7 @@ export const PrivacyPolicyPage = () => {
         title={`Privacy Policy | ${siteSettings.businessName}`}
         description={`Privacy Policy for ${siteSettings.businessName}. Learn how we collect and protect your data.`}
         pathname="/privacy-policy"
+        robots="noindex, nofollow"
         jsonLd={getBreadcrumbSchema([
           { name: "Home", item: siteSettings.baseUrl },
           { name: "Privacy Policy", item: `${siteSettings.baseUrl}/privacy-policy` }

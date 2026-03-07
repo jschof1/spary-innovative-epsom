@@ -12,6 +12,7 @@ export const TermsOfServicePage = () => {
         title={`Terms of Service | ${siteSettings.businessName}`}
         description={`Terms of Service for ${siteSettings.businessName}. Please read our terms and conditions carefully.`}
         pathname="/terms-of-service"
+        robots="noindex, nofollow"
         jsonLd={getBreadcrumbSchema([
           { name: "Home", item: siteSettings.baseUrl },
           { name: "Terms of Service", item: `${siteSettings.baseUrl}/terms-of-service` }
