@@ -1,5 +1,5 @@
 import { locations } from "@/data/locations"
-import { services } from "@/data/services"
+import { serviceSummaries } from "@/data/serviceSummaries"
 import { siteSettings } from "@/data/siteSettings"
 
 export type SeoChangefreq = "daily" | "weekly" | "monthly" | "yearly"
@@ -150,7 +150,7 @@ const staticRoutes: SeoRoute[] = [
   ),
 ]
 
-const serviceRoutes = services.map((service) =>
+const serviceRoutes = serviceSummaries.map((service) =>
   createRoute(
     `/services/${service.slug}`,
     `${service.title} | ${siteSettings.businessName}`,
@@ -171,7 +171,7 @@ const locationRoutes = locations.map((location) =>
 )
 
 const serviceLocationRoutes = locations.flatMap((location) =>
-  services.map((service) =>
+  serviceSummaries.map((service) =>
     createRoute(
       `/locations/${location.slug}/${service.slug}`,
       `${service.shortTitle} in ${location.name} | ${siteSettings.businessName}`,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { locations } from "@/data/locations"
-import { services } from "@/data/services"
+import { serviceSummaries } from "@/data/serviceSummaries"
 import {
   getCanonicalUrl,
   getOutputPath,
@@ -27,9 +27,9 @@ describe("seo route manifest", () => {
       (route) => route.source === "service-location",
     ).length
 
-    expect(serviceRouteCount).toBe(services.length)
+    expect(serviceRouteCount).toBe(serviceSummaries.length)
     expect(locationRouteCount).toBe(locations.length)
-    expect(serviceLocationRouteCount).toBe(services.length * locations.length)
+    expect(serviceLocationRouteCount).toBe(serviceSummaries.length * locations.length)
   })
 
   it("derives clean output paths for nested routes", () => {
