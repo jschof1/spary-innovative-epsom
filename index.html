@@ -38,23 +38,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Spray Innovations" />
-    <!-- Plausible Analytics -->
-    <script defer data-domain="sprayinnovations.co.uk" src="https://analytics.aspectstudio.net/js/script.js"></script>
 </head>
 <body class="font-sans antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- LeadConnector chat widget - Deferred for performance -->
-    <script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          var script = document.createElement('script');
-          script.src = "https://widgets.leadconnectorhq.com/loader.js";
-          script.dataset.resourcesUrl = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
-          script.dataset.widgetId = "69863f052ad2f70d6190767c";
-          document.body.appendChild(script);
-        }, 3000); // 3 second delay after load
-      });
-    </script>
 </body>
 </html>
