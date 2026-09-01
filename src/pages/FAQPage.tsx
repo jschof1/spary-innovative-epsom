@@ -17,7 +17,7 @@ export const FAQPage = () => {
   ]
 
   const quickLinks = [
-    { title: "Kitchen Resprays", slug: "kitchen-respray" },
+    { title: "Kitchen Resprays", slug: "kitchen-resprays" },
     { title: "UPVC Windows", slug: "upvc-window-spraying" },
     { title: "UPVC Doors", slug: "upvc-door-spraying" },
     { title: "Furniture", slug: "furniture-spraying" },

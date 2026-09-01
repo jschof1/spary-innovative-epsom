@@ -184,6 +184,18 @@ const prerender = async () => {
       writeFileSync(outputPath, html, "utf8")
       console.log(`Prerendered ${route.path} -> ${route.outputPath}`)
     }
+
+    const notFoundPath = path.join(distDir, "404.html")
+    const { appHtml: notFoundHtml, helmet: notFoundHelmet } =
+      ssrRender("/404")
+    const notFoundDocument = rewriteSsrAssetPlaceholders(
+      rewriteSourceAssetUrls(
+        renderRouteHtml(template, notFoundHtml, notFoundHelmet),
+        siteSettings,
+      ),
+    )
+    writeFileSync(notFoundPath, notFoundDocument, "utf8")
+    console.log("Prerendered /404 -> 404.html")
   } finally {
     console.error = originalConsoleError
   }

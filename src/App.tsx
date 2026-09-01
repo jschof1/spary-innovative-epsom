@@ -20,6 +20,7 @@ import { TermsOfServicePage } from "@/pages/TermsOfServicePage"
 import { QuotePage } from "@/pages/QuotePage"
 import { FAQPage } from "@/pages/FAQPage"
 import { AddCustomerPage } from "@/pages/AddCustomerPage"
+import { NotFoundPage } from "@/pages/NotFoundPage"
 import { Toaster } from "@/components/ui/toaster"
 
 // Progress bar component for engagement (no-op during SSR)
@@ -109,6 +110,7 @@ function App() {
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/get-quote" element={<QuotePage />} />
               <Route path="/add-customer" element={<AddCustomerPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
             
             {/* Branded accent divider at the very bottom of main content area */}
