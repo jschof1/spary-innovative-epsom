@@ -1,3 +1,4 @@
+import PoweredByUKTradeLeads from './components/layout/PoweredByUKTradeLeads';
 import { Routes, Route, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { PromoBanner } from "@/components/layout/PromoBanner"
@@ -118,7 +119,10 @@ function App() {
           </div>
         </main>
 
-        {!isMinimalPage && <Footer />}
+        {!isMinimalPage && <>
+        <Footer />
+        <PoweredByUKTradeLeads />
+        </>}
         <Toaster />
       </div>
 
