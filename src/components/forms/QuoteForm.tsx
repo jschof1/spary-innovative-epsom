@@ -52,6 +52,8 @@ export const QuoteForm = () => {
 
       if (!response.ok) throw new Error("Failed to submit")
 
+      if (typeof document !== "undefined") document.dispatchEvent(new Event("uktl:enquiry-accepted"));
+
       setSubmitted(true)
       toast({
         title: "Request Received!",

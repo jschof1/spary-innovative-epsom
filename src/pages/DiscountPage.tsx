@@ -50,6 +50,8 @@ export const DiscountPage = () => {
         throw new Error("Submission failed");
       }
 
+      if (typeof document !== "undefined") document.dispatchEvent(new Event("uktl:enquiry-accepted"));
+
       setSubmitted(true);
       toast({
         title: "Discount Claimed!",
