@@ -23,6 +23,7 @@ import { FAQPage } from "@/pages/FAQPage"
 import { AddCustomerPage } from "@/pages/AddCustomerPage"
 import { NotFoundPage } from "@/pages/NotFoundPage"
 import { Toaster } from "@/components/ui/toaster"
+import { OptionalServicesConsent } from "@/components/OptionalServicesConsent"
 
 // Progress bar component for engagement (no-op during SSR)
 const ScrollProgress = () => {
@@ -124,6 +125,7 @@ function App() {
         <PoweredByUKTradeLeads />
         </>}
         <Toaster />
+        <OptionalServicesConsent />
       </div>
 
       {/* Branded Corner Accents for depth */}

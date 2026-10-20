@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { getBreadcrumbSchema } from "@/lib/seo-schemas"
 
 export const CookiePolicyPage = () => {
-  const lastUpdated = "January 16, 2026"
+  const lastUpdated = "August 25, 2026"
 
   return (
     <>
@@ -43,11 +43,11 @@ export const CookiePolicyPage = () => {
 
               <section>
                 <h2 className="text-2xl font-black text-navy-900 mb-4 uppercase tracking-tight">2. How We Use Cookies</h2>
-                <p>We use cookies to:</p>
+                <p>We store your optional-services preference locally so the site can respect it on future visits. If you choose to accept optional services, we also use:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Ensure our website functions correctly (Essential Cookies).</li>
-                  <li>Understand how visitors interact with our website to improve performance (Analytical Cookies).</li>
-                  <li>Remember your preferences and settings (Functional Cookies).</li>
+                  <li>Plausible analytics, to understand aggregated website use.</li>
+                  <li>LeadConnector chat, so that you can use the optional chat service.</li>
+                  <li>Your local optional-services preference.</li>
                 </ul>
               </section>
 
